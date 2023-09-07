@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+h1{
+    font-family: 'Comfortaa';
+    text-align: center;
+}
+
+.bt{
+    background-color: rgb(84, 184, 84);
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.bt:hover{
+    background-color: rgb(7, 154, 7);
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.bt-edit{
+    background-color: rgb(84, 146, 184);
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.bt-edit:hover{
+    background-color: rgb(7, 107, 154);
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}

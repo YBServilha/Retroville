@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body{
+    margin: 0px;
+    /*background: linear-gradient(to bottom right, rgb(19, 18, 19), rgb(98, 98, 91));*/
+    background-image: url('https://i.pinimg.com/originals/58/15/ec/5815ecc05e41373624cef809fcc09991.jpg');
+    background-size: cover;
+    background-position: 50%;
+    height: 100vh;
+    width: 100%;
+}
+
+form{
+    background-color: white;
+    border: black;
+    display: flex;
+    width: 600px;
+    height: 400px;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto';
+    border-radius: 5PX;
+    background-color: rgb(30, 29, 29);
+}
+
+h2{
+    margin-top: 60px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+input{
+    width: 400px;
+    height:30px;
+    padding: 10px;
+    border-radius: 5px;
+    /*border: 1px solid black;*/
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+
+.box-form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: red;*/  
+}
+
+.enviar{
+    height: 45px;
+    width: 420px;
+    background-color: rgb(219, 189, 15);
+    box-shadow: 0px 0px 17px 2px rgb(125, 108, 10);
+    color: white;
+    transition: all 0.5s ease
+}
+
+.enviar:hover{
+    background-color: rgb(237, 203, 11);
+}

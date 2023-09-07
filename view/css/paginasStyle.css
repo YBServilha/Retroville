@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+h1{
+    font-family:'Comfortaa';
+    margin-left: 30px;
+}
+
+.box-item{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 05px 10px 1px rgb(66, 65, 65);
+    display: flex;
+    flex-direction: column-reverse;
+    transition: all 0.5s ease;
+}
+
+a{
+    text-decoration: none;
+}
+
+.box-item:hover{
+    width: 320px;
+    height: 320px;
+    cursor: pointer;
+}
+
+.box-item p{
+    text-align: center;
+    height: 30px;
+    font-family: 'Roboto';
+    color: rgb(240, 224, 4);
+}
+
+.box-1{
+    background-image: url("../img/add-car.png");
+    background-size:cover;
+}
+
+.box-2{
+    background-image: url("../img/list-car.png");
+    background-size:cover;
+}
+
+.box{
+    display: flex;
+    width: 900px;
+    flex-wrap:wrap;
+    margin-left: 15px;
+}
