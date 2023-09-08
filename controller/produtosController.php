@@ -155,13 +155,22 @@ if(isset($_POST['btnEditar'])){
     }
     
     
-    
 
-    // Atualize os detalhes do produto no banco de dados
+
+    // Atualiza os detalhes do produto no banco de dados
     $produtos = new Produto($marca, $modelo, $carroceria, $preco, $motor, $cor, $km, $ano, $cambio, $finalPlaca, $texto, $imgCard, $imgCapa, $imgHistoria, $img1, $img2, $img3, $img4, $img5, $img6, $img7, $img8);
     $produtos->editar($cod);
 
-    // Redirecione ou exiba uma mensagem de sucesso, conforme necessário
+    ?>
+    <form action="../view/editarProdutos.php" method="get" name="formEditar" id="formEditar">
+        <input type="hidden" name="cod" value="<?php echo $cod;?>">
+        <input type="hidden" name="editou">
+    </form>
+    <script>
+        var form = document.getElementById('formEditar');
+        form.submit();
+    </script>
+    <?php
 }
 
 

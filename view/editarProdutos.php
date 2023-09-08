@@ -38,7 +38,15 @@ if (isset($_GET['cod'])) {
 </head>
 <body>
     <h1 class="mt-5">Editar Produto</h1>
-
+    <?php
+    if(isset($_GET['editou'])){
+    ?>
+    <div class="container col-5">
+    <div class="alert alert-success mt-5" role="alert" id="msgIncluiu">
+      Produto editado com sucesso!
+    </div>
+    </div>  
+    <?php } ?>
     <div class="container col-5 mt-5" >
       <?php
       foreach($resultados as $resultado){
