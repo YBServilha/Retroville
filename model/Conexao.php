@@ -75,10 +75,10 @@
             $_SESSION['SENHA'] = $dados['senha'];
             header('Location: ../view/home.php');
             
-            // You can store this data in an array if you expect multiple rows
+            
             // $_SESSION['user_data'][] = array('ID' => $dados['id'], 'EMAIL' => $dados['email'], 'SENHA' => $dados['senha']);
         } else {
-            // You might want to handle the case when no data is found
+            
             session_destroy();
             //header('Location: ../index.php');
             ?>
