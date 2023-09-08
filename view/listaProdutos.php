@@ -21,6 +21,18 @@ if(isset($_SESSION['EMAIL'])){
 </head>
 <body>
     <h1 class="mt-3">Lista de produtos</h1>
+    <?php
+    if(isset($_POST['excluiu'])){
+    ?>
+    <div class="container col-5">
+    <div class="alert alert-success mt-5" role="alert" id="msgIncluiu">
+        <?php
+        $desc = $_POST['marca'].' '.$_POST['modelo'].'- COD: '.$_POST['cod'];
+        ?>
+      Veículo: <?php echo $desc;?> foi excluído com sucesso!
+    </div>
+    </div>  
+    <?php } ?>
 
     <!--<table>
         <tr>
@@ -85,8 +97,15 @@ if(isset($_SESSION['EMAIL'])){
                     echo '<td>' . $resultado['finalPlaca'] . '</td>';
                     echo '<td>' . $resultado['textoCarro'] . '</td>';
                     echo '<td><a class="btn btn-success" href="adicionarProdutos.php">adicionar</a></td>';
-                    echo '<td><a class="btn btn-danger" href="adicionarProdutos.php">excluir</a></td>';
-                    echo '<td><a class="btn btn-primary" href="editarProdutos.php?cod=' . $resultado['cod'] . '">editar</a></td>';
+                    echo '<td>';
+                    echo '<form method="post" action="../controller/produtosController.php">';
+                    echo '<input type="hidden" name="cod" value="' . $resultado['cod'] . '">';
+                    echo '<input type="hidden" name="modelo" value="' . $resultado['modelo'] . '">';
+                    echo '<input type="hidden" name="marca" value="' . $resultado['marca'] . '">';
+                    echo '<button type="submit" class="btn btn-danger" name="btnExcluir">excluir</button>';
+                    echo '</form>';
+                    echo '</td>';
+                    echo '<td><a class="btn btn-primary" href="editarProdutos.php?cod=' . $resultado['cod'] . '">editar</a></td>';                    
     echo '</tr>';
                     echo '</tr>';
                 }

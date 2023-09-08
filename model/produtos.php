@@ -111,6 +111,13 @@ class Produto{
         $conn = new Conexao();
         $conn->executar($sql);
     }
+
+    function excluir($cod){
+        include_once 'Conexao.php';
+        $sql = "delete from produtos where cod = '$cod'";
+        $conn = new Conexao();
+        $conn->executar($sql);
+    }
     
 }
 

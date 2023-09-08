@@ -173,6 +173,49 @@ if(isset($_POST['btnEditar'])){
     <?php
 }
 
+if (isset($_POST['btnExcluir'])) {
+    $cod = $_POST['cod'];
+    $modelo = $_POST['modelo'];
+    $marca = $_POST['marca'];
+    $imgFolder = "../view/img/imgProdutos/{$modelo}_{$cod}";
+
+    // Função para excluir recursivamente um diretório e seu conteúdo
+    function deleteDirectory($dir) {
+        if (!is_dir($dir)) {
+            return;
+        }
+
+        $files = array_diff(scandir($dir), array('.', '..'));
+        foreach ($files as $file) {
+            $path = $dir . '/' . $file;
+            is_dir($path) ? deleteDirectory($path) : unlink($path);
+        }
+
+        rmdir($dir);
+    }
+
+    // Exclua o diretório e seu conteúdo
+    deleteDirectory($imgFolder);
+
+    // Agora, você pode excluir o registro do banco de dados (se necessário)
+    $null = '';
+    $produtos = new Produto($null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null);
+    $produtos->excluir($cod);
+
+    ?>
+    <form action="../view/listaProdutos.php" method="post" name="formExcluir" id="formExcluir">
+        <input type="hidden" name="cod" value="<?php echo $cod;?>">
+        <input type="hidden" name="marca" value="<?php echo $marca;?>">
+        <input type="hidden" name="modelo" value="<?php echo $modelo;?>">
+        <input type="hidden" name="excluiu">
+    </form>
+    <script>
+        var form = document.getElementById('formExcluir');
+        form.submit();
+    </script>
+    <?php
+}
+
 
 
 
