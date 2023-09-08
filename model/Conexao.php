@@ -80,7 +80,16 @@
         } else {
             // You might want to handle the case when no data is found
             session_destroy();
-            header('Location: ../index.php');
+            //header('Location: ../index.php');
+            ?>
+            <form action="../index.php" method="post" name="formMsg" id="formMsg">
+                <input type="hidden" name="msg">
+            </form>
+            <script>
+                var form = document.getElementById('formMsg');
+                form.submit();
+            </script>
+            <?php
         }
         
         //var_dump($_SESSION['EMAIL']);

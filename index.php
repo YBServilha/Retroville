@@ -23,6 +23,14 @@
 
     <div class="box-form">
         <form action="controller/loginController.php" method="post">
+    <?php
+        if(isset($_POST['msg'])){
+        ?>
+        <div class="msgInvalido" id="msgIncluiu">
+        Usuário/senha inválidos!
+        </div>
+         
+    <?php } ?>
             <h2>Login</h2>
             <input type="email" name="email" placeholder="Email..." value="teste@gmail.com"><br><br>
 
