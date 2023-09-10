@@ -47,6 +47,10 @@ if(isset($_SESSION['EMAIL'])){
     </table>-->
 
     <div class="container-fluid mt-3 h-100">
+        <div class="container-fluid d-flex justify-content-end">
+            <a class="btn btn-success m-1" href="adicionarProdutos.php">adicionar</a>
+        </div>
+    
     <div class="table-responsive h-100" style="overflow-y: scroll;">
         <table class="table h-100">
             <thead class="thead-dark">
@@ -69,7 +73,7 @@ if(isset($_SESSION['EMAIL'])){
                     <th scope="col">Adicionar</th>
                     <th scope="col">Excluir</th>
                     <th scope="col">Editar</th>
-                    <a class="btn btn-success" href="adicionarProdutos.php">adicionar</a>
+                    
                 </tr>
             </thead>
             <tbody>
@@ -107,7 +111,7 @@ if(isset($_SESSION['EMAIL'])){
                     echo '</form>';
                     echo '</td>';
                     echo '<td><a class="btn btn-primary" href="editarProdutos.php?cod=' . $resultado['cod'] . '">editar</a></td>';                    
-    echo '</tr>';
+                    echo '</tr>';
                     echo '</tr>';
                 }
                 ?>
