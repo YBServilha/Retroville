@@ -47,7 +47,7 @@ if(isset($_SESSION['EMAIL'])){
     </table>-->
 
     <div class="container-fluid mt-3 h-100">
-    <div class="table-responsive h-100" style=" overflow-y: scroll;">
+    <div class="table-responsive h-100" style="overflow-y: scroll;">
         <table class="table h-100">
             <thead class="thead-dark">
                 <tr>
@@ -80,11 +80,12 @@ if(isset($_SESSION['EMAIL'])){
                 $resultados = $conn->consultarDados($sql);
 
                 foreach ($resultados as $resultado) {
+                    $imgCaminho = "img/imgProdutos/".$resultado['modelo'].'_'.$resultado['cod'].'/';
                     echo '<tr>';
                     echo '<th scope="row">' . $resultado['id'] . '</th>';
                     echo '<td>' . $resultado['cod'] . '</td>';
                     echo '<td>' . $resultado['data'] . '</td>';
-                    echo '<td>' . $resultado['imgCard'] . '</td>';
+                    echo '<td>' . '<img src="' . $imgCaminho . $resultado['imgCard'] . '" . width="150px"></td>';
                     echo '<td>' . $resultado['marca'] . '</td>';
                     echo '<td>' . $resultado['modelo'] . '</td>';
                     echo '<td>' . $resultado['carroceria'] . '</td>';
