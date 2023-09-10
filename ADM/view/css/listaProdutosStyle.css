@@ -9,6 +9,7 @@ body{
 h1{
     font-family: 'Comfortaa';
     text-align: center;
+    
 }
 
 .bt{
@@ -48,3 +49,4 @@ h1{
     padding: 5px;
     border-radius: 5px;
 }
+

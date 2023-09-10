@@ -46,9 +46,9 @@ if(isset($_SESSION['EMAIL'])){
         </tr>
     </table>-->
 
-    <div class="container-fluid mt-3">
-    <div class="table-responsive" style="max-height: 400px; overflow-y: scroll;">
-        <table class="table">
+    <div class="container-fluid mt-3 h-100">
+    <div class="table-responsive h-100" style=" overflow-y: scroll;">
+        <table class="table h-100">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">id</th>
