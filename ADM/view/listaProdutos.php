@@ -70,7 +70,6 @@ if(isset($_SESSION['EMAIL'])){
                     <th scope="col">cambio</th>
                     <th scope="col">Final Placa</th>
                     <th scope="col">Historia</th>
-                    <th scope="col">Adicionar</th>
                     <th scope="col">Excluir</th>
                     <th scope="col">Editar</th>
                     
@@ -101,7 +100,6 @@ if(isset($_SESSION['EMAIL'])){
                     echo '<td>' . $resultado['cambio'] . '</td>';
                     echo '<td>' . $resultado['finalPlaca'] . '</td>';
                     echo '<td>' . $resultado['textoCarro'] . '</td>';
-                    echo '<td><a class="btn btn-success" href="adicionarProdutos.php">adicionar</a></td>';
                     echo '<td>';
                     echo '<form method="post" action="../controller/produtosController.php">';
                     echo '<input type="hidden" name="cod" value="' . $resultado['cod'] . '">';
