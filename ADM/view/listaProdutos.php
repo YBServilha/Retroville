@@ -70,8 +70,8 @@ if(isset($_SESSION['EMAIL'])){
                     <th scope="col">cambio</th>
                     <th scope="col">Final Placa</th>
                     <th scope="col">Historia</th>
-                    <th scope="col">Excluir</th>
                     <th scope="col">Editar</th>
+                    <th scope="col">Excluir</th>
                     
                 </tr>
             </thead>
@@ -100,6 +100,7 @@ if(isset($_SESSION['EMAIL'])){
                     echo '<td>' . $resultado['cambio'] . '</td>';
                     echo '<td>' . $resultado['finalPlaca'] . '</td>';
                     echo '<td>' . $resultado['textoCarro'] . '</td>';
+                    echo '<td><a class="btn btn-primary" href="editarProdutos.php?cod=' . $resultado['cod'] . '">editar</a></td>'; 
                     echo '<td>';
                     echo '<form method="post" action="../controller/produtosController.php">';
                     echo '<input type="hidden" name="cod" value="' . $resultado['cod'] . '">';
@@ -107,8 +108,7 @@ if(isset($_SESSION['EMAIL'])){
                     echo '<input type="hidden" name="marca" value="' . $resultado['marca'] . '">';
                     echo '<button type="submit" class="btn btn-danger" name="btnExcluir">excluir</button>';
                     echo '</form>';
-                    echo '</td>';
-                    echo '<td><a class="btn btn-primary" href="editarProdutos.php?cod=' . $resultado['cod'] . '">editar</a></td>';                    
+                    echo '</td>';       
                     echo '</tr>';
                     echo '</tr>';
                 }
