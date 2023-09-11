@@ -1,0 +1,47 @@
+body{
+    color: #171a20;
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+.desktop{
+    display: initial
+}
+
+@media(min-width: 768px){
+    .desktop{
+        display: initial
+    }
+}
+
+header{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    padding: 5px 20px;
+    position: fixed;
+    top:0;
+    z-index: 2;
+    width: 100%;
+}
+
+a.logo{
+    height:12px;
+    width:100px;
+    color: inherit;
+}
+
+header a{
+    color: inherit;
+}
+
+header a nav{
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+header nav.center{
+    text-align: center;
+}
+
+header nav.right{
+    text-align: right;
+}
