@@ -106,7 +106,7 @@ if(isset($_SESSION['EMAIL'])){
                     echo '<input type="hidden" name="cod" value="' . $resultado['cod'] . '">';
                     echo '<input type="hidden" name="modelo" value="' . $resultado['modelo'] . '">';
                     echo '<input type="hidden" name="marca" value="' . $resultado['marca'] . '">';
-                    echo '<button type="submit" class="btn btn-danger" name="btnExcluir">excluir</button>';
+                    echo '<button type="submit" class="btn btn-danger" name="btnExcluir" id="btnExcluir">excluir</button>';
                     echo '</form>';
                     echo '</td>';       
                     echo '</tr>';
@@ -119,5 +119,18 @@ if(isset($_SESSION['EMAIL'])){
 </div>
 
     
+
+<script>
+    var btnExcluir = document.getElementById('btnExcluir');
+
+    btnExcluir.addEventListener('click', function (event) {
+        var confirmed = confirm("Tem certeza que deseja deletar este produto?");
+        
+        if (!confirmed) {
+            event.preventDefault(); // Impede o envio do formulário se o usuário clicou em "Cancelar"
+        }
+    });
+
+</script>
 </body>
 </html>
