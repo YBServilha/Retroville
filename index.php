@@ -27,10 +27,98 @@
         <nav class="right desktop">
             <a href="" class="desktop">Shop</a>
             <a href="" class="desktop">Accountant</a>
-            <a href="" class="desktop">Menu</a>
+            <a href="" class="desktop" id="menuBtn">Menu</a>
         </nav>
-    </header>    
+    </header>   
+    <div class="backdrop">
 
+    </div>
+    
+    <aside>
+    <button class="close">&times</button>
+        <a href="">Model S</a>
+        <a href="">Model S</a>
+        <a href="">Model 3</a>
+        <a href="">Model 3</a>
+        <a href="">Model X</a>
+        <a href="">Model X</a>
+        <a href="">Model Y</a>
+        <a href="">Model Y</a>
+    </aside>
+
+    <section style="background-image: url('CLIENTE/view/img/imgHome/model-3.jpg')">
+        <div class="content">
+            <h1>Model-3</h1>
+            <p>Order Online for <a href="">Retroville</a></p>
+            <div class="buttons">
+                <a href="">custom order</a>
+                <a href="">exising inventory</a>
+            </div>
+        </div>
+    </section>
+        
+    <section style="background-image: url('CLIENTE/view/img/imgHome/model-s.jpg')">
+        <div class="content">
+            <h1>Model-3</h1>
+            <p>Order Online for <a href="">Retroville</a></p>
+        </div>
+    </section>
+        
+    <section style="background-image: url('CLIENTE/view/img/imgHome/model-x.jpg')">
+        <div class="content">
+            <h1>Model-3</h1>
+            <p>Order Online for <a href="">Retroville</a></p>
+            <div class="buttons">
+                <a href="">custom order</a>
+                <a href="">exising inventory</a>
+            </div>
+        </div>
+    </section>
+        
+    <section style="background-image: url('CLIENTE/view/img/imgHome/model-y.jpg')">
+        <div class="content">
+            <h1>Model-3</h1>
+            <p>Order Online for <a href="">Retroville</a></p>
+            <div class="buttons">
+                <a href="">custom order</a>
+                <a href="">exising inventory</a>
+            </div>
+        </div>
+    </section>
+       
+    <section style="background-image: url('CLIENTE/view/img/imgHome/roof.jpg')">
+        <div class="content">
+            <h1>Model-3</h1>
+            <p>Order Online for <a href="">Retroville</a></p>
+            <div class="buttons">
+                <a href="">custom order</a>
+                <a href="">exising inventory</a>
+            </div>
+        </div>
+    </section>
+        
+    <section style="background-image: url('CLIENTE/view/img/imgHome/solarpanels.jpg')">
+        <div class="content">
+            <h1>Model-3</h1>
+            <p>Order Online for <a href="">Retroville</a></p>
+            <div class="buttons">
+                <a href="">custom order</a>
+                <a href="">exising inventory</a>
+            </div>
+        </div>
+    </section>
+        
+    <section style="background-image: url('CLIENTE/view/img/imgHome/accessories.jpg')">
+        <div class="content">
+                <h1>Model-3</h1>
+                <p>Order Online for <a href="">Retroville</a></p>
+                <div class="buttons">
+                    <a href="">custom order</a>
+                    <a href="">exising inventory</a>
+                </div>
+        </div>
+    </section>
+    <script src="CLIENTE/view/js/nav.js"></script>
 
 </body>
 </html>
