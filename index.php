@@ -37,7 +37,7 @@
     <aside>
     <button class="close">&times</button>
         <a href="">Model S</a>
-        <a href="">Model S</a>
+        <a href="">Model Y</a>
         <a href="">Model 3</a>
         <a href="">Model 3</a>
         <a href="">Model X</a>
@@ -119,6 +119,6 @@
         </div>
     </section>
     <script src="CLIENTE/view/js/nav.js"></script>
-
+    <script src="CLIENTE/view/js/scroll.js"></script>
 </body>
 </html>
