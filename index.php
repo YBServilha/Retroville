@@ -14,7 +14,7 @@
         </div>
         <nav>
             <ul>
-                <a href="#"><li>Veículos</li></a>
+                <a href="CLIENTE/view/produtos.html"><li>Veículos</li></a>
                 <a href="#"><li>Sobre</li></a>
                 <a href="#"><li>Contato</li></a>
             </ul>

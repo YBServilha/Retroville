@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap');
+
+
+html{
+    height: 100vh;
+}
+
+body{
+    margin: 0;
+    padding:0;
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+header #logo img{
+    max-width: 110px;
+    width: 100%;
+    object-fit: contain;
+}
+
+footer{
+    width: 100%;
+    background-color: rgb(17, 17, 17);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+#box-footer{
+    color: white;
+    font-family: 'Inclusive Sans';
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.box-item-footer{
+    width: 300px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-item-footer p{
+    font-size: 23px;
+}
+
+.logo{
+    width: 150px;
+}
+
+.fa-brands{
+    font-size:28px;
+    margin:0px 0px 0px 15px;
+    transition: all 0.5s ease;
+}
+
+.link-redes{
+    color: white;
+    text-decoration: none;
+}
+
+.fa-brands:hover{
+   color: rgb(204, 204, 28);
+}
+
+.p-redes-sociais{
+    margin-right: 5px;
+}
