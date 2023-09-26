@@ -8,7 +8,66 @@
     <title>Produtos</title>
 </head>
 <body>
-  
+
+    <!--CABEÇALHO HEADER-->
+    <header>
+        <div id="logo">
+            <img src="img/imgHome/logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <a href="produtos.html"><li>Veículos</li></a>
+                <a href="#"><li>Sobre</li></a>
+                <a href="#"><li>Contato</li></a>
+            </ul>
+        </nav>
+        <div class="icons">
+            <a href="#"><ion-icon name="person-outline"></ion-icon></a>
+            <a href="#"><ion-icon name="car-sport-outline"></ion-icon></a>
+        </div>
+        <div class="menuResponsivoIcon">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        <div class="menuResponsivo display">
+            <div class="principalResponsivo">
+                <div class="headerResponsivo">
+                    <img src="CLIENTE/view/img/imgHome/logo.png" alt="Logo">
+                </div>
+                <div class="itensResponsivo">
+                    <ul>
+                        <a href="#"><li>Veículos</li></a>
+                        <a href="#"><li>Sobre</li></a>
+                        <a href="#"><li>Contato</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!--TÍTULO DE PRODUTOS E BARRA DE PESQUISA-->
+    <h1>Veículos Clássicos</h1>
+    
+
+
+    <!--BOX DE PRODUTOS-->
+    <div class="box-products">
+        <div class="item-products"><a href=""><img src="img/imgProdutos/1.png" alt="" class="item-products-img"></a></div>
+        <div class="item-products"><a href=""><img src="img/imgProdutos/2.png" alt="" class="item-products-img"></a></div>
+        <div class="item-products"><a href=""><img src="img/imgProdutos/3.png" alt="" class="item-products-img"></a></div>
+        <div class="item-products"><a href=""><img src="img/imgProdutos/4.png" alt="" class="item-products-img"></a></div>
+        <div class="item-products"><a href=""><img src="img/imgProdutos/5.png" alt="" class="item-products-img"></a></div>
+        <div class="item-products"><a href=""><img src="img/imgProdutos/6.png" alt="" class="item-products-img"></a></div>
+        <div class="item-products"><a href=""><img src="img/imgProdutos/7.png" alt="" class="item-products-img"></a></div>
+        <div class="item-products"><a href=""><img src="img/imgProdutos/8.png" alt="" class="item-products-img"></a></div>
+        <div class="item-products"><a href=""><img src="img/imgProdutos/9.png" alt="" class="item-products-img"></a></div>
+        <div class="item-products"><a href=""><img src="img/imgProdutos/10.png" alt="" class="item-products-img"></a></div>
+        <div class="item-products"><a href=""><img src="img/imgProdutos/11.png" alt="" class="item-products-img"></a></div>
+        <div class="item-products"><a href=""><img src="img/imgProdutos/12.png" alt="" class="item-products-img"></a></div>
+    </div>
+
+
+    <!--RODAPÉ FOOTER-->
     <footer>
         <div id="box-footer">
             <div class="box-item-footer">
@@ -33,9 +92,22 @@
                     </a>
                 </p>
             </div>
-            <!--<img src="img/imgHome/logo.png" alt="Logo">-->
         </div>
     </footer>
 
+
+    <!--JAVASCRIPT DO MENU-->
+    <script>
+        let btn = document.querySelector('.menuResponsivoIcon');
+        let menuMobile = document.querySelector('.menuResponsivo');
+        var width = document.documentElement.clientWidth;
+
+        btn.addEventListener('click', () => {
+            menuMobile.classList.toggle('display');
+        });
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
