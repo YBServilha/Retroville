@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn e SigIn - Retroville</title>
+    <link rel="stylesheet" href="css/logSiginStyle.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+        <svg class="tds-icon tds-icon-logo-wordmark tds-site-logo-icon" viewBox="0 0 342 35" xmlns="http://www.w3.org/2000/svg"><path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z" fill="currentColor"></path></svg>
+        </a>    
+        <nav class="center desktop">
+            <a href="#"> Model S</a>
+            <a href="#"> Model 3</a>
+            <a href="#"> Model X</a>
+            <a href="#"> Model Y</a>
+            <a href="#"> Solar Roof</a>
+            <a href="#"> Solar Panels</a>
+        </nav>
+
+        <nav class="right desktop">
+            <a href="" class="desktop">Shop</a>
+            <a href="" class="desktop">Accountant</a>
+            <a href="" class="desktop" id="menuBtn">Menu</a>
+        </nav>
+    </header>  
+    <div class="backdrop">
+
+    </div>
+    <aside>
+    <button class="close">&times</button>
+        <a href="">Model S</a>
+        <a href="">Model S</a>
+        <a href="">Model 3</a>
+        <a href="">Model 3</a>
+        <a href="">Model X</a>
+        <a href="">Model X</a>
+        <a href="">Model Y</a>
+        <a href="">Model Y</a>
+    </aside>
+
+    <section id="section">
+        <div class="boxLogin">
+            <div class="sigIn">
+                <div class="imgFundo1" id="imgSigIn"></div>
+                <h2>SigIn</h2>
+                <div class="btn" id="btn">
+                    <div class="transicao"></div>
+                    <div>SigIn</div>
+                    <div>LogIn</div>
+                </div>
+                <form action="#" method="post">
+                    <label for="nome">Nome: </label>
+                    <input type="text" name="nome" id="nome">
+                    <label for="senha">Senha: </label>
+                    <input type="password" name="senha" id="senha">
+                    <label for="cpf">CPF: </label>
+                    <input type="text" name="cpf" id="cpf">
+                    <input type="submit" value="Cadastrar" id="btnCadastrar">
+                </form>
+            </div>
+            <div class="logIn">
+                <div class="imgFundo1" id="imgLogIn"></div>
+                    <h2>LogIn</h2>
+                    <div class="btn" id="btn2">
+                        <div class="transicao"></div>
+                        <div>SigIn</div>
+                        <div>LogIn</div>
+                    </div>
+                    <form action="#" method="post">
+                        <label for="nome">Nome: </label>
+                        <input type="text" name="nome" id="nome">
+                        <label for="senha">Senha: </label>
+                        <input type="password" name="senha" id="senha">
+                        <input type="submit" value="Entrar" id="btnEntrar">
+                    </form>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+var btn = document.getElementById('btn');
+var btn2 = document.getElementById('btn2');
+var transicao = document.querySelector('.transicao');
+var imgSigIn = document.getElementById('imgSigIn');
+var imgLogIn = document.getElementById('imgLogIn');
+
+btn.addEventListener('click', () => {
+    transicao.style.left = "50%";
+
+    // Defina a opacidade da imgSigIn como 1 (totalmente visível) e imgLogIn como 0 (totalmente transparente)
+    imgSigIn.style.transition = "opacity 2s";
+    imgSigIn.style.opacity = "1";
+    imgSigIn.style.zIndex = "10";
+    imgLogIn.style.transition = "opacity 2s";
+    imgLogIn.style.opacity = "0";
+});
+
+btn2.addEventListener('click', () => {
+    transicao.style.right = "-50%";
+
+    // Defina a opacidade da imgSigIn como 1 (totalmente visível) e imgLogIn como 0 (totalmente transparente)
+    imgSigIn.style.transition = "opacity 2s";
+    imgSigIn.style.opacity = "0";
+    imgLogIn.style.zIndex = "10";
+    imgLogIn.style.transition = "opacity 2s";
+    imgLogIn.style.opacity = "1";
+});
+
+
+    </script>
+    <script src="logSigin.js"></script>t
+</body>
+</html>
