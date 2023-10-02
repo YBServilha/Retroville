@@ -82,36 +82,41 @@
 
 
     <script>
-var btn = document.getElementById('btn');
-var btn2 = document.getElementById('btn2');
-var transicao = document.querySelector('.transicao');
-var imgSigIn = document.getElementById('imgSigIn');
-var imgLogIn = document.getElementById('imgLogIn');
-
-btn.addEventListener('click', () => {
-    transicao.style.left = "50%";
-
-    // Defina a opacidade da imgSigIn como 1 (totalmente visível) e imgLogIn como 0 (totalmente transparente)
-    imgSigIn.style.transition = "opacity 2s";
-    imgSigIn.style.opacity = "1";
-    imgSigIn.style.zIndex = "10";
-    imgLogIn.style.transition = "opacity 2s";
-    imgLogIn.style.opacity = "0";
-});
-
-btn2.addEventListener('click', () => {
-    transicao.style.right = "-50%";
-
-    // Defina a opacidade da imgSigIn como 1 (totalmente visível) e imgLogIn como 0 (totalmente transparente)
-    imgSigIn.style.transition = "opacity 2s";
-    imgSigIn.style.opacity = "0";
-    imgLogIn.style.zIndex = "10";
-    imgLogIn.style.transition = "opacity 2s";
-    imgLogIn.style.opacity = "1";
-});
-
-
+        var btn = document.getElementById('btn');
+        var btnLogIn = document.getElementById('btn2'); // Use 'btn2' para selecionar o botão de LogIn
+        var transicao = document.querySelector('.transicao');
+        var imgSigIn = document.getElementById('imgSigIn');
+        var imgLogIn = document.getElementById('imgLogIn');
+        var formSigIn = document.getElementById('formSigIn');
+        var formLogIn = document.getElementById('formLogIn');
+        
+        btn.addEventListener('click', () => {
+            transicao.style.left = "50%";
+            transicao.style.right = "0"; // Adicione esta linha para redefinir 'right'
+        
+            // Defina a opacidade da imgSigIn como 1 (totalmente visível) e imgLogIn como 0 (totalmente transparente)
+            imgSigIn.style.transition = "opacity 2s";
+            imgSigIn.style.opacity = "1";
+            imgSigIn.style.zIndex = "10";
+            imgLogIn.style.transition = "opacity 2s";
+            imgLogIn.style.opacity = "0";
+            imgLogIn.style.zIndex = "0"; // Certifique-se de redefinir o zIndex
+        });
+        
+        btnLogIn.addEventListener('click', () => {
+            transicao.style.left = "0"; // Adicione esta linha para redefinir 'left'
+            transicao.style.right = "50%";
+        
+            // Defina a opacidade da imgSigIn como 0 e imgLogIn como 1 (totalmente visível)
+            imgSigIn.style.transition = "opacity 2s";
+            imgSigIn.style.opacity = "0";
+            imgSigIn.style.zIndex = "0"; // Certifique-se de redefinir o zIndex
+            imgLogIn.style.transition = "opacity 2s";
+            imgLogIn.style.opacity = "1";
+            imgLogIn.style.zIndex = "10";
+        });
     </script>
+    
     <script src="logSigin.js"></script>t
 </body>
 </html>
