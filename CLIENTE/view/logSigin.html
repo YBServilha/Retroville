@@ -57,7 +57,7 @@
                     <label for="senha">Senha: </label>
                     <input type="password" name="senha" id="senha">
                     <label for="cpf">CPF: </label>
-                    <input type="text" name="cpf" id="cpf">
+                    <input type="text" name="cpf" id="cpfInput" maxlength="14">
                     <input type="submit" value="Cadastrar" id="btnCadastrar">
                 </form>
             </div>
@@ -114,6 +114,33 @@
             imgLogIn.style.transition = "opacity 2s";
             imgLogIn.style.opacity = "1";
             imgLogIn.style.zIndex = "10";
+        });
+    </script>
+
+    <script>
+        // Função para formatar o CPF
+        function formatarCPF(cpf) {
+            cpf = cpf.replace(/\D/g, ''); // Remove caracteres não numéricos
+
+            if (cpf.length <= 3) {
+                return cpf;
+            } else if (cpf.length <= 6) {
+                return cpf.replace(/(\d{3})(\d{0,3})/, '$1.$2');
+            } else if (cpf.length <= 9) {
+                return cpf.replace(/(\d{3})(\d{3})(\d{0,3})/, '$1.$2.$3');
+            } else {
+                return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{0,2})/, '$1.$2.$3-$4');
+            }
+        }
+
+        // Captura o campo de entrada de CPF
+        const cpfInput = document.getElementById('cpfInput');
+
+        // Adiciona um ouvinte de evento de entrada para formatar o CPF conforme o usuário digita
+        cpfInput.addEventListener('input', function() {
+            const valorSemFormatacao = this.value.replace(/\D/g, '');
+            const cpfFormatado = formatarCPF(valorSemFormatacao);
+            this.value = cpfFormatado;
         });
     </script>
     
