@@ -17,7 +17,7 @@ body{
 
 /* HEADER */
 header{
-    background-color: rgba(22, 21, 21);
+    background-color: rgba(0, 0, 0, 0.71);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -169,6 +169,29 @@ header nav ul a:hover{
     background-color: orange;
 }
 
+/* Responsividade */
+@media(max-width: 750px){
+    nav, header .icons{
+        display: none;
+    }
+    .menuResponsivoIcon{
+        display: block;
+        z-index: 10;
+        color: white;
+    }
+}
+@media(min-width: 751px){
+    .menuResponsivo{
+        z-index: -10000;
+        display: none;
+    }
+    .menuResponsivo .principalResponsivo{
+        display: none;
+    }
+}
+/* FIM HEADER */
+
+
 /*TÍTULO*/
 h1{
     margin-top: 200px;
@@ -176,6 +199,82 @@ h1{
     font-family: 'Martian Mono';
     font-size: 50px;
     color: rgb(51, 51, 50)
+}
+
+.form-pesquisa{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.pesquisa{
+    width: 630px;
+    height: 50px;
+    outline: none;
+    /*border: solid 2px rgb(28, 27, 27);*/
+    border: none;
+    box-shadow: 0px 0px 10px -5px;
+    border-radius: 7px;
+    font-family: 'Martian Mono';
+    padding-left: 50px;
+    font-size: 15px;
+    color:rgb(22, 22, 21)
+}
+
+.fa-magnifying-glass{
+    position: absolute;
+    margin-top: 17px;
+    margin-right: 580px;
+}
+
+@media(max-width:800px){
+    h1{
+        font-size: 30px;
+    }
+
+    .pesquisa{
+        width: 480px;
+        height:40px;
+    }
+
+    .fa-magnifying-glass{
+        margin-right: 430px;
+        margin-top: 13px;
+    }
+}
+
+@media(max-width:550px){
+    h1{
+        font-size: 26px;
+    }
+
+    .pesquisa{
+        width: 380px;
+        height:40px;
+    }
+
+    .fa-magnifying-glass{
+        margin-right: 330px;
+        margin-top: 13px;
+    }
+}
+
+@media(max-width:412px){
+    h1{
+        font-size: 26px;
+        border: solid 2px red;
+    }
+
+    .pesquisa{
+        width: 280px;
+        height:40px;
+    }
+
+    .fa-magnifying-glass{
+        margin-right: 210px;
+        margin-top: 13px;
+    }
 }
 
 
@@ -187,7 +286,7 @@ h1{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .item-products{
@@ -208,16 +307,26 @@ h1{
     transform: scale(1.05);
 }
 
+@media(max-width:412px){
+    .item-products{
+        width: 300px;
+    }
+
+    .box-products{
+        border: solid 2px rgb(22, 14, 255);
+    }
+}
+
 
 /*RODAPÉ FOOTER*/
 footer{
     margin-top: 70px;
     width: 100%;
-    background-color: rgb(17, 17, 17);
+    background-color: rgba(0, 0, 0, 0.71);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: 180px;
 }
 
 #box-footer{
