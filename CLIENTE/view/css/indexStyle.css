@@ -258,9 +258,3 @@ main section.background1:nth-child(2){
 
 
 /* FOOTER */
-footer{
-    height: 500px;
-    width: 1000px;
-    background-color: red;
-    color: white;
-}

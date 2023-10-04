@@ -263,7 +263,7 @@ h1{
 @media(max-width:412px){
     h1{
         font-size: 26px;
-        border: solid 2px red;
+        /*border: solid 2px red;*/
     }
 
     .pesquisa{
@@ -313,7 +313,7 @@ h1{
     }
 
     .box-products{
-        border: solid 2px rgb(22, 14, 255);
+        /*border: solid 2px rgb(22, 14, 255);*/
     }
 }
 
@@ -327,6 +327,7 @@ footer{
     justify-content: center;
     align-items: center;
     height: 180px;
+    
 }
 
 #box-footer{
@@ -344,6 +345,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .box-item-footer p{
@@ -358,6 +360,7 @@ footer{
     font-size:28px;
     margin:0px 0px 0px 15px;
     transition: all 0.5s ease;
+    /*border: solid 2px green;*/
 }
 
 .link-redes{
@@ -371,4 +374,50 @@ footer{
 
 .p-redes-sociais{
     margin-right: 5px;
+}
+
+@media(max-width:412px){
+    .box-item-footer{
+        width: 100px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .fa-brands{
+        font-size:17px;
+    }
+
+    .box-item-footer{
+        font-size: 16px;
+       /*border: 2px solid green;*/
+        width:400px
+    }
+
+    .box-icons{
+        display: flex;
+        /*border: 2px solid green;*/
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .iii{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .box-item-footer p{
+        font-size: 16px;
+        margin: 5px;
+    }
+
+    .p-1{
+        display: none;
+    }
+
+    .logo{
+        width: 100px;
+    }
 }
