@@ -281,7 +281,30 @@ h1{
         margin-right: 430px;
         margin-top: 13px;
     }
+
+    .icon-car{
+        margin-right: 10px;
+    }
+
+    
+    .link-icon-car p{
+        margin-right: 10px;
+    }
+
 }
+
+@media(max-width:700px){
+    .icon-car{
+        width: 50px;
+        margin-right: 10px;
+    }
+
+    .link-icon-car p{
+        font-size: 11px;
+        margin-right: 10px;
+    }
+}
+
 
 @media(max-width:550px){
     h1{
@@ -313,6 +336,43 @@ h1{
     .fa-magnifying-glass{
         margin-right: 210px;
         margin-top: 13px;
+    }
+
+    .icon-car{
+        display: none;
+    }
+
+    .icones{
+        display: flex;
+        flex-wrap: wrap;
+        /*border: solid 2px red;*/
+        border-radius: 5px;
+        padding: 3px;
+        background-color:rgb(228, 228, 228);
+        box-shadow: 0px 2px 10px -4px;
+    }
+
+    .link-icon-car{
+        /*border: solid 2px blue;*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        background-color:rgb(37, 36, 36);
+        padding: 2px;
+        margin: 5px;
+    }
+
+    .link-icon-car p{
+        font-size: 11px;
+        width: 130px;
+        text-align: center;
+        color: rgb(216, 216, 11);
+    }
+
+    .box-icons-car{
+        /*border: solid 2px green;*/
+        width: 100%;
     }
 }
 
@@ -353,6 +413,7 @@ h1{
 
     .box-products{
         /*border: solid 2px rgb(22, 14, 255);*/
+        margin-top: 50px;
     }
 }
 
@@ -415,11 +476,25 @@ footer{
     margin-right: 5px;
 }
 
+@media(max-width: 850px){
+    .p-1{
+        display: none;
+    }
+
+    .fa-brands{
+        margin-top: 5px;
+    }
+}
+
 @media(max-width:412px){
     .box-item-footer{
         width: 100px;
         display: flex;
         flex-wrap: wrap;
+    }
+
+    footer{
+        border: solid 2px black;
     }
 
     .fa-brands{
@@ -428,8 +503,8 @@ footer{
 
     .box-item-footer{
         font-size: 16px;
-       /*border: 2px solid green;*/
-        width:400px
+        /*border: 2px solid green;*/
+        width:300px
     }
 
     .box-icons{
@@ -458,5 +533,9 @@ footer{
 
     .logo{
         width: 100px;
+    }
+
+    .box-products{
+        /*border: solid 2px red;*/
     }
 }
