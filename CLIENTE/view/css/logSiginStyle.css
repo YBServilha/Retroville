@@ -306,6 +306,12 @@ header nav ul a:hover{
     bottom: 50px;
     cursor: pointer;
     bottom: 20px;
+    transition: .7s;
+}
+#section .boxLogin .sigIn form #btnCadastrar:hover, 
+#section .boxLogin .logIn form #btnEntrar:hover{
+    background-color: rgba(255, 238, 0, 0.804);
+    color: black;
 }
 
 
