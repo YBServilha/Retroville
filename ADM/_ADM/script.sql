@@ -39,3 +39,11 @@ create table produtos(
     img8 varchar(80) not null,
     primary key(id)
 );  
+
+create table usuarios(
+    id int not null auto_increment,
+    nome varchar(100) not null,
+    senha varchar(100) not null,
+    cpf varchar(100) not null,
+    primary key(id)
+);
