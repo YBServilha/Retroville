@@ -118,7 +118,7 @@
             $_SESSION['NOME'] = $dados['nome'];
             $_SESSION['EMAIL'] = $dados['email'];
             $_SESSION['SENHA'] = $dados['senha'];
-            header('Location: ../../CLIENTE/view/logSigin.html');
+            header('Location: ../../index.php');
             
             
             // $_SESSION['user_data'][] = array('ID' => $dados['id'], 'EMAIL' => $dados['email'], 'SENHA' => $dados['senha']);
@@ -127,7 +127,7 @@
             session_destroy();
             //header('Location: ../index.php');
             ?>
-            <form action="../../CLIENTE/view/index.php" method="post" name="formMsg" id="formMsg">
+            <form action="../../CLIENTE/view/logSigin.html" method="post" name="formMsg" id="formMsg">
                 <input type="hidden" name="msg">
             </form>
             <script>
