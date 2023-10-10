@@ -341,8 +341,8 @@ header nav ul a:hover{
 
 #section .boxLogin .sigIn .btn, #section .boxLogin .logIn .btn{
     background-color: rgb(96, 93, 93);
-    font-size: 18px;
-    width: 150px;
+    font-size: 16px;
+    width: 180px;
     display: flex;
     justify-content: space-between;
     padding: 5px 15px;
