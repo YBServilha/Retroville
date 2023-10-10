@@ -20,8 +20,8 @@
             </ul>
         </nav>
         <div class="icons">
-            <a href="#"><ion-icon name="person-outline"></ion-icon></a>
-            <a href="#"><ion-icon name="car-sport-outline"></ion-icon></a>
+            <a href="CLIENTE/view/logSigin.html"><ion-icon name="person-outline"></ion-icon></a>
+            <a href="CLIENTE/view/carrinho.html"><ion-icon name="car-sport-outline"></ion-icon></a>
         </div>
         <div class="menuResponsivoIcon">
             <ion-icon name="menu-outline"></ion-icon>
@@ -61,7 +61,6 @@
         <p>asdfasdf</p>
         <p>asdfasdfasdfsdf</p>
     </footer>
-
 
 
 

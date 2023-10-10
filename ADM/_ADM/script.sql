@@ -42,6 +42,7 @@ create table produtos(
 
 create table usuarios(
     id int not null auto_increment,
+    email varchar(100) not null,
     nome varchar(100) not null,
     senha varchar(100) not null,
     cpf varchar(100) not null,

@@ -6,15 +6,12 @@
     $senha = $_POST['senha'];
     $cpf = $_POST['cpf'];
 
+    $user = new Usuarios($email, $nome, $senha, $cpf);
     $senhaHash = new Ferramentas($nome, $senha);
     $password = $senhaHash->hashSenha();
-    $user = new Usuarios($email, $nome, $password, $cpf);
-    $user->incluirUsuario();
-    
-    //$descrypto = $senhaHash->descriptografarSenha($password);
-    //echo $password . '<br>'; 
-    //echo $descrypto;
-   
+    $user->validarUsuario($email,$password);
+
+
 
 
 ?>
