@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@500&display=swap');
+
+
+html{
+    height: 100vh;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    background-image: url("../img/imgUsuario/kombi.jpg");
+}
+
+
+
+
+/*TÍTULO - IMAGEM DE FUNDO*/
+h1{
+    margin-top: 200px;
+    text-align: center;
+    font-family: 'Martian Mono';
+    font-size: 50px;
+    color: rgb(255, 255, 255)
+}
+
+.box-info{
+   height: 100%;
+    width: 48%;
+    /*border: solid 2px red;*/
+    display: flex;
+    justify-content: center;
+    z-index:1;
+    background-color:rgba(0, 0, 0, 0.762)
+}
+
+.box-fundo{
+   /* border: solid 2px green;*/
+    height: 100%;
+    width:100%;
+    /*background-image: url("../img/imgUsuario/kombi.jpg");*/
+    background-size: cover;
+    overflow: hidden;
+}
+
+.box-all{
+    /*border: solid 2px blue;*/
+    height: 100vh;
+    display: flex;
+}
+
+
+
+
+
+/*RODAPÉ FOOTER*/
+footer{
+    margin-top: 70px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.71);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    
+}
+
+#box-footer{
+    color: white;
+    font-family: 'Inclusive Sans';
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.box-item-footer{
+    width: 300px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.box-item-footer p{
+    font-size: 23px;
+}
+
+.logo{
+    width: 150px;
+}
+
+.fa-brands{
+    font-size:28px;
+    margin:0px 0px 0px 15px;
+    transition: all 0.5s ease;
+    /*border: solid 2px green;*/
+}
+
+.link-redes{
+    color: white;
+    text-decoration: none;
+}
+
+.fa-brands:hover{
+   color: rgb(204, 204, 28);
+}
+
+.p-redes-sociais{
+    margin-right: 5px;
+}
+
+@media(max-width: 850px){
+    .p-1{
+        display: none;
+    }
+
+    .fa-brands{
+        margin-top: 5px;
+    }
+}
+
+@media(max-width:412px){
+    .box-item-footer{
+        width: 100px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    footer{
+        border: solid 2px black;
+    }
+
+    .fa-brands{
+        font-size:17px;
+    }
+
+    .box-item-footer{
+        font-size: 16px;
+        /*border: 2px solid green;*/
+        width:300px
+    }
+
+    .box-icons{
+        display: flex;
+        /*border: 2px solid green;*/
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .iii{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .box-item-footer p{
+        font-size: 16px;
+        margin: 5px;
+    }
+
+    .p-1{
+        display: none;
+    }
+
+    .logo{
+        width: 100px;
+    }
+
+    .box-products{
+        /*border: solid 2px red;*/
+    }
+}
