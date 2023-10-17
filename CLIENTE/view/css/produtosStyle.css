@@ -430,7 +430,30 @@ h1{
     transform: scale(1.03);
 }
 
-@media(max-width:412px){
+@media(max-width:480px){
+    .item-products{
+        width: 300px;
+        height: 250px;
+        overflow:visible;
+        margin-bottom: -30px;
+    }
+
+    .box-products{
+        /*border: solid 2px rgb(22, 14, 255);*/
+        margin-top: 50px;
+    }
+
+    .box-div-img{
+        height: 250px;
+        overflow:visible;  
+    }
+
+    .item-products p{
+        margin-top: -90px;
+    }
+}
+
+@media(max-width:290px){
     .item-products{
         width: 300px;
         height: 250px;
@@ -449,7 +472,7 @@ h1{
     }
 
     .item-products p{
-        margin-top: -120px;
+        margin-top: -124px;
     }
 }
 
