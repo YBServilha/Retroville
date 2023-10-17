@@ -1,3 +1,21 @@
+<?php
+
+include_once '../../ADM/model/Conexao.php';
+
+if (isset($_GET['cod'])) {
+    $codProduto = $_GET['cod'];
+    
+    // Consultar os detalhes do produto com base no código
+    $conn = new Conexao();
+    $sql = "SELECT * FROM produtos WHERE cod = '$codProduto'";
+    $resultados = $conn->consultarDados($sql);
+  
+
+  }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,19 +60,26 @@
     </header>
 
     <main id="sectionProduto">
-        <section id="sectionPrincipal">
+    <?php
+      foreach($resultados as $resultado){
+        $pasta = $resultado['modelo'].'_'.$resultado['cod'].'/';
+
+      ?>
+        <section id="sectionPrincipal" style="background-image: url(../../ADM/view/img/imgProdutos/<?php echo $pasta;?><?php echo $resultado['imgCapa']?>)">
 
         </section>
-        <section id="sectionHistoria">
+
+        <section id="sectionHistoria" style="background-image: url(../../ADM/view/img/imgProdutos/<?php echo $pasta;?><?php echo $resultado['imgHistoria']?>)">
             <div class="tituloHistoria">
                 <h1>UMA HISTÓRIA CLÁSSICA</h1>
             </div>
             <div class="textoHistoria">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi omnis, doloribus rerum voluptatibus perferendis praesentium ea laborum fugiat libero deserunt. Sapiente impedit earum porro provident repellendus inventore officia reprehenderit! Ullam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate saepe numquam, et neque distinctio voluptas recusandae quasi quae odio commodi porro molestias repellat. Eveniet, et neque dolores soluta dignissimos quam.</p>
+                <p><?php echo $resultado['textoCarro']?></p>
             </div>
+
         </section>
         <section class="modelo">
-            <h2><span id="ano">2023</span> - Porsche 718 Spyder</h2>
+            <h2><span id="ano"><?php echo $resultado['ano']?></span> - <?php echo $resultado['marca'].' '.$resultado['modelo']?></h2>
         </section>
         <section class="especificacoes">
             <div class="categoria">
@@ -62,7 +87,7 @@
                     <p>Marca</p>
                 </div>
                 <div class="resultado">
-                    <p>Porsche</p>
+                    <p><?php echo $resultado['marca']?></p>
                 </div>
             </div>
             <div class="categoria">
@@ -70,7 +95,7 @@
                     <p>Modelo</p>
                 </div>
                 <div class="resultado">
-                    <p>Porsche</p>
+                    <p><?php echo $resultado['modelo']?></p>
                 </div>
             </div>
             <div class="categoria">
@@ -78,7 +103,7 @@
                     <p>Ano</p>
                 </div>
                 <div class="resultado">
-                    <p>Porsche</p>
+                    <p><?php echo $resultado['ano']?></p>
                 </div>
             </div>
             <div class="categoria">
@@ -86,7 +111,7 @@
                     <p>Motor</p>
                 </div>
                 <div class="resultado">
-                    <p>Porsche</p>
+                    <p><?php echo $resultado['motor']?></p>
                 </div>
             </div>
             <div class="categoria">
@@ -94,7 +119,7 @@
                     <p>Carroceria</p>
                 </div>
                 <div class="resultado">
-                    <p>Porsche</p>
+                    <p><?php echo $resultado['carroceria']?></p>
                 </div>
             </div>
             <div class="categoria">
@@ -102,7 +127,7 @@
                     <p>KM</p>
                 </div>
                 <div class="resultado">
-                    <p>Porsche</p>
+                    <p><?php echo $resultado['km']?></p>
                 </div>
             </div>
             <div class="categoria">
@@ -110,7 +135,7 @@
                     <p>Cor</p>
                 </div>
                 <div class="resultado">
-                    <p>Porsche</p>
+                    <p><?php echo $resultado['cor']?></p>
                 </div>
             </div>
             <div class="categoria">
@@ -118,7 +143,7 @@
                     <p>Câmbio</p>
                 </div>
                 <div class="resultado">
-                    <p>Porsche</p>
+                    <p><?php echo $resultado['cambio']?></p>
                 </div>
             </div>
             <div class="categoria">
@@ -126,7 +151,7 @@
                     <p>Final da placa</p>
                 </div>
                 <div class="resultado">
-                    <p>Porsche</p>
+                    <p><?php echo $resultado['finalPlaca']?></p>
                 </div>
             </div>
             <div class="categoria">
@@ -134,38 +159,40 @@
                     <p>Valor</p>
                 </div>
                 <div class="resultado">
-                    <p>Porsche</p>
+                    <p><?php echo $resultado['preco']?></p>
                 </div>
             </div>
         </section>
         <section class="mosaicoFotos">
             <div class="foto" id="foto1">
-                <img src="img/imgProduto/corvetter c3 inicio 1.png" alt="foto1">
+                <img src="../../ADM/view/img/imgProdutos/<?php echo $pasta;?><?php echo $resultado['img1']?>" alt="foto1">
             </div>
             <div class="foto" id="foto2">
-                <img src="img/imgProduto/img1.jpg" alt="foto2">
+                <img src="../../ADM/view/img/imgProdutos/<?php echo $pasta;?><?php echo $resultado['img2']?>" alt="foto2">
             </div>
             <div class="foto" id="foto3">
-                <img src="img/imgProduto/corvetter c3 inicio 1.png" alt="foto3">
+                <img src="../../ADM/view/img/imgProdutos/<?php echo $pasta;?><?php echo $resultado['img3']?>" alt="foto3">
             </div>
             <div class="foto" id="foto4">
-                <img src="img/imgProduto/img1.jpg" alt="foto4">
+                <img src="../../ADM/view/img/imgProdutos/<?php echo $pasta;?><?php echo $resultado['img4']?>" alt="foto4">
             </div>
             <div class="foto" id="foto5">
-                <img src="img/imgProduto/corvetter c3 inicio 1.png" alt="foto5">
+                <img src="../../ADM/view/img/imgProdutos/<?php echo $pasta;?><?php echo $resultado['img5']?>" alt="foto5">
             </div>
             <div class="foto" id="foto6">
-                <img src="img/imgProduto/img1.jpg" alt="foto6">
+                <img src="../../ADM/view/img/imgProdutos/<?php echo $pasta;?><?php echo $resultado['img6']?>" alt="foto6">
             </div>
             <div class="foto" id="foto7">
-                <img src="img/imgProduto/corvetter c3 inicio 1.png" alt="foto7">
+                <img src="../../ADM/view/img/imgProdutos/<?php echo $pasta;?><?php echo $resultado['img7']?>" alt="foto7">
             </div>
             <div class="foto" id="foto8">
-                <img src="img/imgProduto/img1.jpg" alt="foto8">
+                <img src="../../ADM/view/img/imgProdutos/<?php echo $pasta;?><?php echo $resultado['img8']?>" alt="foto8">
             </div>
         </section>
     </main>
-
+    <?php
+      }
+    ?>
 
 
 

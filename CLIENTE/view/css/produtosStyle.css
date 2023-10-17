@@ -399,7 +399,23 @@ h1{
     min-height: 250px;
     margin: 20px;
     overflow: hidden;
+    position: relative;
 }
+
+span#carroceria {
+    width: 280px;
+    height: auto;
+    background-color: #CFB53B;
+    position: absolute;
+    left: -100px;
+    top: 25px;
+    transform: rotate(-45deg);
+    text-align: center;
+    z-index: 100000;
+    color: white;
+    font-size: 17px;
+}
+
 
 .item-products a{
     text-decoration: none;
