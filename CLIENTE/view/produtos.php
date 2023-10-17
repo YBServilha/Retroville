@@ -1,3 +1,14 @@
+<?php
+include_once '../../ADM/model/Conexao.php';
+
+$conn = new Conexao();
+
+$sql = "SELECT * FROM produtos";
+$resultados = $conn->consultarDados($sql);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,7 +90,12 @@
 
     <!--BOX DE PRODUTOS-->
     <div class="box-products">
-        <div class="item-products"><a href=""><div class="box-div-img"><img src="img/imgProdutos/1.png" alt="" class="item-products-img"></div><p>ferrari f40</p></a></div>
+    <?php
+        foreach($resultados as $resultado){
+            $pasta = $resultado['modelo'].'_'.$resultado['cod'].'/';
+            
+    ?>
+        <div class="item-products"><a href=""><div class="box-div-img"><img src="../../ADM/view/img/imgProdutos/<?php echo $pasta;?><?php echo $resultado['imgCard']?>" alt="" class="item-products-img"></div><p><?php echo $resultado['marca']?> <?php echo $resultado['modelo']?></p></a></div>
         <div class="item-products"><a href=""><div class="box-div-img"><img src="img/imgProdutos/2.png" alt="" class="item-products-img"></div><p>comprar</p></a></div>
         <div class="item-products"><a href=""><div class="box-div-img"><img src="img/imgProdutos/3.png" alt="" class="item-products-img"></div><p>comprar</p></a></div>
         <div class="item-products"><a href=""><div class="box-div-img"><img src="img/imgProdutos/4.png" alt="" class="item-products-img"></div><p>comprar</p></a></div>
@@ -91,6 +107,9 @@
         <div class="item-products"><a href=""><div class="box-div-img"><img src="img/imgProdutos/10.png" alt="" class="item-products-img"></div><p>comprar</p></a></div>
         <div class="item-products"><a href=""><div class="box-div-img"><img src="img/imgProdutos/11.png" alt="" class="item-products-img"></div><p>comprar</p></a></div>
         <div class="item-products"><a href=""><div class="box-div-img"><img src="img/imgProdutos/12.png" alt="" class="item-products-img"></div><p>comprar</p></a></div>
+        <?php
+        }
+        ?>
     </div>
 
 
