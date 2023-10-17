@@ -190,12 +190,12 @@ header nav ul a:hover{
 main#sectionProduto{
     width: 100%;
     height: auto;
-    background-color: rgba(255, 238, 0, 0.804);
+    background-color: white;
 }
-main#sectionProduto section#sectionPrincipal{
+main#sectionProduto section#sectionPrincipal {
     width: 100%;
     height: 100vh;
-    background-image: url(../img/imgProduto/corvetter\ c3\ inicio\ 1.png);
+    /*background-image: url(../img/imgProduto/corvetter\ c3\ inicio\ 1.png);*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -260,7 +260,7 @@ main#sectionProduto section.modelo{
     width: 100%;
     height: auto;
     padding: 20px 0;
-    background-color: orange;
+    background-color: transparent;
     text-align: center;
     font-size: 42px;
 }
@@ -274,7 +274,6 @@ main#sectionProduto section.especificacoes{
     width: 80%;
     min-height: 180px;
     height: auto;
-    background-color: red;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -288,23 +287,29 @@ main#sectionProduto section.especificacoes{
 main#sectionProduto section.especificacoes .categoria{
     width: 90px;
     height: 120px;
-    background-color: #CFB53B;
 }
 main#sectionProduto section.especificacoes .categoria .titulo{
     width: 100%;
     height: 50%;
-    background-color: green;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 20px;
+    position: relative;
+}
+main#sectionProduto section.especificacoes .categoria .titulo::after{
+    content: '';
+    width: 90%;
+    height: 2px;
+    background-color: #CFB53B;
+    position: absolute;
+    bottom: 0;
 }
 
 main#sectionProduto section.especificacoes .categoria .resultado{
     width: 100%;
     height: 50%;
-    background-color: pink;
     text-align: center;
     display: flex;
     align-items: center;

@@ -95,7 +95,7 @@ $resultados = $conn->consultarDados($sql);
             $pasta = $resultado['modelo'].'_'.$resultado['cod'].'/';
             
     ?>  
-        <div class="item-products"><a href=""><div class="box-div-img"><span id="carroceria"><?php echo $resultado['carroceria']?></span><img src="../../ADM/view/img/imgProdutos/<?php echo $pasta;?><?php echo $resultado['imgCard']?>" alt="" class="item-products-img"></div><p><?php echo $resultado['marca']?> <?php echo $resultado['modelo']?></p></a></div>
+        <div class="item-products"><a href="produto.php?cod=<?php echo $resultado['cod']; ?>"><div class="box-div-img"><span id="carroceria"><?php echo $resultado['carroceria']?></span><img src="../../ADM/view/img/imgProdutos/<?php echo $pasta;?><?php echo $resultado['imgCard']?>" alt="" class="item-products-img"></div><p><?php echo $resultado['marca']?> <?php echo $resultado['modelo']?></p></a></div>
         <?php
         }
         ?>
