@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="css/dadosUsuariosStyle.css" rel="stylesheet">
+    <title>Produtos</title>
+</head>
+<body>
+
+
+    <!--TÍTULO DE USUÁRIOS E IMG DE FUNDO-->
+    <div class="box-all">
+        <div class="box-fundo">
+            
+        </div>
+        <div class="box-info">
+            <h1>Sua Conta</h1>
+        </div>
+    </div>
+
+    
+
+    <!--RODAPÉ FOOTER-->
+    <footer>
+        <div id="box-footer">
+            <div class="box-item-footer">
+                <img src="img/imgHome/logo.png" alt="Logo" class="logo">
+            </div>
+
+            <div class="box-item-footer p-1">
+                <p class="p-1">Direitos Autorais - ©</p>
+            </div>
+
+            <div class="box-item-footer">
+                <div class="box-icons">
+                    <p class="p-redes-sociais">Redes Sociais:</p>
+                    <div class="iii">
+                        <a href="" class="link-redes">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="" class="link-redes">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="" class="link-redes">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--JAVASCRIPT DO MENU-->
+    <script>
+        let btn = document.querySelector('.menuResponsivoIcon');
+        let menuMobile = document.querySelector('.menuResponsivo');
+        var width = document.documentElement.clientWidth;
+
+        btn.addEventListener('click', () => {
+            menuMobile.classList.toggle('display');
+        });
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
