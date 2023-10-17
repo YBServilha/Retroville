@@ -398,8 +398,7 @@ h1{
     width: 500px;
     min-height: 250px;
     margin: 20px;
-    overflow: hidden;  
-
+    overflow: hidden;
 }
 
 .item-products a{
@@ -434,11 +433,23 @@ h1{
 @media(max-width:412px){
     .item-products{
         width: 300px;
+        height: 250px;
+        overflow:visible;
+        margin-bottom: -70px;
     }
 
     .box-products{
         /*border: solid 2px rgb(22, 14, 255);*/
         margin-top: 50px;
+    }
+
+    .box-div-img{
+        height: 250px;
+        overflow:visible;  
+    }
+
+    .item-products p{
+        margin-top: -120px;
     }
 }
 
