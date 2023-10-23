@@ -9,8 +9,13 @@ if (isset($_GET['cod'])) {
     $conn = new Conexao();
     $sql = "SELECT * FROM produtos WHERE cod = '$codProduto'";
     $resultados = $conn->consultarDados($sql);
-  
-
+  }else{
+    ?>
+    <script>
+        alert("Produto não selecionado para acessar esta página! Você será redirecionado ao nosso catálogo de veículos!");
+        location.href = "produtos.php";
+    </script>
+    <?php
   }
 
 ?>
