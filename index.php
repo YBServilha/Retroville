@@ -24,7 +24,7 @@
             <a href="CLIENTE/view/carrinho.html"><ion-icon name="car-sport-outline"></ion-icon></a>
         </div>
         <div class="menuResponsivoIcon">
-            <ion-icon name="menu-outline"></ion-icon>
+            <ion-icon name="menu-outline" id="iconResponsivo"></ion-icon>
         </div>
         <div class="menuResponsivo display">
             <div class="principalResponsivo">
@@ -69,10 +69,13 @@
         let btn = document.querySelector('.menuResponsivoIcon');
         let menuMobile = document.querySelector('.menuResponsivo');
         var width = document.documentElement.clientWidth;
+        var iconResponsivo = document.getElementById('iconResponsivo');
 
         btn.addEventListener('click', () => {
             menuMobile.classList.toggle('display');
+            iconResponsivo.classList.toggle('white');
         });
+
 
     </script>
 

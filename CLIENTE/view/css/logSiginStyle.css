@@ -89,6 +89,7 @@ header nav ul a:hover{
     font-size: 35px;
     display: none;
     margin-right: 20px;
+    color: white;
 }
 .menuResponsivo{
     position: absolute;
@@ -105,10 +106,9 @@ header nav ul a:hover{
     max-width: 900px;
     width: 100%;
     height: 100vh;
-    background-color: rgb(192, 192, 192);
+    background-color: rgb(49, 48, 48);
 }
 .menuResponsivo .principalResponsivo .headerResponsivo{
-    border: 5px solid red;
     width: 100%;
     height: 120px;
     display: flex;
@@ -121,14 +121,13 @@ header nav ul a:hover{
     object-fit: contain;
 }
 .menuResponsivo .principalResponsivo .itensResponsivo{
-    border: 5px solid green;;
     width: 100%;
     height: 80%;
     display: flex;
     justify-content: flex-start;
 }
 .menuResponsivo .principalResponsivo .itensResponsivo ul{
-    background-color: gray;
+    background-color: rgb(49, 48, 48);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -139,8 +138,7 @@ header nav ul a:hover{
 }
 .menuResponsivo .principalResponsivo .itensResponsivo ul a{
     text-decoration: none;
-    color: black;
-    background-color: yellow;
+    color: white;
     width: 100%;
     height: 100px;
     display: flex;
@@ -148,7 +146,7 @@ header nav ul a:hover{
     justify-content: center;
     font-size: 32px;
     transition: .5s;
-    border-bottom: 2px solid black;
+    border-bottom: 3px solid #d5b93e;
 }
 .menuResponsivo .principalResponsivo .itensResponsivo ul a:nth-child(1){
     margin-top: 50px;
