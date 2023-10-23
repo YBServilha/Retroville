@@ -23,18 +23,20 @@
             <a href="carrinho.html"><ion-icon name="car-sport-outline"></ion-icon></a>
         </div>
         <div class="menuResponsivoIcon">
-            <ion-icon name="menu-outline"></ion-icon>
+            <ion-icon name="menu-outline" id="iconResponsivo"></ion-icon>
         </div>
         <div class="menuResponsivo display">
             <div class="principalResponsivo">
                 <div class="headerResponsivo">
-                    <img src="CLIENTE/view/img/imgHome/logo.png" alt="Logo">
+                    <img src="img/imgHome/logo.png" alt="Logo">
                 </div>
                 <div class="itensResponsivo">
                     <ul>
                         <a href="#"><li>Veículos</li></a>
                         <a href="#"><li>Sobre</li></a>
                         <a href="#"><li>Contato</li></a>
+                        <a href="logSigin.html"><ion-icon name="person-outline"></ion-icon></a>
+                        <a href="carrinho.html"><ion-icon name="car-sport-outline"></ion-icon></a>
                     </ul>
                 </div>
             </div>
@@ -127,12 +129,14 @@
 
 
     <script>
-        let btnResponsivo = document.querySelector('.menuResponsivoIcon');
+        let btn = document.querySelector('.menuResponsivoIcon');
         let menuMobile = document.querySelector('.menuResponsivo');
         var width = document.documentElement.clientWidth;
+        var iconResponsivo = document.getElementById('iconResponsivo');
 
-        btnResponsivo.addEventListener('click', () => {
+        btn.addEventListener('click', () => {
             menuMobile.classList.toggle('display');
+            iconResponsivo.classList.toggle('white');
         });
         
 
