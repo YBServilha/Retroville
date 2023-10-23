@@ -36,6 +36,8 @@
                         <a href="#"><li>Veículos</li></a>
                         <a href="#"><li>Sobre</li></a>
                         <a href="#"><li>Contato</li></a>
+                        <a href="CLIENTE/view/logSigin.html"><ion-icon name="person-outline"></ion-icon></a>
+                        <a href="CLIENTE/view/carrinho.html"><ion-icon name="car-sport-outline"></ion-icon></a>
                     </ul>
                 </div>
             </div>
