@@ -8,7 +8,7 @@ body{
     color: #171a20;
     font-family: 'M PLUS 1p', sans-serif;
     position: relative;
-    background-color: rgb(59, 59, 59);
+    background-color: black;
 }
 /* HEADER */
 header{
@@ -231,7 +231,6 @@ section.carrinho .resumo-pedido{
 section.carrinho .informacoes-produto .produto{
     width: 90%;
     height: 220px;
-    border: 2px solid silver;
     display: flex;
     color: white;
     justify-content: space-between;
@@ -239,6 +238,15 @@ section.carrinho .informacoes-produto .produto{
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 10px;
+    position: relative;
+}
+section.carrinho .informacoes-produto .produto::after{
+    content: '';
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    bottom: 1px;
 }
 section.carrinho .informacoes-produto .produto .desc-produto{
     margin: 0 20px;
