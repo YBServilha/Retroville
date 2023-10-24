@@ -19,7 +19,16 @@ class Usuarios{
         $conexao = new Conexao();
         $sql = "INSERT INTO usuarios(email, nome, senha, cpf) VALUES('$this->email','$this->nome','$this->senha','$this->cpf');";
         $conexao->executar($sql);
-        header('Location: ../view/logSigin.html');
+        ?>
+        <form action="../view/logSigin.php" method="post" id="formCadastro">
+        <input type="hidden" name="cadastro" id="cadastro" id="myForm">
+        </form>
+        <script>
+            var formCadastro = document.getElementById('formCadastro');
+            formCadastro.submit();
+        </script>
+        <?php
+        //header('Location: ../view/logSigin.html');
     }
 
     public function validarUsuario($email, $senha) {

@@ -127,8 +127,9 @@
             session_destroy();
             //header('Location: ../index.php');
             ?>
-            <form action="../../CLIENTE/view/logSigin.html" method="post" name="formMsg" id="formMsg">
+            <form action="../../CLIENTE/view/logSigin.php" method="post" name="formMsg" id="formMsg">
                 <input type="hidden" name="msg">
+                <input type="hidden" name="cadastro">
             </form>
             <script>
                 var form = document.getElementById('formMsg');

@@ -55,13 +55,13 @@
                 </div>
                 <form action="../controller/siginController.php" method="post">
                     <label for="nome">Nome: </label>
-                    <input type="text" name="nome" id="nome">
+                    <input type="text" name="nome" id="nome" required>
                     <label for="email">E-mail: </label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" required>
                     <label for="senha">Senha: </label>
-                    <input type="password" name="senha" id="senha">
+                    <input type="password" name="senha" id="senha" required>
                     <label for="cpf">CPF: </label>
-                    <input type="text" name="cpf" id="cpfInput" maxlength="14">
+                    <input type="text" name="cpf" id="cpfInput" maxlength="14" required>
                     <input type="submit" value="Cadastrar" id="btnCadastrar">
                 </form>
             </div>
@@ -96,29 +96,46 @@
         
         btn.addEventListener('click', () => {
             transicao.style.left = "50%";
-            transicao.style.right = "0"; // Adicione esta linha para redefinir 'right'
+            transicao.style.right = "0"; 
         
-            // Defina a opacidade da imgSigIn como 1 (totalmente visível) e imgLogIn como 0 (totalmente transparente)
+            
             imgSigIn.style.transition = "opacity 2s";
             imgSigIn.style.opacity = "1";
             imgSigIn.style.zIndex = "1";
             imgLogIn.style.transition = "opacity 2s";
             imgLogIn.style.opacity = "0";
-            imgLogIn.style.zIndex = "0"; // Certifique-se de redefinir o zIndex
+            imgLogIn.style.zIndex = "0"; 
         });
         
         btnLogIn.addEventListener('click', () => {
-            transicao.style.left = "0"; // Adicione esta linha para redefinir 'left'
+            transicao.style.left = "0"; 
             transicao.style.right = "50%";
         
-            // Defina a opacidade da imgSigIn como 0 e imgLogIn como 1 (totalmente visível)
             imgSigIn.style.transition = "opacity 2s";
             imgSigIn.style.opacity = "0";
-            imgSigIn.style.zIndex = "0"; // Certifique-se de redefinir o zIndex
+            imgSigIn.style.zIndex = "0";
             imgLogIn.style.transition = "opacity 2s";
             imgLogIn.style.opacity = "1";
             imgLogIn.style.zIndex = "10";
         });
+
+        <?php
+        if(isset($_POST['cadastro'])){
+        ?>
+        console.log('Foi um post');
+            transicao.style.left = "50%";
+            transicao.style.right = "0"; 
+        
+            
+            imgSigIn.style.transition = "opacity 2s";
+            imgSigIn.style.opacity = "1";
+            imgSigIn.style.zIndex = "1";
+            imgLogIn.style.transition = "opacity 2s";
+            imgLogIn.style.opacity = "0";
+            imgLogIn.style.zIndex = "0"; 
+        <?php
+        }
+        ?>
     </script>
 
     <script>
@@ -159,6 +176,7 @@
         
 
     </script>
+
     
     
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
