@@ -66,6 +66,7 @@ header nav ul a{
     justify-content: center;
     border-radius: 5px;
     transition: .4s;
+    text-decoration: none;
 }
 header nav ul a:nth-child(1), header nav ul a:nth-child(2), header nav ul a:nth-child(3){
     width: 33%;
@@ -321,7 +322,6 @@ section.carrinho .resumo-pedido .total #total{
     section.carrinho .resumo-pedido{
         width: 95%;
         height: 40%;
-        border: 2px solid silver;
         color: white;
         display: flex;
         flex-direction: column;
@@ -336,7 +336,6 @@ section.carrinho .resumo-pedido .total #total{
     section.carrinho .informacoes-produto .produto{
         width: 100%;
         height: auto;
-        border: 2px solid silver ;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
