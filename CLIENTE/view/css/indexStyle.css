@@ -11,7 +11,7 @@ body{
 
 /* HEADER */
 header{
-    background-color: rgba(255, 255, 255, 0.363);
+    /*background-color: rgba(255, 255, 255, 0.363);*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,7 +72,9 @@ header nav ul a:nth-child(1), header nav ul a:nth-child(2), header nav ul a:nth-
 header nav ul a li{
     list-style-type: none;
     padding: 10px 12px;
-    font-size: 20px;    
+    font-size: 20px;
+    color: black;
+    mix-blend-mode: difference;
 }
 header nav ul a:hover{
     background-color: rgba(0, 0, 0, 0.158);
