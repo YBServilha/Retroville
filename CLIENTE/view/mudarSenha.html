@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="css/dadosUsuariosStyle.css" rel="stylesheet">
+    <link href="css/mudarSenha.css" rel="stylesheet">
     <title>Produtos</title>
 </head>
 <body>
@@ -50,16 +50,19 @@
     <!--TÍTULO DE USUÁRIOS E IMG DE FUNDO-->
     <div class="box-all">
         <div class="box-info">
-            <h1>Sua Conta</h1>
-            <div class="box-p">
+            <h1>Mudar senha:</h1>
+            <!--<div class="box-p">
                 <p>Nome: Danilo dos Santos Almeida</p>
                 <p>Email: dan@gmail.com</p>
                 <p>CPF: 094.095.04-70</p>
-                <!--<p>Senha: Mdjhs</p>-->
-            </div>
+                <p>Senha: Mdjhs</p>
+            </div>-->
             <div class="forms">
-                <form action="mudarSenha.html" method="POST"><input type="submit" name="editar" value="Mudar senha" class="btn edit"></form>
-                <form action=""><input type="submit" name="excluir" value="Excluir" class="btn delete"></form>
+                <form action="../controller/confirmarSenha.php" method="POST">
+                    <input type="text" name="senha" placeholder="Senha atual...">
+                    <input type="text" name="nova_senha" placeholder="Nova senha...">
+                    <input type="submit" name="editar" value="Atualizar" class="btn edit">
+                </form>
             </div>
         </div>
     </div>
