@@ -217,7 +217,7 @@ h1{
 .box-info p{
     font-family: 'Martian Mono';
     color: rgb(255, 255, 255);
-    margin: 20px 0px 0px 0px;
+    margin: 20px 10px 0px 10px;
     font-size: 25px;
 }
 
@@ -265,7 +265,98 @@ h1{
     background-color: rgb(35, 63, 218);
 }
 
+@media(max-width: 1180px){
+    .box-info{
+        min-width: 60%;
+        height: 55%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /*justify-content: center;*/
+    }
 
+    h1{
+        font-size: 32px;
+    }
+
+    .box-info p{
+        font-size: 18px;
+        margin: 20px 10px 0px 10px;
+    }
+
+    .box-p{
+        display: flex;
+        flex-direction: column;
+        margin:70px 20px 0px 20px;
+        /*border: solid 1px blue;*/
+        padding-left: 15px;
+    }
+
+    .btn{
+        min-width: 130px;
+        margin-bottom: 10px;
+    }
+}
+
+
+@media(max-width: 420px){
+    body{
+        background-image: url("../img/imgUsuario/imgCell2.webp");
+        background-size: cover;
+    }
+
+    .box-info{
+        min-width: 300px;
+        min-height: 43%;
+    }
+
+    h1{
+        font-size: 32px;
+    }
+
+    .box-info p{
+        font-size: 18px;
+        margin: 20px 10px 0px 10px;
+    }
+
+    .box-p{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn{
+        min-width: 130px;
+    }
+}
+
+@media(max-width: 280px){
+    .box-info{
+        margin-top: 50px;
+        min-width: 250px;
+        height: 60%;
+    }
+
+    h1{
+        font-size: 27px;
+        margin-bottom: -60px;
+    }
+
+    .box-info p{
+        font-size: 15px;
+        margin: 20px 10px 0px 10px;
+    }
+
+    .box-p{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn{
+        min-width: 80px;
+        padding: 5px;
+        border-radius: 1px;
+    }
+}
 
 
 
@@ -348,7 +439,7 @@ footer{
     }
 
     footer{
-        border: solid 2px black;
+        /*border: solid 2px black;*/
     }
 
     .fa-brands{
