@@ -141,7 +141,7 @@ header nav ul a:hover{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 10px;
     padding: 0 20px;
 }
 .menuResponsivo .principalResponsivo .itensResponsivo ul a{
@@ -157,7 +157,7 @@ header nav ul a:hover{
     border-bottom: 3px solid #d5b93e;
 }
 .menuResponsivo .principalResponsivo .itensResponsivo ul a:nth-child(1){
-    margin-top: 50px;
+    margin-top: 5px;
 }
 .menuResponsivo .principalResponsivo .itensResponsivo ul a li{
     list-style: none;
@@ -447,7 +447,7 @@ span#carroceria {
     .item-products{
         width: 300px;
         height: 250px;
-        overflow:visible;
+        overflow:hidden;
         margin-bottom: -30px;
     }
 

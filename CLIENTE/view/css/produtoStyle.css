@@ -134,7 +134,7 @@ header nav ul a:hover{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 10px;
     padding: 0 20px;
 }
 .menuResponsivo .principalResponsivo .itensResponsivo ul a{
@@ -150,7 +150,7 @@ header nav ul a:hover{
     border-bottom: 3px solid #d5b93e;
 }
 .menuResponsivo .principalResponsivo .itensResponsivo ul a:nth-child(1){
-    margin-top: 50px;
+    margin-top: 5px;
 }
 .menuResponsivo .principalResponsivo .itensResponsivo ul a li{
     list-style: none;
@@ -199,8 +199,46 @@ main#sectionProduto section#sectionPrincipal {
     background-repeat: no-repeat;
     background-position: center;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
+main#sectionProduto section#sectionPrincipal h2{
+    font-size: 80px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.56);
+    padding: 20px 50px;
+    border-radius: 5px;
+}
+
+main#sectionProduto section#sectionPrincipal a{
+    font-size: 50px;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.56);
+    padding: 20px 50px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 40px;
+    border: 2px solid #CFB53B;
+    transition: .7s;
+}
+
+main#sectionProduto section#sectionPrincipal a:hover{
+    background-color: #CFB53B;
+
+}
+@media(max-width: 700px){
+    main#sectionProduto section#sectionPrincipal h2{
+        font-size: 40px;
+    }
+    main#sectionProduto section#sectionPrincipal a{
+        font-size: 40px;
+    }
+}
 main#sectionProduto section#sectionHistoria{
     width: 100%;
     height: 95vh;
