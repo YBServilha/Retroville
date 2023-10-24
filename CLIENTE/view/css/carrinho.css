@@ -66,6 +66,7 @@ header nav ul a{
     justify-content: center;
     border-radius: 5px;
     transition: .4s;
+    text-decoration: none;
 }
 header nav ul a:nth-child(1), header nav ul a:nth-child(2), header nav ul a:nth-child(3){
     width: 33%;
