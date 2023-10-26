@@ -74,7 +74,7 @@ if (isset($_GET['cod'])) {
       ?>
         <section id="sectionPrincipal" style="background-image: url(../../ADM/view/img/imgProdutos/<?php echo $pasta;?><?php echo $resultado['imgCapa']?>)">
         <h2 class="text-light"><?php echo $resultado['marca'].' '.$resultado['modelo'];?></h2>
-        <a href="#">Comprar</a>
+        <a href="carrinho.php?cod=<?php echo $resultado['cod']; ?>">Comprar</a>
         </section>
 
         <section id="sectionHistoria" style="background-image: url(../../ADM/view/img/imgProdutos/<?php echo $pasta;?><?php echo $resultado['imgHistoria']?>)">
