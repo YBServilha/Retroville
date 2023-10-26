@@ -48,3 +48,18 @@ create table usuarios(
     cpf varchar(100) not null,
     primary key(id)
 );
+
+create table carrinho(
+    id int not null auto_increment,
+    cod_usuario varchar(50) not null,
+    cod_produto varchar(50) not null,
+    marca varchar(80) not null,
+    modelo varchar(80) not null,
+    carroceria varchar(80) not null,        
+    preco decimal(10,2) not null,
+    motor varchar(120) not null,
+    cor varchar(80) not null,
+    km varchar(100) not null,
+    ano varchar(9) not null,
+    primary key(id)
+);
