@@ -1,3 +1,15 @@
+<?php 
+   session_start();
+   if(isset($_SESSION['EMAIL'])){
+       //ECHO 'TUDO CERTO';
+      
+   }else{
+    //DESLOGADO
+   }
+
+   
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +34,7 @@
         <div class="icons">
             <a href="CLIENTE/view/logSigin.html"><ion-icon name="person-outline"></ion-icon></a>
             <a href="CLIENTE/view/carrinho.html"><ion-icon name="car-sport-outline"></ion-icon></a>
+            <button id="logout" onclick="logout();">Logout</button>
         </div>
         <div class="menuResponsivoIcon">
             <ion-icon name="menu-outline" id="iconResponsivo"></ion-icon>
@@ -45,7 +58,17 @@
     </header>
     <main>
         <section class="background1">
-            <p>Esportivos</p>
+            <?php 
+                 if(isset($_SESSION['EMAIL'])){
+                    //DESLOGAR USUARIO
+                    session_destroy();
+                    echo '<p>' . $_SESSION['EMAIL'] . '</p>';
+                }else{
+                    //TOTALMENTE TESTE
+                    echo '<p>Esportivos</p>';
+                }
+            ?>
+            <!--<p>Esportivos</p>-->
             <a href="#">Ver todos os veículos</a>
         </section>
         <section class="background1">
@@ -58,14 +81,12 @@
         </section>
     </main>
 
-    <footer>
-        <p>asfklçjsqdklçfjlkasdf</p>
-        <p>asdfasdf</p>
-        <p>asdfasdfasdfsdf</p>
-    </footer>
-
-
-
+    <script>
+        function logout() {
+            // Redirecionar para a página de logout
+            window.location.href = "index.php?code=1"; 
+        }
+    </script>
 
     <script>
         let btn = document.querySelector('.menuResponsivoIcon');
@@ -77,8 +98,6 @@
             menuMobile.classList.toggle('display');
             iconResponsivo.classList.toggle('white');
         });
-
-
     </script>
 
 
