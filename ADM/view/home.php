@@ -44,8 +44,6 @@
             // Redirecionar para a página de logout
             window.location.href = "../index.php?code=1"; 
         }
-        
-        
     </script>
 
 

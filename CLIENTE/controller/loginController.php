@@ -2,9 +2,9 @@
     include_once('../model/siginModel.php');
     include_once('../../ADM/model/ferramentas.php');
     $email = $_POST['email'];
-    $nome = $_POST['nome'];
+    $nome = '##';
     $senha = $_POST['senha'];
-    $cpf = $_POST['cpf'];
+    $cpf = '##';
 
     $user = new Usuarios($email, $nome, $senha, $cpf);
     $senhaHash = new Ferramentas($nome, $senha);

@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@500&display=swap');
+
 
 *{
     margin: 0;
@@ -41,6 +44,21 @@ header .icons a{
     color: black;
     font-size: 25px;
     transition: .5s;
+    margin-right: 10px;
+}
+#logout{
+    color: white;
+    background-color: rgb(46, 44, 44);
+    border: none;
+    border-radius: 4px;
+    width: 70px;
+    font-size: 12px;
+    padding: 8px;
+    transition:all 0.5s ease;
+}
+#logout:hover{
+    color: white;
+    background-color: rgb(202, 121, 29);
 }
 header .icons a:hover{
     color: yellow;
@@ -65,6 +83,8 @@ header nav ul a{
     justify-content: center;
     border-radius: 5px;
     transition: .4s;
+    margin-right: 20px;
+    font-family: 'Martian Mono';
 }
 header nav ul a:nth-child(1), header nav ul a:nth-child(2), header nav ul a:nth-child(3){
     width: 33%;
@@ -72,7 +92,7 @@ header nav ul a:nth-child(1), header nav ul a:nth-child(2), header nav ul a:nth-
 header nav ul a li{
     list-style-type: none;
     padding: 10px 12px;
-    font-size: 20px;
+    font-size: 16px;
     color: black;
     mix-blend-mode: difference;
 }
