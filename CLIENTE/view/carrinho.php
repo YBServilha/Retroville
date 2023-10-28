@@ -1,4 +1,15 @@
     <?php
+    session_start();
+    if(isset($_SESSION['EMAIL'])){
+     //ECHO 'TUDO CERTO';
+    }if(isset($_GET['code'])){
+     //DESLOGANDO
+     session_destroy();
+     header('Location: ../../index.php');
+    }elseif(!isset($_SESSION['EMAIL'])){
+     //DESLOGADO
+     header('Location: ../../index.php');
+    }
     include_once '../../ADM/model/Conexao.php';
     include_once '../model/carrinhoModel.php';
 
@@ -63,6 +74,15 @@
             <div class="icons">
                 <a href="logSigin.html"><ion-icon name="person-outline"></ion-icon></a>
                 <a href="carrinho.html"><ion-icon name="car-sport-outline"></ion-icon></a>
+                <?php 
+                    if(isset($_SESSION['EMAIL'])){
+                        //USUARIO LOGADO
+                        echo '<button id="logout" onclick="logout();">Sair</button>';
+                    }else{
+                        //USUÁRIO DESLOGADO
+                        echo '<button id="logout" onclick="sigin();">Entrar</button>';
+                    }
+                ?>
             </div>
             <div class="menuResponsivoIcon">
                 <ion-icon name="menu-outline" id="iconResponsivo"></ion-icon>
@@ -137,7 +157,17 @@
 
     <!-- FIM Carrinho de compras1 -->
 
+        <script>
+            function logout() {
+                // Redirecionar para a página de logout
+                window.location.href = "../../index.php?code=1"; 
+            }
 
+            function sigin() {
+                //Redirecionar para login e sigin
+                window.location.href = "logSigin.php";
+            }
+        </script>
 
         <script>
             let btn = document.querySelector('.menuResponsivoIcon');
