@@ -1,13 +1,14 @@
 <?php 
    session_start();
    if(isset($_SESSION['EMAIL'])){
-       //ECHO 'TUDO CERTO';
-      
+    //ECHO 'TUDO CERTO';
+   }if(isset($_GET['code'])){
+    //DESLOGANDO
+    session_destroy();
+    header('Location: index.php');
    }else{
     //DESLOGADO
-   }
-
-   
+   } 
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +35,15 @@
         <div class="icons">
             <a href="CLIENTE/view/logSigin.html"><ion-icon name="person-outline"></ion-icon></a>
             <a href="CLIENTE/view/carrinho.html"><ion-icon name="car-sport-outline"></ion-icon></a>
-            <button id="logout" onclick="logout();">Logout</button>
+            <?php 
+                if(isset($_SESSION['EMAIL'])){
+                    //USUARIO LOGADO
+                    echo '<button id="logout" onclick="logout();">Sair</button>';
+                }else{
+                    //TOTALMENTE TESTE
+                    echo '<button id="logout" onclick="sigin();">Entrar</button>';
+                }
+            ?>
         </div>
         <div class="menuResponsivoIcon">
             <ion-icon name="menu-outline" id="iconResponsivo"></ion-icon>
@@ -58,17 +67,8 @@
     </header>
     <main>
         <section class="background1">
-            <?php 
-                 if(isset($_SESSION['EMAIL'])){
-                    //DESLOGAR USUARIO
-                    session_destroy();
-                    echo '<p>' . $_SESSION['EMAIL'] . '</p>';
-                }else{
-                    //TOTALMENTE TESTE
-                    echo '<p>Esportivos</p>';
-                }
-            ?>
             <!--<p>Esportivos</p>-->
+            <p>Esportivos</p>
             <a href="#">Ver todos os veículos</a>
         </section>
         <section class="background1">
@@ -85,6 +85,11 @@
         function logout() {
             // Redirecionar para a página de logout
             window.location.href = "index.php?code=1"; 
+        }
+
+        function sigin() {
+            //Redirecionar para login e sigin
+            window.location.href = "CLIENTE/view/logSigin.php";
         }
     </script>
 
