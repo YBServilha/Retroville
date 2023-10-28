@@ -218,7 +218,8 @@ h1{
 }
 
 .box-info{
-    height: 65%;
+    margin-top: 60px;
+    min-height: 65%;
     width: 48%;
     /*border: solid 2px red;*/
     display: flex;
@@ -290,7 +291,7 @@ form{
 input{
     margin: 20px;
     padding: 10px;
-    width: 500px;
+    min-width: 500px;
     height: 50px;
     font-family: 'Martian Mono';
     outline: none;
@@ -300,8 +301,8 @@ input{
 
 @media(max-width: 1180px){
     .box-info{
-        min-width: 60%;
-        height: 55%;
+        min-width: 75%;
+        min-height: 35%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -342,6 +343,11 @@ input{
     }
 }
 
+@media(max-width:540px){
+    input{
+        min-width: 300px;
+    }
+} 
 
 @media(max-width: 420px){
     body{
