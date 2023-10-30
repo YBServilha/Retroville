@@ -3,6 +3,7 @@
         class Carrinho{
             private $codUsuario;
             private $codProduto;
+            private $imgCard;
             private $marca;
             private $modelo;
             private $carroceria;
@@ -12,9 +13,10 @@
             private $km;
             private $ano;
 
-            public function __construct($codUsuario, $codProduto, $marca, $modelo, $carroceria, $preco, $motor, $cor, $km, $ano) {
+            public function __construct($codUsuario, $codProduto, $imgCard, $marca, $modelo, $carroceria, $preco, $motor, $cor, $km, $ano) {
                 $this->codUsuario = $codUsuario;
                 $this->codProduto = $codProduto;
+                $this->imgCard = $imgCard;
                 $this->marca = $marca;
                 $this->modelo = $modelo;
                 $this->carroceria = $carroceria;
@@ -35,7 +37,7 @@
             
                 if (count($resultado) == 0) {
                     // O produto não está no carrinho, então podemos adicioná-lo
-                    $sql = "INSERT INTO carrinho (cod_usuario, cod_produto, marca, modelo, carroceria, preco, motor, cor, km, ano) VALUES ('$this->codUsuario', '$this->codProduto', '$this->marca', '$this->modelo', '$this->carroceria', '$this->preco', '$this->motor', '$this->cor', '$this->km', '$this->ano')";
+                    $sql = "INSERT INTO carrinho (cod_usuario, cod_produto, imgCard, marca, modelo, carroceria, preco, motor, cor, km, ano) VALUES ('$this->codUsuario', '$this->codProduto', '$this->imgCard', '$this->marca', '$this->modelo', '$this->carroceria', '$this->preco', '$this->motor', '$this->cor', '$this->km', '$this->ano')";
                     $conn->executar($sql);
                 } else {
                     // O produto já está no carrinho, você pode lidar com isso da maneira que preferir (por exemplo, exibir uma mensagem de erro).

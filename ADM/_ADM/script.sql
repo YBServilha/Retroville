@@ -53,6 +53,7 @@ create table carrinho(
     id int not null auto_increment,
     cod_usuario varchar(50) not null,
     cod_produto varchar(50) not null,
+    imgCard varchar(80) not null,
     marca varchar(80) not null,
     modelo varchar(80) not null,
     carroceria varchar(80) not null,        
