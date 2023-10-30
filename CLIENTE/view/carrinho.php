@@ -24,7 +24,7 @@
         $resultados = $conn->consultarDados($sql);
         
         foreach ($resultados as $resultado) {
-            $carrinho = new Carrinho('user', $resultado['cod'], $resultado['marca'], $resultado['modelo'], $resultado['carroceria'], $resultado['preco'], $resultado['motor'], $resultado['cor'], $resultado['km'], $resultado['ano']);
+            $carrinho = new Carrinho('user', $resultado['cod'], $resultado['imgCard'], $resultado['marca'], $resultado['modelo'], $resultado['carroceria'], $resultado['preco'], $resultado['motor'], $resultado['cor'], $resultado['km'], $resultado['ano']);
 
             $carrinho->adicionar();
             
@@ -115,11 +115,12 @@
     <div class="informacoes-produto">
         <?php
         foreach ($produtosNoCarrinho as $produtoNoCarrinho) {
+            $pasta = $produtoNoCarrinho['modelo'].'_'.$produtoNoCarrinho['cod_produto'].'/'.$produtoNoCarrinho['imgCard'];
             ?>
             <div class="produto">
-                <img src="https://conteudo.imguol.com.br/c/entretenimento/7c/2022/03/14/volkswagen-fusca-1965-1647298960975_v2_4x3.jpg" alt="#">
+                <img src="../../ADM/view/img/imgProdutos/<?php echo $pasta;?>" alt="#">
                 <div class="desc-produto">
-                    <h2 class="rubik"><?php echo $produtoNoCarrinho['modelo']; ?></h2>
+                    <h2 class="rubik"><?php echo $produtoNoCarrinho['modelo'];?></h2>
                     <p>Peças: Volante, Banco, motor, câmbio.</p>
                 </div>
                 <p class="preco-carrinho">Preço R$ <?php echo number_format($produtoNoCarrinho['preco'], 2); ?></p>

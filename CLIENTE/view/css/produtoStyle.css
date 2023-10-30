@@ -209,9 +209,10 @@ main#sectionProduto section#sectionPrincipal {
 main#sectionProduto section#sectionPrincipal h2{
     font-size: 80px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.56);
+    background-color: rgba(0, 0, 0, 0.795);
     padding: 20px 50px;
     border-radius: 5px;
+    
 }
 
 main#sectionProduto section#sectionPrincipal a{
