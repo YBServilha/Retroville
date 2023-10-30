@@ -76,9 +76,9 @@
         <div class="box-info">
             <h1>Sua Conta</h1>
             <div class="box-p">
-                <p>Nome: Danilo dos Santos Almeida</p>
-                <p>Email: dan@gmail.com</p>
-                <p>CPF: 094.095.04-70</p>
+                <p>Nome: <?php echo $_SESSION['NOME'] ?></p>
+                <p>Email: <?php echo $_SESSION['EMAIL'] ?></p>
+                <p>CPF: <?php echo $_SESSION['CPF'] ?></p>
                 <!--<p>Senha: Mdjhs</p>-->
             </div>
             <div class="forms">

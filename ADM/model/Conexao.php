@@ -118,6 +118,7 @@
             $_SESSION['NOME'] = $dados['nome'];
             $_SESSION['EMAIL'] = $dados['email'];
             $_SESSION['SENHA'] = $dados['senha'];
+            $_SESSION['CPF'] = $dados['cpf'];
             header('Location: ../../index.php');
             
             
