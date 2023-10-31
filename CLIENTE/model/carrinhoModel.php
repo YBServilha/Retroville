@@ -53,6 +53,27 @@
                 $conn = new Conexao();
                 return $conn->consultarDados($sql);
             }
+
+            function deletarItem($codUsuario, $codProduto) {
+                include_once '../../ADM/model/Conexao.php';
+                $conn = new Conexao();
+                
+                // Verifique se o produto está no carrinho
+                $verificarSql = "SELECT id FROM carrinho WHERE cod_usuario = '$codUsuario' AND cod_produto = '$codProduto'";
+                $resultado = $conn->consultarDados($verificarSql);
+            
+                if (count($resultado) > 0) {
+                    // O produto está no carrinho, então podemos excluí-lo
+                    $sql = "DELETE FROM carrinho WHERE cod_usuario = '$codUsuario' AND cod_produto = '$codProduto'";
+                    $conn->executar($sql);
+                    header('Location: ../view/carrinho.php?itemDeletado=true');
+                } else {
+                    // O produto não está no carrinho, você pode lidar com isso da maneira que preferir (por exemplo, exibir uma mensagem de erro).
+                    // Aqui, retornaremos false para indicar que a exclusão falhou.
+                    return false;
+                }
+            }
+            
         }
 
 

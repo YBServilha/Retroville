@@ -371,3 +371,12 @@ section.carrinho .resumo-pedido .total #total{
         margin-left: 7px;
     }
 }
+
+#linkProdutos{
+    text-decoration: none;
+}
+
+#excluirProdutoCarrinho{
+    font-size: 32px;
+    cursor: pointer;
+}
