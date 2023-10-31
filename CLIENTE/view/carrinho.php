@@ -33,7 +33,7 @@
             $carrinho->adicionar();
             
             // Consultar o carrinho
-            $sqlCarrinho = "SELECT * FROM carrinho WHERE cod_usuario = 'user'";
+            $sqlCarrinho = "SELECT * FROM carrinho WHERE cod_usuario = '$usuario'";
             $resultadoCarrinho = $carrinho->listarCarrinho($sqlCarrinho);
             
             // Adicionar os produtos ao array
@@ -41,6 +41,8 @@
                 $produtosNoCarrinho[] = $res;
             }
         }
+        //var_dump($sqlCarrinho);
+        //exit();
     } else {
         if(isset($_GET['itemDeletado'])){
         ?>
