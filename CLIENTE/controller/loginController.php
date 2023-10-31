@@ -7,7 +7,7 @@
     $cpf = '##';
 
     $user = new Usuarios($email, $nome, $senha, $cpf);
-    $senhaHash = new Ferramentas($nome, $senha);
+    $senhaHash = new Ferramentas($nome, $senha, null);
     $password = $senhaHash->hashSenha();
     $user->validarUsuario($email,$password);
 

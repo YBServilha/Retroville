@@ -74,16 +74,11 @@
     <div class="box-all">
         <div class="box-info">
             <h1>Mudar senha:</h1>
-            <!--<div class="box-p">
-                <p>Nome: Danilo dos Santos Almeida</p>
-                <p>Email: dan@gmail.com</p>
-                <p>CPF: 094.095.04-70</p>
-                <p>Senha: Mdjhs</p>
-            </div>-->
             <div class="forms">
                 <form action="../controller/confirmarSenha.php" method="POST">
                     <input type="text" name="senha" placeholder="Senha atual...">
                     <input type="text" name="nova_senha" placeholder="Nova senha...">
+                    <input type="hidden" name="email" value="<?php echo $_SESSION['EMAIL'] ?>">
                     <input type="submit" name="editar" value="Atualizar" class="btn edit">
                 </form>
             </div>
