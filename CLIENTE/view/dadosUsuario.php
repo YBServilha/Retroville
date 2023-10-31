@@ -82,8 +82,11 @@
                 <!--<p>Senha: Mdjhs</p>-->
             </div>
             <div class="forms">
-                <form action="mudarSenha.html" method="POST"><input type="submit" name="editar" value="Mudar senha" class="btn edit"></form>
-                <form action=""><input type="submit" name="excluir" value="Excluir" class="btn delete"></form>
+                <form action="mudarSenha.php" method="POST"><input type="submit" name="editar" value="Mudar senha" class="btn edit"></form>
+                <form action="../controller/confirmarSenha.php" method="POST">
+                    <input type="submit" name="deletar" value="Excluir" class="btn delete">
+                    <input type="hidden" name="email" value="<?php echo $_SESSION['EMAIL']; ?>">
+                </form>
             </div>
         </div>
     </div>

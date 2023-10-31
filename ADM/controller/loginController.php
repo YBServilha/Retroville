@@ -5,8 +5,9 @@ include_once '../model/Conexao.php';
 if(isset($_POST['login'])){
     $email = $_POST['email'];
     $senha = $_POST['senha'];
+    $new_senha = "";
 
-    $ferramentas = new Ferramentas($email, $senha);
+    $ferramentas = new Ferramentas($email, $senha, $new_senha);
     $senhaCriptografada = $ferramentas->hashSenha();
     $ferramentas->validarAdm($email, $senhaCriptografada);
 

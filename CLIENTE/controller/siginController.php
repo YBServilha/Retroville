@@ -6,7 +6,7 @@
     $senha = $_POST['senha'];
     $cpf = $_POST['cpf'];
 
-    $senhaHash = new Ferramentas($nome, $senha);
+    $senhaHash = new Ferramentas($nome, $senha, null);
     $password = $senhaHash->hashSenha();
     $user = new Usuarios($email, $nome, $password, $cpf);
     $user->incluirUsuario();
