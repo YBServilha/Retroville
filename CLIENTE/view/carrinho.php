@@ -121,13 +121,11 @@
                 <img src="../../ADM/view/img/imgProdutos/<?php echo $pasta;?>" alt="#">
                 <div class="desc-produto">
                     <h2 class="rubik"><?php echo $produtoNoCarrinho['modelo'];?></h2>
-                    <p>Peças: Volante, Banco, motor, câmbio.</p>
+                    <p>Infos: <br>Carroceria: <?php echo $produtoNoCarrinho['carroceria']?>;<br>KM: <?php echo $produtoNoCarrinho['km']?>;<br>Cor: <?php echo $produtoNoCarrinho['cor']?>;<br> Motor: <?php echo $produtoNoCarrinho['motor']?>.</p>
                 </div>
-                <p class="preco-carrinho">Preço R$ <?php echo number_format($produtoNoCarrinho['preco'], 2); ?></p>
+                <p class="preco-carrinho">Preço: R$ <?php echo number_format($produtoNoCarrinho['preco'], 2); ?></p>
             </div>
-            <?php
-        }
-        ?>
+
     </div>
         <div class="resumo-pedido">
             <h2>Resumo do pedido</h2>
@@ -135,7 +133,7 @@
             <div class="sub-total">
                 <div id="sub-total">
                     <p>Subtotal</p>
-                    <p>R$ 35,00</p>
+                    <p>R$ <?php echo number_format($produtoNoCarrinho['preco'], 2); ?></p>
                 </div>
                 <div id="frete">
                     <p>Frete</p>
@@ -145,8 +143,11 @@
             <div class="total">
                 <div id="total">
                     <p>Total</p>
-                    <p>R$ 35,00</p>
+                    <p>R$ <?php echo number_format($produtoNoCarrinho['preco'], 2); ?></p>
                 </div>
+                <?php
+                }
+                ?>
                 <button type="button" class="btn btn-outline-warning btn-lg btn-block">Adicionar outro produto</button>
                 <button type="button" class="btn btn-outline-success btn-lg btn-block">Comprar</button>
             </div>
