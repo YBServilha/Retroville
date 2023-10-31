@@ -118,12 +118,17 @@
             $pasta = $produtoNoCarrinho['modelo'].'_'.$produtoNoCarrinho['cod_produto'].'/'.$produtoNoCarrinho['imgCard'];
             ?>
             <div class="produto">
-                <img src="../../ADM/view/img/imgProdutos/<?php echo $pasta;?>" alt="#">
+                <img src="../../ADM/view/img/imgProdutos/<?php echo $pasta;?>" alt="Imagem produto carrinho">
                 <div class="desc-produto">
-                    <h2 class="rubik"><?php echo $produtoNoCarrinho['modelo'];?></h2>
+                    <h2 class="rubik"><?php echo $produtoNoCarrinho['marca'].' - '.$produtoNoCarrinho['modelo'];?></h2>
                     <p>Infos: <br>Carroceria: <?php echo $produtoNoCarrinho['carroceria']?>;<br>KM: <?php echo $produtoNoCarrinho['km']?>;<br>Cor: <?php echo $produtoNoCarrinho['cor']?>;<br> Motor: <?php echo $produtoNoCarrinho['motor']?>.</p>
                 </div>
                 <p class="preco-carrinho">Preço: R$ <?php echo number_format($produtoNoCarrinho['preco'], 2); ?></p>
+                <form action="../controller/carrinhoController.php" method="post" id="formCarrinho">
+                <ion-icon name="trash-outline" id="excluirProdutoCarrinho"></ion-icon>
+                <input type="hidden" name="codUsuario" value="<?php echo 'user';?>">
+                <input type="hidden" name="codProduto" value="<?php echo 'produto'?>">
+                </form>
             </div>
 
     </div>
@@ -148,7 +153,7 @@
                 <?php
                 }
                 ?>
-                <button type="button" class="btn btn-outline-warning btn-lg btn-block">Adicionar outro produto</button>
+                <a href="produtos.php" id="linkProdutos"><button type="button" class="btn btn-outline-warning btn-lg btn-block">Adicionar outro produto</button></a>
                 <button type="button" class="btn btn-outline-success btn-lg btn-block">Comprar</button>
             </div>
         </div>
@@ -184,6 +189,16 @@
             
 
         </script>
+
+        <script>
+            let deleteButton = document.getElementById('excluirProdutoCarrinho');
+            let formDelete = document.getElementById('formCarrinho');
+
+            deleteButton.addEventListener('click', () => {
+                formDelete.submit();
+            });
+        </script>
+
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>
