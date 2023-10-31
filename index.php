@@ -6,6 +6,10 @@
     //DESLOGANDO
     session_destroy();
     header('Location: index.php');
+   }if(isset($_GET['desconectar'])){
+    //DESLOGANDO
+    session_destroy();
+    header('Location: index.php');
    }else{
     //DESLOGADO
    } 

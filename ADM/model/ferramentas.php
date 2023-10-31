@@ -58,7 +58,7 @@ class Ferramentas{
         $conn = new Conexao();
         $sql = "DELETE FROM usuarios WHERE email = '$email'";
         $conn->executar($sql);
-        header('Location: ../../index.php');
+        header('Location: ../../index.php?desconectar');
     }
 }
 
