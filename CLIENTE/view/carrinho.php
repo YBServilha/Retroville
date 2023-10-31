@@ -22,9 +22,13 @@
         $conn = new Conexao();
         $sql = "SELECT * FROM produtos WHERE cod = '$codProduto'";
         $resultados = $conn->consultarDados($sql);
+
+        $usuario = $_SESSION['CPF'];
+        //var_dump($usuario);
+
         
         foreach ($resultados as $resultado) {
-            $carrinho = new Carrinho('user', $resultado['cod'], $resultado['imgCard'], $resultado['marca'], $resultado['modelo'], $resultado['carroceria'], $resultado['preco'], $resultado['motor'], $resultado['cor'], $resultado['km'], $resultado['ano']);
+            $carrinho = new Carrinho($usuario, $resultado['cod'], $resultado['imgCard'], $resultado['marca'], $resultado['modelo'], $resultado['carroceria'], $resultado['preco'], $resultado['motor'], $resultado['cor'], $resultado['km'], $resultado['ano']);
 
             $carrinho->adicionar();
             
@@ -38,12 +42,21 @@
             }
         }
     } else {
+        if(isset($_GET['itemDeletado'])){
         ?>
         <script>
-            alert("Produto não selecionado para acessar esta página! Você será redirecionado ao nosso catálogo de veículos!");
+            alert("Produto excluído do carrinho!");
+            location.href = "produtos.php";
+        </script>
+        <?php
+        }else{
+        ?>
+        <script>
+            alert("Nenhum produto foi selecionado para acessar esta página! Você será redirecionado ao nosso catálogo de veículos!");
             location.href = "produtos.php";
         </script>
     <?php
+        }
     }
     ?>
 
@@ -124,10 +137,11 @@
                     <p>Infos: <br>Carroceria: <?php echo $produtoNoCarrinho['carroceria']?>;<br>KM: <?php echo $produtoNoCarrinho['km']?>;<br>Cor: <?php echo $produtoNoCarrinho['cor']?>;<br> Motor: <?php echo $produtoNoCarrinho['motor']?>.</p>
                 </div>
                 <p class="preco-carrinho">Preço: R$ <?php echo number_format($produtoNoCarrinho['preco'], 2); ?></p>
-                <form action="../controller/carrinhoController.php" method="post" id="formCarrinho">
+                <form action="../controller/carrinhoController.php" method="post" id="formCarrinho" name="formDelete">
                 <ion-icon name="trash-outline" id="excluirProdutoCarrinho"></ion-icon>
-                <input type="hidden" name="codUsuario" value="<?php echo 'user';?>">
-                <input type="hidden" name="codProduto" value="<?php echo 'produto'?>">
+                <input type="hidden" name="codUsuario" value="<?php echo $usuario;?>">
+                <input type="hidden" name="codProduto" value="<?php echo $produtoNoCarrinho['cod_produto'];?>">
+                <input type="hidden" name="formExcluir">
                 </form>
             </div>
 

@@ -66,7 +66,7 @@
                     // O produto está no carrinho, então podemos excluí-lo
                     $sql = "DELETE FROM carrinho WHERE cod_usuario = '$codUsuario' AND cod_produto = '$codProduto'";
                     $conn->executar($sql);
-                    return true; // Item deletado com sucesso
+                    header('Location: ../view/carrinho.php?itemDeletado=true');
                 } else {
                     // O produto não está no carrinho, você pode lidar com isso da maneira que preferir (por exemplo, exibir uma mensagem de erro).
                     // Aqui, retornaremos false para indicar que a exclusão falhou.
