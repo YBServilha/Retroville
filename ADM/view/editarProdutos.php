@@ -137,7 +137,13 @@ if (isset($_GET['cod'])) {
           <?php
           }
           ?>
-          <!-- Repita para as outras imagens (img3, img4, etc.) -->
+          <div class="form-group">
+          <label for="exampleFormControlSelect2">Status do Carro</label>
+          <select class="form-control" id="exampleFormControlSelect2" name="status">
+          <option <?php if ($resultado['status'] === '0') echo 'selected'; ?>>0 - Vendido</option>
+          <option <?php if ($resultado['status'] === '1') echo 'selected'; ?>>1 - Disponível</option>
+        </select>
+        </div>
 
         </div>
         <input type="hidden" name="cod" value="<?php echo $resultado['cod'];?>">

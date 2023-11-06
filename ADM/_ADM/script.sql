@@ -37,6 +37,7 @@ create table produtos(
     img6 varchar(80) not null,
     img7 varchar(80) not null,
     img8 varchar(80) not null,
+    status varchar(1) not null,
     primary key(id)
 );  
 

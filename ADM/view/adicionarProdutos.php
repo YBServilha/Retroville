@@ -93,6 +93,13 @@ if(isset($_SESSION['EMAIL'])){
             <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img7" required><br>
             <input type="file" class="form-control-file" id="exampleFormControlFile1" name="img8" required><br>
           </div>
+          <div class="form-group">
+          <label for="exampleFormControlSelect2">Status do Carro</label>
+          <select class="form-control" id="exampleFormControlSelect2" name="status" required>
+            <option value="0">0 - Vendido</option>
+            <option value="1">1 - Disponível</option>
+          </select>
+        </div>
             <input type="submit" name="btnIncluir" value="Adicionar" class="btn btn-success btn-lg btn-block mb-5">
       </form>
     </div>

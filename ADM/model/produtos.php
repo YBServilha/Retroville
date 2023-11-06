@@ -23,9 +23,10 @@ class Produto{
     private $img6;
     private $img7;
     private $img8;
+    private $status;
 
 
-    function __construct($marca,$modelo,$carroceria,$preco,$motor,$cor,$km,$ano,$cambio,$finalPlaca,$historia,$imgCard,$imgCapa,$imgHistoria,$img1,$img2,$img3,$img4,$img5,$img6,$img7, $img8){
+    function __construct($marca,$modelo,$carroceria,$preco,$motor,$cor,$km,$ano,$cambio,$finalPlaca,$historia,$imgCard,$imgCapa,$imgHistoria,$img1,$img2,$img3,$img4,$img5,$img6,$img7, $img8, $status){
         $this->marca = $marca;
         $this->modelo = $modelo;
         $this->carroceria = $carroceria;
@@ -48,6 +49,7 @@ class Produto{
         $this->img6 = $img6;
         $this->img7 = $img7;
         $this->img8 = $img8;
+        $this->status = $status;
     }
     function gerarCode($tamanho = 8) {
         $caracteres = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
@@ -67,7 +69,7 @@ class Produto{
         //$cod = Produto::gerarCode();
         date_default_timezone_set('America/Sao_Paulo');
         $dataAtualFormatada = date('d-m-Y H:i:s');
-        $sql = "INSERT INTO produtos(cod, data, marca,modelo,carroceria,preco,motor,cor,km,ano,cambio,finalPlaca,textocarro,imgCard,imgCapa,imgHistoria,img1,img2,img3,img4,img5,img6,img7, img8) VALUES('$cod', '$dataAtualFormatada', '$this->marca','$this->modelo','$this->carroceria','$this->preco','$this->motor','$this->cor','$this->km','$this->ano','$this->cambio','$this->finalPlaca','$this->historia','$this->imgCard','$this->imgCapa','$this->imgHistoria','$this->img1','$this->img2','$this->img3','$this->img4','$this->img5','$this->img6','$this->img7','$this->img8');";
+        $sql = "INSERT INTO produtos(cod, data, marca,modelo,carroceria,preco,motor,cor,km,ano,cambio,finalPlaca,textocarro,imgCard,imgCapa,imgHistoria,img1,img2,img3,img4,img5,img6,img7, img8, status) VALUES('$cod', '$dataAtualFormatada', '$this->marca','$this->modelo','$this->carroceria','$this->preco','$this->motor','$this->cor','$this->km','$this->ano','$this->cambio','$this->finalPlaca','$this->historia','$this->imgCard','$this->imgCapa','$this->imgHistoria','$this->img1','$this->img2','$this->img3','$this->img4','$this->img5','$this->img6','$this->img7','$this->img8','$this->status');";
         $conn = new Conexao();
         $conn->executar($sql);
     }
@@ -105,7 +107,8 @@ class Produto{
             img5 = '$this->img5',
             img6 = '$this->img6',
             img7 = '$this->img7',
-            img8 = '$this->img8'
+            img8 = '$this->img8',
+            status = '$this->status'
             WHERE cod = '$cod';";
         
         $conn = new Conexao();

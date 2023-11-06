@@ -25,13 +25,14 @@ if(isset($_POST['btnIncluir'])){
     $img6 = $_FILES['img6']['name'];
     $img7 = $_FILES['img7']['name'];
     $img8 = $_FILES['img8']['name'];
+    $status = $_POST['status'];
 
     
 
 
 
 
-    $produtos = new Produto($marca,$modelo,$carroceria,$preco,$motor,$cor,$km,$ano,$cambio,$finalPlaca,$texto,$imgCard,$imgCapa,$imgHistoria,$img1,$img2,$img3,$img4,$img5,$img6,$img7,$img8);
+    $produtos = new Produto($marca,$modelo,$carroceria,$preco,$motor,$cor,$km,$ano,$cambio,$finalPlaca,$texto,$imgCard,$imgCapa,$imgHistoria,$img1,$img2,$img3,$img4,$img5,$img6,$img7,$img8, $status);
     $cod = $produtos->gerarCode();
 
     $productFolder = "{$modelo}_{$cod}";
@@ -93,6 +94,7 @@ if(isset($_POST['btnEditar'])){
     $novaImg6 = $_FILES['img6']['name'];
     $novaImg7 = $_FILES['img7']['name'];
     $novaImg8 = $_FILES['img8']['name'];
+    $status = $_POST['status'];
 
 
     //$produtos = new Produto($marca, $modelo, $carroceria, $preco, $motor, $cor, $km, $ano, $cambio, $finalPlaca, $texto);
@@ -158,7 +160,7 @@ if(isset($_POST['btnEditar'])){
 
 
     // Atualiza os detalhes do produto no banco de dados
-    $produtos = new Produto($marca, $modelo, $carroceria, $preco, $motor, $cor, $km, $ano, $cambio, $finalPlaca, $texto, $imgCard, $imgCapa, $imgHistoria, $img1, $img2, $img3, $img4, $img5, $img6, $img7, $img8);
+    $produtos = new Produto($marca, $modelo, $carroceria, $preco, $motor, $cor, $km, $ano, $cambio, $finalPlaca, $texto, $imgCard, $imgCapa, $imgHistoria, $img1, $img2, $img3, $img4, $img5, $img6, $img7, $img8, $status);
     $produtos->editar($cod);
 
     ?>
@@ -199,7 +201,7 @@ if (isset($_POST['btnExcluir'])) {
 
     // Agora, você pode excluir o registro do banco de dados (se necessário)
     $null = '';
-    $produtos = new Produto($null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null);
+    $produtos = new Produto($null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null);
     $produtos->excluir($cod);
 
     ?>
