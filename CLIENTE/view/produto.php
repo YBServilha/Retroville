@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include_once '../../ADM/model/Conexao.php';
 
 if (isset($_GET['cod'])) {
@@ -44,6 +44,15 @@ if (isset($_GET['cod'])) {
         <div class="icons">
             <a href="logSigin.php"><ion-icon name="person-outline"></ion-icon></a>
             <a href="carrinho.php"><ion-icon name="car-sport-outline"></ion-icon></a>
+            <?php 
+                if(isset($_SESSION['EMAIL'])){
+                    //USUARIO LOGADO
+                    echo '<button id="logout" onclick="logout();">Sair</button>';
+                }else{
+                    //TOTALMENTE TESTE
+                    echo '<button id="logout" onclick="sigin();">Entrar</button>';
+                }
+            ?>
         </div>
         <div class="menuResponsivoIcon">
             <ion-icon name="menu-outline" id="iconResponsivo"></ion-icon>
@@ -203,6 +212,17 @@ if (isset($_GET['cod'])) {
     ?>
 
 
+        <script>
+            function logout() {
+                // Redirecionar para a página de logout
+                window.location.href = "../../index.php?code=1"; 
+            }
+
+            function sigin() {
+                //Redirecionar para login e sigin
+                window.location.href = "logSigin.php";
+            }
+        </script>
 
     <script>
         let btn = document.querySelector('.menuResponsivoIcon');
