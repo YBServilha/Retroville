@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +25,15 @@
         <div class="icons">
             <a href="logSigin.php"><ion-icon name="person-outline"></ion-icon></a>
             <a href="carrinho.php"><ion-icon name="car-sport-outline"></ion-icon></a>
+            <?php 
+                if(isset($_SESSION['EMAIL'])){
+                    //USUARIO LOGADO
+                    echo '<button id="logout" onclick="logout();">Sair</button>';
+                }else{
+                    //TOTALMENTE TESTE
+                    echo '<button id="logout" onclick="sigin();">Entrar</button>';
+                }
+            ?>
         </div>
         <div class="menuResponsivoIcon">
             <ion-icon name="menu-outline"></ion-icon>

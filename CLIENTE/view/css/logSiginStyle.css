@@ -39,13 +39,14 @@ header .icons{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 5px;
 }
 header .icons a{
     text-decoration: none;
     color: black;
     font-size: 25px;
     transition: .5s;
+    margin-right: 10px;
 }
 #logout{
     color: white;
