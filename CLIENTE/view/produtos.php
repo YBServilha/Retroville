@@ -27,14 +27,14 @@ $resultados = $conn->consultarDados($sql);
         </div>
         <nav>
             <ul>
-                <a href="produtos.html"><li>Veículos</li></a>
+                <a href="produtos.php"><li>Veículos</li></a>
                 <a href="#"><li>Sobre</li></a>
                 <a href="#"><li>Contato</li></a>
             </ul>
         </nav>
         <div class="icons">
-            <a href="logSigin.html"><ion-icon name="person-outline"></ion-icon></a>
-            <a href="carrinho.html"><ion-icon name="car-sport-outline"></ion-icon></a>
+            <a href="logSigin.php"><ion-icon name="person-outline"></ion-icon></a>
+            <a href="carrinho.php"><ion-icon name="car-sport-outline"></ion-icon></a>
         </div>
         <div class="menuResponsivoIcon">
             <ion-icon name="menu-outline"></ion-icon>
@@ -46,11 +46,11 @@ $resultados = $conn->consultarDados($sql);
                 </div>
                 <div class="itensResponsivo">
                     <ul>
-                        <a href="#"><li>Veículos</li></a>
+                        <a href="produtos.php"><li>Veículos</li></a>
                         <a href="#"><li>Sobre</li></a>
                         <a href="#"><li>Contato</li></a>
-                        <a href="logSigin.html"><ion-icon name="person-outline"></ion-icon></a>
-                        <a href="carrinho.html"><ion-icon name="car-sport-outline"></ion-icon></a>
+                        <a href="logSigin.php"><ion-icon name="person-outline"></ion-icon></a>
+                        <a href="carrinho.php"><ion-icon name="car-sport-outline"></ion-icon></a>
                     </ul>
                 </div>
             </div>
@@ -66,23 +66,23 @@ $resultados = $conn->consultarDados($sql);
 
     <div class="box-icons-car">
         <div class="icones">
-            <a href="" class="link-icon-car">
+            <a href="#" class="link-icon-car">
                 <img src="img/imgIcones/1.png" alt="" class="icon-car">
                 <p>conservadores</p>
             </a>
-            <a href="" class="link-icon-car">
+            <a href="#" class="link-icon-car">
                 <img src="img/imgIcones/2.png" alt="" class="icon-car">
                 <p>sedans</p>
             </a>
-            <a href="" class="link-icon-car">
+            <a href="#" class="link-icon-car">
                 <img src="img/imgIcones/3.png" alt="" class="icon-car">
                 <p>esportivos</p>
             </a>
-            <a href="" class="link-icon-car">
+            <a href="#" class="link-icon-car">
                 <img src="img/imgIcones/4.png" alt="" class="icon-car">
                 <p>SUV</p>
             </a>
-            <a href="" class="link-icon-car">
+            <a href="#" class="link-icon-car">
                 <img src="img/imgIcones/5.png" alt="" class="icon-car">
                 <p>caminhonetes</p>
             </a>
@@ -119,13 +119,13 @@ $resultados = $conn->consultarDados($sql);
                 <div class="box-icons">
                     <p class="p-redes-sociais">Redes Sociais:</p>
                     <div class="iii">
-                        <a href="" class="link-redes">
+                        <a href="#" class="link-redes">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
-                        <a href="" class="link-redes">
+                        <a href="#" class="link-redes">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
-                        <a href="" class="link-redes">
+                        <a href="#" class="link-redes">
                             <i class="fa-brands fa-tiktok"></i>
                         </a>
                     </div>

@@ -36,14 +36,14 @@ if (isset($_GET['cod'])) {
         </div>
         <nav>
             <ul>
-                <a href="CLIENTE/view/produtos.html"><li>Veículos</li></a>
+                <a href="produtos.php"><li>Veículos</li></a>
                 <a href="#"><li>Sobre</li></a>
                 <a href="#"><li>Contato</li></a>
             </ul>
         </nav>
         <div class="icons">
-            <a href="logSigin.html"><ion-icon name="person-outline"></ion-icon></a>
-            <a href="carrinho.html"><ion-icon name="car-sport-outline"></ion-icon></a>
+            <a href="logSigin.php"><ion-icon name="person-outline"></ion-icon></a>
+            <a href="carrinho.php"><ion-icon name="car-sport-outline"></ion-icon></a>
         </div>
         <div class="menuResponsivoIcon">
             <ion-icon name="menu-outline" id="iconResponsivo"></ion-icon>
@@ -55,11 +55,11 @@ if (isset($_GET['cod'])) {
                 </div>
                 <div class="itensResponsivo">
                     <ul>
-                        <a href="#"><li>Veículos</li></a>
+                        <a href="produtos.php"><li>Veículos</li></a>
                         <a href="#"><li>Sobre</li></a>
                         <a href="#"><li>Contato</li></a>
-                        <a href="logSigin.html"><ion-icon name="person-outline"></ion-icon></a>
-                        <a href="carrinho.html"><ion-icon name="car-sport-outline"></ion-icon></a>
+                        <a href="logSigin.php"><ion-icon name="person-outline"></ion-icon></a>
+                        <a href="carrinho.php"><ion-icon name="car-sport-outline"></ion-icon></a>
                     </ul>
                 </div>
             </div>

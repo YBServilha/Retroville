@@ -31,14 +31,14 @@
         </div>
         <nav>
             <ul>
-                <a href="CLIENTE/view/produtos.html"><li>Veículos</li></a>
+                <a href="CLIENTE/view/produtos.php"><li>Veículos</li></a>
                 <a href="#"><li>Sobre</li></a>
                 <a href="#"><li>Contato</li></a>
             </ul>
         </nav>
         <div class="icons">
-            <a href="CLIENTE/view/logSigin.html"><ion-icon name="person-outline"></ion-icon></a>
-            <a href="CLIENTE/view/carrinho.html"><ion-icon name="car-sport-outline"></ion-icon></a>
+            <a href="CLIENTE/view/logSigin.php"><ion-icon name="person-outline"></ion-icon></a>
+            <a href="CLIENTE/view/carrinho.php"><ion-icon name="car-sport-outline"></ion-icon></a>
             <?php 
                 if(isset($_SESSION['EMAIL'])){
                     //USUARIO LOGADO
@@ -62,8 +62,8 @@
                         <a href="#"><li>Veículos</li></a>
                         <a href="#"><li>Sobre</li></a>
                         <a href="#"><li>Contato</li></a>
-                        <a href="CLIENTE/view/logSigin.html"><ion-icon name="person-outline"></ion-icon></a>
-                        <a href="CLIENTE/view/carrinho.html"><ion-icon name="car-sport-outline"></ion-icon></a>
+                        <a href="CLIENTE/view/logSigin.php"><ion-icon name="person-outline"></ion-icon></a>
+                        <a href="CLIENTE/view/carrinho.php"><ion-icon name="car-sport-outline"></ion-icon></a>
                     </ul>
                 </div>
             </div>
@@ -73,15 +73,15 @@
         <section class="background1">
             <!--<p>Esportivos</p>-->
             <p>Esportivos</p>
-            <a href="#">Ver todos os veículos</a>
+            <a href="CLIENTE/view/produtos.php">Ver todos os veículos</a>
         </section>
         <section class="background1">
             <p>Esportivos</p>
-            <a href="#">Ver todos os esportivos</a>
+            <a href="CLIENTE/view/produtos.php">Ver todos os esportivos</a>
         </section>
         <section class="background1">
             <p>Esportivos</p>
-            <a href="#">Ver todos os esportivos</a>
+            <a href="CLIENTE/view/produtos.php">Ver todos os esportivos</a>
         </section>
     </main>
 
