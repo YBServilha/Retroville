@@ -47,6 +47,9 @@ if (isset($_GET['cod'])) {
     </div>
     </div>  
     <?php } ?>
+    <div id="voltar">
+      <a href="listaProdutos.php"><ion-icon name="return-up-back-outline"></ion-icon></a>
+    </div>
     <div class="container col-5 mt-5" >
       <?php
       foreach($resultados as $resultado){
@@ -153,5 +156,8 @@ if (isset($_GET['cod'])) {
     <?php
       }
     ?>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
