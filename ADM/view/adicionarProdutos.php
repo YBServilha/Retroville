@@ -31,6 +31,9 @@ if(isset($_SESSION['EMAIL'])){
     </div>
     </div>  
     <?php } ?>
+    <div id="voltar">
+      <a href="listaProdutos.php"><ion-icon name="return-up-back-outline"></ion-icon></a>
+    </div>
     <div class="container col-5 mt-5">
     <form action="../controller/produtosController.php" method="post" enctype="multipart/form-data">
         <div class="form-group">
@@ -104,5 +107,8 @@ if(isset($_SESSION['EMAIL'])){
       </form>
     </div>
     
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

@@ -17,3 +17,14 @@ h1{
     left: 50%;
     transform: translateX(-50%);
 }
+
+#voltar{
+    font-size: 52px;
+    position: fixed;
+    right: 40px;
+    top: 50px;
+}
+
+#voltar a{
+    color: black;
+}
