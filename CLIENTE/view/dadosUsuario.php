@@ -27,7 +27,7 @@
     <header>
         <div id="logo">
             <a href="../../index.php">
-                <img src="CLIENTE/view/img/imgHome/logo.png" alt="Logo">
+                <img src="img/imgHome/logo.png" alt="Logo">
             </a>
         </div>
         <nav>
