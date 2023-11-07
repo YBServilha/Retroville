@@ -25,7 +25,11 @@
 
         $usuario = $_SESSION['CPF'];
         //var_dump($usuario);
-
+        /* Subtotal do carrinho */
+        $subtotal = "SELECT SUM(preco) AS total_precos
+        FROM carrinho
+        WHERE cod_usuario = '$usuario';";
+        $resSubtotal = $conn->consultarDados($subtotal);
         
         foreach ($resultados as $resultado) {
             $carrinho = new Carrinho($usuario, $resultado['cod'], $resultado['imgCard'], $resultado['marca'], $resultado['modelo'], $resultado['carroceria'], $resultado['preco'], $resultado['motor'], $resultado['cor'], $resultado['km'], $resultado['ano']);
@@ -51,15 +55,38 @@
             location.href = "produtos.php";
         </script>
         <?php
-        }else{
+        }elseif(isset($_GET['res'])){
+            //$codProduto = $_GET['cod'];
+            $conn = new Conexao();
+            $usuario = $_SESSION['CPF'];
+            $sql = "SELECT * FROM carrinho WHERE cod_usuario = '" . $usuario . "'";
+            //echo $sql;
+            //exit();
+            $carrinho = new Carrinho(null, null, null, null, null, null, null, null, null, null, null);
+            $resultadoCarrinho = $carrinho->listarCarrinho($sql);
+            foreach ($resultadoCarrinho as $res) {
+                $produtosNoCarrinho[] = $res;
+            }
+     
+            
+        $subtotal = "SELECT SUM(preco) AS total_precos
+        FROM carrinho
+        WHERE cod_usuario = '$usuario';";
+        $resSubtotal = $conn->consultarDados($subtotal);
+        
         ?>
-        <script>
-            alert("Nenhum produto foi selecionado para acessar esta página! Você será redirecionado ao nosso catálogo de veículos!");
-            location.href = "produtos.php";
-        </script>
     <?php
         }
     }
+
+    if(isset($_GET['itemDeletado'])){
+        ?>
+        <script>
+            alert("Produto excluído do carrinho!");
+            location.href = "produtos.php";
+        </script>
+        <?php
+        }
     ?>
 
 
@@ -88,7 +115,7 @@
             </nav>
             <div class="icons">
                 <a href="logSigin.php"><ion-icon name="person-outline"></ion-icon></a>
-                <a href="carrinho.php"><ion-icon name="car-sport-outline"></ion-icon></a>
+                <a href="carrinho.php?res=1"><ion-icon name="car-sport-outline"></ion-icon></a>
                 <?php 
                     if(isset($_SESSION['EMAIL'])){
                         //USUARIO LOGADO
@@ -113,7 +140,7 @@
                             <a href="#"><li>Sobre</li></a>
                             <a href="#"><li>Contato</li></a>
                             <a href="logSigin.php"><ion-icon name="person-outline"></ion-icon></a>
-                            <a href="carrinho.php"><ion-icon name="car-sport-outline"></ion-icon></a>
+                            <a href="carrinho.php?res=1"><ion-icon name="car-sport-outline"></ion-icon></a>
                         </ul>
                     </div>
                 </div>
@@ -146,6 +173,9 @@
                 <input type="hidden" name="formExcluir">
                 </form>
             </div>
+            <?php
+                }
+                ?>
 
     </div>
         <div class="resumo-pedido">
@@ -154,7 +184,16 @@
             <div class="sub-total">
                 <div id="sub-total">
                     <p>Subtotal</p>
-                    <p>R$ <?php echo number_format($produtoNoCarrinho['preco'], 2); ?></p>
+                    <p>R$ <?php 
+                    if(isset($resSubtotal)){
+                        
+                        foreach($resSubtotal as $sub){
+                            echo $sub['total_precos']; 
+                        }
+                    } else {
+                        echo 0;
+                    }
+                    ?></p>
                 </div>
                 <div id="frete">
                     <p>Frete</p>
@@ -164,11 +203,17 @@
             <div class="total">
                 <div id="total">
                     <p>Total</p>
-                    <p>R$ <?php echo number_format($produtoNoCarrinho['preco'], 2); ?></p>
+                <p>R$ <?php
+                    if(isset($resSubtotal)){
+                        //var_dump($resSubtotal);
+                        foreach($resSubtotal as $sub){
+                            echo $sub['total_precos']; 
+                        }
+                    } else {
+                        echo 0;
+                    } ?></p>
                 </div>
-                <?php
-                }
-                ?>
+
                 <a href="produtos.php" id="linkProdutos"><button type="button" class="btn btn-outline-warning btn-lg btn-block">Adicionar outro produto</button></a>
                 <button type="button" class="btn btn-outline-success btn-lg btn-block">Comprar</button>
             </div>
