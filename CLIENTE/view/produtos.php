@@ -23,7 +23,9 @@ $resultados = $conn->consultarDados($sql);
     <!--CABEÇALHO HEADER-->
     <header>
         <div id="logo">
-            <img src="img/imgHome/logo.png" alt="Logo">
+            <a href="../../index.php">
+                <img src="CLIENTE/view/img/imgHome/logo.png" alt="Logo">
+            </a>
         </div>
         <nav>
             <ul>
@@ -33,7 +35,7 @@ $resultados = $conn->consultarDados($sql);
             </ul>
         </nav>
         <div class="icons">
-            <a href="logSigin.php"><ion-icon name="person-outline"></ion-icon></a>
+            <a href="dadosUsuario.php"><ion-icon name="person-outline"></ion-icon></a>
             <a href="carrinho.php?res=1"><ion-icon name="car-sport-outline"></ion-icon></a>
         </div>
         <div class="menuResponsivoIcon">
@@ -49,7 +51,7 @@ $resultados = $conn->consultarDados($sql);
                         <a href="produtos.php"><li>Veículos</li></a>
                         <a href="#"><li>Sobre</li></a>
                         <a href="#"><li>Contato</li></a>
-                        <a href="logSigin.php"><ion-icon name="person-outline"></ion-icon></a>
+                        <a href="dadosUsuario.php"><ion-icon name="person-outline"></ion-icon></a>
                         <a href="carrinho.php?res=1"><ion-icon name="car-sport-outline"></ion-icon></a>
                     </ul>
                 </div>
