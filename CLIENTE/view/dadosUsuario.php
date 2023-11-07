@@ -32,14 +32,14 @@
         </div>
         <nav>
             <ul>
-                <a href="CLIENTE/view/produtos.html"><li>Veículos</li></a>
+                <a href="produtos.php"><li>Veículos</li></a>
                 <a href="#"><li>Sobre</li></a>
                 <a href="#"><li>Contato</li></a>
             </ul>
         </nav>
         <div class="icons">
             <a href="dadosUsuario.php"><ion-icon name="person-outline"></ion-icon></a>
-            <a href="carrinho.php"><ion-icon name="car-sport-outline"></ion-icon></a>
+            <a href="carrinho.php?res=1"><ion-icon name="car-sport-outline"></ion-icon></a>
             <?php 
                 if(isset($_SESSION['EMAIL'])){
                     //USUARIO LOGADO
@@ -64,7 +64,7 @@
                         <a href="#"><li>Sobre</li></a>
                         <a href="#"><li>Contato</li></a>
                         <a href="dadosUsuario.php"><ion-icon name="person-outline"></ion-icon></a>
-                        <a href="carrinho.php"><ion-icon name="car-sport-outline"></ion-icon></a>
+                        <a href="carrinho.php?res=1"><ion-icon name="car-sport-outline"></ion-icon></a>
                     </ul>
                 </div>
             </div>

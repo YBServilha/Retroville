@@ -54,6 +54,12 @@
                 return $conn->consultarDados($sql);
             }
 
+            function listar($sql){
+                include_once '../../ADM/model/Conexao.php';
+                $conn = new Conexao();
+                return $conn->consultarDados($sql);
+            }
+
             function deletarItem($codUsuario, $codProduto) {
                 include_once '../../ADM/model/Conexao.php';
                 $conn = new Conexao();
@@ -72,6 +78,13 @@
                     // Aqui, retornaremos false para indicar que a exclusão falhou.
                     return false;
                 }
+            }
+
+            function somarCarrinho(){
+                include_once '../../ADM/model/Conexao.php';
+                $conn = new Conexao();
+
+                return $conn->consultarDados($sql);
             }
             
         }
