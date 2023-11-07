@@ -32,7 +32,9 @@ if (isset($_GET['cod'])) {
 <body>
     <header>
         <div id="logo">
-            <img src="img/imgHome/logo.png" alt="Logo">
+            <a href="../../index.php">
+                <img src="img/imgHome/logo.png" alt="Logo">
+            </a>
         </div>
         <nav>
             <ul>
@@ -42,7 +44,7 @@ if (isset($_GET['cod'])) {
             </ul>
         </nav>
         <div class="icons">
-            <a href="logSigin.php"><ion-icon name="person-outline"></ion-icon></a>
+            <a href="dadosUsuario.php"><ion-icon name="person-outline"></ion-icon></a>
             <a href="carrinho.php"><ion-icon name="car-sport-outline"></ion-icon></a>
             <?php 
                 if(isset($_SESSION['EMAIL'])){
@@ -67,7 +69,7 @@ if (isset($_GET['cod'])) {
                         <a href="produtos.php"><li>Veículos</li></a>
                         <a href="#"><li>Sobre</li></a>
                         <a href="#"><li>Contato</li></a>
-                        <a href="logSigin.php"><ion-icon name="person-outline"></ion-icon></a>
+                        <a href="dadosUsuario.php"><ion-icon name="person-outline"></ion-icon></a>
                         <a href="carrinho.php"><ion-icon name="car-sport-outline"></ion-icon></a>
                     </ul>
                 </div>

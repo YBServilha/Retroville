@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@500&display=swap');
+
+
 *{
     padding: 0px;
     margin: 0px;
@@ -92,9 +96,10 @@ header nav ul a:nth-child(1), header nav ul a:nth-child(2), header nav ul a:nth-
     width: 33%;
 }
 header nav ul a li{
+    font-family: 'Martian Mono';
     list-style-type: none;
     padding: 10px 12px;
-    font-size: 20px;    
+    font-size: 16px;    
 }
 header nav ul a:hover{
     background-color: rgba(0, 0, 0, 0.158);

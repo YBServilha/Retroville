@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once '../../ADM/model/Conexao.php';
 
 $conn = new Conexao();
@@ -23,7 +24,9 @@ $resultados = $conn->consultarDados($sql);
     <!--CABEÇALHO HEADER-->
     <header>
         <div id="logo">
-            <img src="img/imgHome/logo.png" alt="Logo">
+            <a href="../../index.php">
+                <img src="img/imgHome/logo.png" alt="Logo">
+            </a>
         </div>
         <nav>
             <ul>
@@ -33,8 +36,17 @@ $resultados = $conn->consultarDados($sql);
             </ul>
         </nav>
         <div class="icons">
-            <a href="logSigin.php"><ion-icon name="person-outline"></ion-icon></a>
+            <a href="dadosUsuario.php"><ion-icon name="person-outline"></ion-icon></a>
             <a href="carrinho.php"><ion-icon name="car-sport-outline"></ion-icon></a>
+            <?php 
+                if(isset($_SESSION['EMAIL'])){
+                    //USUARIO LOGADO
+                    echo '<button id="logout" onclick="logout();">Sair</button>';
+                }else{
+                    //TOTALMENTE TESTE
+                    echo '<button id="logout" onclick="sigin();">Entrar</button>';
+                }
+            ?>
         </div>
         <div class="menuResponsivoIcon">
             <ion-icon name="menu-outline"></ion-icon>
@@ -49,7 +61,7 @@ $resultados = $conn->consultarDados($sql);
                         <a href="produtos.php"><li>Veículos</li></a>
                         <a href="#"><li>Sobre</li></a>
                         <a href="#"><li>Contato</li></a>
-                        <a href="logSigin.php"><ion-icon name="person-outline"></ion-icon></a>
+                        <a href="dadosUsuario.php"><ion-icon name="person-outline"></ion-icon></a>
                         <a href="carrinho.php"><ion-icon name="car-sport-outline"></ion-icon></a>
                     </ul>
                 </div>
