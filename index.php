@@ -27,7 +27,9 @@
 <body>
     <header>
         <div id="logo">
-            <img src="CLIENTE/view/img/imgHome/logo.png" alt="Logo">
+            <a href="index.php">
+                <img src="CLIENTE/view/img/imgHome/logo.png" alt="Logo">
+            </a>
         </div>
         <nav>
             <ul>
@@ -37,7 +39,7 @@
             </ul>
         </nav>
         <div class="icons">
-            <a href="CLIENTE/view/logSigin.php"><ion-icon name="person-outline"></ion-icon></a>
+            <a href="CLIENTE/view/dadosUsuario.php"><ion-icon name="person-outline"></ion-icon></a>
             <a href="CLIENTE/view/carrinho.php"><ion-icon name="car-sport-outline"></ion-icon></a>
             <?php 
                 if(isset($_SESSION['EMAIL'])){
