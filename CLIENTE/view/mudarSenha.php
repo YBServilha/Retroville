@@ -25,7 +25,9 @@
     <!--HEADER DO SITE-->
     <header>
         <div id="logo">
-            <img src="img/imgHome/logo.png" alt="Logo">
+            <a href="../../index.php">
+                <img src="CLIENTE/view/img/imgHome/logo.png" alt="Logo">
+            </a>
         </div>
         <nav>
             <ul>
@@ -35,7 +37,7 @@
             </ul>
         </nav>
         <div class="icons">
-            <a href="logSigin.html"><ion-icon name="person-outline"></ion-icon></a>
+            <a href="dadosUsuario.php"><ion-icon name="person-outline"></ion-icon></a>
             <a href="carrinho.php?res=1"><ion-icon name="car-sport-outline"></ion-icon></a>
             <?php 
                 if(isset($_SESSION['EMAIL'])){
@@ -60,7 +62,7 @@
                         <a href="#"><li>Veículos</li></a>
                         <a href="#"><li>Sobre</li></a>
                         <a href="#"><li>Contato</li></a>
-                        <a href="logSigin.html"><ion-icon name="person-outline"></ion-icon></a>
+                        <a href="dadosUsuario.php"><ion-icon name="person-outline"></ion-icon></a>
                         <a href="carrinho.php?res=1"><ion-icon name="car-sport-outline"></ion-icon></a>
                     </ul>
                 </div>
