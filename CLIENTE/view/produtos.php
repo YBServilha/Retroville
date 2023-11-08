@@ -1,11 +1,5 @@
 <?php
-include_once '../../ADM/model/Conexao.php';
-
-$conn = new Conexao();
-
-$sql = "SELECT * FROM produtos";
-$resultados = $conn->consultarDados($sql);
-
+    include_once ('../../ADM/model/Conexao.php');
 ?>
 
 
@@ -71,8 +65,9 @@ $resultados = $conn->consultarDados($sql);
 
     <!--TÍTULO DE PRODUTOS E BARRA DE PESQUISA E ÍCONES-->
     <h1>Veículos Clássicos</h1>
-    <form action="" method="" class="form-pesquisa">
-        <i class="fa-solid fa-magnifying-glass"></i><input type="text" name="pesquisa" class="pesquisa">
+    <form action="produtos.php" method="POST" class="form-pesquisa">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" name="pesquisa" class="pesquisa">
     </form>
 
     <div class="box-icons-car">
@@ -104,13 +99,33 @@ $resultados = $conn->consultarDados($sql);
     <!--BOX DE PRODUTOS-->
     <div class="box-products">
     <?php
+        $conn = new Conexao();
+
+        if(isset($_POST['pesquisa'])){
+            $sql = "SELECT * FROM produtos WHERE modelo LIKE '{$_POST["pesquisa"]}%';";
+
+            $resultados = $conn->consultarDados($sql);
+        
+
         foreach($resultados as $resultado){
             $pasta = $resultado['modelo'].'_'.$resultado['cod'].'/';
             
     ?>  
         <div class="item-products"><a href="produto.php?cod=<?php echo $resultado['cod']; ?>"><div class="box-div-img"><span id="carroceria"><?php echo $resultado['carroceria']?></span><img src="../../ADM/view/img/imgProdutos/<?php echo $pasta;?><?php echo $resultado['imgCard']?>" alt="" class="item-products-img"></div><p><?php echo $resultado['marca']?> <?php echo $resultado['modelo']?></p></a></div>
         <?php
-        }
+            }
+        }else{
+        $sql = "SELECT * FROM produtos";
+        $resultados = $conn->consultarDados($sql);
+        
+
+        foreach($resultados as $resultado){
+            $pasta = $resultado['modelo'].'_'.$resultado['cod'].'/';
+            
+    ?>  
+        <div class="item-products"><a href="produto.php?cod=<?php echo $resultado['cod']; ?>"><div class="box-div-img"><span id="carroceria"><?php echo $resultado['carroceria']?></span><img src="../../ADM/view/img/imgProdutos/<?php echo $pasta;?><?php echo $resultado['imgCard']?>" alt="" class="item-products-img"></div><p><?php echo $resultado['marca']?> <?php echo $resultado['modelo']?></p></a></div>
+        <?php
+            }}
         ?>
     </div>
 
@@ -147,6 +162,18 @@ $resultados = $conn->consultarDados($sql);
 
 
     <!--JAVASCRIPT DO MENU-->
+    <script>
+        function logout() {
+            // Redirecionar para a página de logout
+            window.location.href = "../../index.php?code=1"; 
+        }
+
+        function sigin() {
+            //Redirecionar para login e sigin
+            window.location.href = "logSigin.php";
+        }
+    </script>
+
     <script>
         let btn = document.querySelector('.menuResponsivoIcon');
         let menuMobile = document.querySelector('.menuResponsivo');
