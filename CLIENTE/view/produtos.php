@@ -72,25 +72,25 @@
 
     <div class="box-icons-car">
         <div class="icones">
-            <a href="#" class="link-icon-car">
+            <a href="produtos.php?pesquisaM=Hatch" class="link-icon-car">
                 <img src="img/imgIcones/1.png" alt="" class="icon-car">
-                <p>conservadores</p>
+                <p>Hatch</p>
             </a>
-            <a href="#" class="link-icon-car">
+            <a href="produtos.php?pesquisaM=Coupe" class="link-icon-car">
                 <img src="img/imgIcones/2.png" alt="" class="icon-car">
-                <p>sedans</p>
+                <p>Coupe</p>
             </a>
-            <a href="#" class="link-icon-car">
+            <a href="produtos.php?pesquisaM=Sedan" class="link-icon-car">
                 <img src="img/imgIcones/3.png" alt="" class="icon-car">
-                <p>esportivos</p>
+                <p>Sedan</p>
             </a>
-            <a href="#" class="link-icon-car">
+            <a href="produtos.php?pesquisaM=SUV" class="link-icon-car">
                 <img src="img/imgIcones/4.png" alt="" class="icon-car">
                 <p>SUV</p>
             </a>
-            <a href="#" class="link-icon-car">
+            <a href="produtos.php?pesquisaM=Caminhonete" class="link-icon-car">
                 <img src="img/imgIcones/5.png" alt="" class="icon-car">
-                <p>caminhonetes</p>
+                <p>Caminhonete</p>
             </a>
         </div>
     </div>
@@ -101,10 +101,15 @@
     <?php
         $conn = new Conexao();
 
-        if(isset($_POST['pesquisa'])){
-            $sql = "SELECT * FROM produtos WHERE modelo LIKE '{$_POST["pesquisa"]}%';";
-
-            $resultados = $conn->consultarDados($sql);
+        if(isset($_POST['pesquisa']) || isset($_GET['pesquisaM'])){
+            if(isset($_POST['pesquisa'])){
+                $sql = "SELECT * FROM produtos WHERE modelo LIKE '{$_POST["pesquisa"]}%' OR marca LIKE '{$_POST["pesquisa"]}%';";
+                $resultados = $conn->consultarDados($sql);
+            }else{
+                $sql = "SELECT * FROM produtos WHERE carroceria = '{$_GET["pesquisaM"]}';";
+                $resultados = $conn->consultarDados($sql);
+            }
+                
         
 
         foreach($resultados as $resultado){
