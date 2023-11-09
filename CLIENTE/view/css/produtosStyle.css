@@ -402,8 +402,8 @@ h1{
 }
 
 .box-div-img{
-    max-width: 500px;
-    min-height: 250px;
+    width: 500px;
+    height: 300px;
     overflow: hidden;  
 }
 
