@@ -9,11 +9,11 @@ use Mpdf\QrCode\Output;
 
 //INSTANCIA PRINCIPAL DO PAYLOAD PIX
 
-$obPayload = (new Payload)->setPixKey('11998949584')
+$obPayload = (new Payload)->setPixKey('+5511998949584')
                           ->setDescription('Pagamento B')
                           ->setMerchantName("Brunno Silva Steagall")
                           ->setMerchantCity("SAO PAULO")
-                          ->setAmount(100.00)
+                          ->setAmount(82.00)
                           ->setTxid('WDEV1234');
 
 //CODIGO DE PAGAMENTO PIX
