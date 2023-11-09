@@ -116,7 +116,7 @@
         if ($dados = mysqli_fetch_array($executar)) {
             $_SESSION['ID'] = $dados['id'];
             $_SESSION['NOME'] = $dados['nome'];
-            $_SESSION['EMAIL'] = $dados['email'];
+            $_SESSION['EMAIL_USER'] = $dados['email'];
             $_SESSION['SENHA'] = $dados['senha'];
             $_SESSION['CPF'] = $dados['cpf'];
             header('Location: ../../index.php');

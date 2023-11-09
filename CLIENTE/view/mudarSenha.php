@@ -1,14 +1,14 @@
 <?php 
    session_start();
-   if(isset($_SESSION['EMAIL'])){
+   if(isset($_SESSION['EMAIL_USER'])){
     //ECHO 'TUDO CERTO';
    }if(isset($_GET['code'])){
     //DESLOGANDO
     session_destroy();
     header('Location: ../../index.php');
-   }elseif(!isset($_SESSION['EMAIL'])){
+   }elseif(!isset($_SESSION['EMAIL_USER'])){
     //DESLOGADO
-    header('Location: ../../index.php');
+    header('Location: logSigin.php');
    } 
 ?>
 
@@ -40,7 +40,7 @@
             <a href="dadosUsuario.php"><ion-icon name="person-outline"></ion-icon></a>
             <a href="carrinho.php?res=1"><ion-icon name="car-sport-outline"></ion-icon></a>
             <?php 
-                if(isset($_SESSION['EMAIL'])){
+                if(isset($_SESSION['EMAIL_USER'])){
                     //USUARIO LOGADO
                     echo '<button id="logout" onclick="logout();">Sair</button>';
                 }else{
@@ -80,7 +80,7 @@
                 <form action="../controller/confirmarSenha.php" method="POST">
                     <input type="text" name="senha" placeholder="Senha atual...">
                     <input type="text" name="nova_senha" placeholder="Nova senha...">
-                    <input type="hidden" name="email" value="<?php echo $_SESSION['EMAIL'] ?>">
+                    <input type="hidden" name="email" value="<?php echo $_SESSION['EMAIL_USER'] ?>">
                     <input type="submit" name="editar" value="Atualizar" class="btn edit">
                 </form>
             </div>
