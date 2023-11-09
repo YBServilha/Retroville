@@ -150,13 +150,13 @@
                 <div class="box-icons">
                     <p class="p-redes-sociais">Redes Sociais:</p>
                     <div class="iii">
-                        <a href="#" class="link-redes">
+                        <a href="https://www.instagram.com/retroville_rv/" class="link-redes">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
-                        <a href="#" class="link-redes">
+                        <a href="https://api.whatsapp.com/send?phone=5511984008296" class="link-redes">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
-                        <a href="#" class="link-redes">
+                        <a href="https://www.tiktok.com/@retroville_rv" class="link-redes">
                             <i class="fa-brands fa-tiktok"></i>
                         </a>
                     </div>
