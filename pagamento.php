@@ -45,4 +45,81 @@ echo $image;
 
 <br><br>-->
 <?php
+}else{
+    ?>
+    <head>
+        <style>
+            body{
+                margin: 0;
+                padding:0;
+                box-sizing: border-box;
+                background: black;
+                width: 100%;
+                height: 100vh;
+            }
+            #msg{
+                color: #4BEB48;
+                position: absolute;
+                top: 10%;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 42px;
+                width: 100%;
+                
+            }
+
+        @keyframes dots {
+            0% { content: ". "; }
+            33% { content: ".. "; }
+            66% { content: "... "; }
+            100% { content: ". "; }
+        }
+
+        #dots::before {
+            content: "";
+            display: inline-block;
+            animation: dots 1.5s infinite;
+        }
+        #gif{
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 50vh;
+            object-fit: cover;
+            pointer-events: none;
+        }
+        #gif2{
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 80vh;
+            object-fit: cover;
+            pointer-events: none;
+            display: none;
+        }
+        </style>
+    </head>
+    <center><h1 id="msg">Área restrita! Hackeando a sua máquina<span id="dots"></span></h1></center>
+    <img src="https://media.tenor.com/zEzrCBd_6i8AAAAd/hacker%C4%B1m-hacker.gif" alt="gif" id="gif">
+    <img src="https://steamuserimages-a.akamaihd.net/ugc/2431257904741262239/5224F69217562A3C070E381FE3DAC295BCF5C9A8/?imw=1024&imh=575&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true" alt="gif" id="gif2">
+
+    <script>
+        setTimeout(function() {
+            var gif = document.getElementById("gif");
+            gif.style.display = "none";
+
+            var gif2 = document.getElementById("gif2");
+            gif2.style.display = "block";
+        }, 6340); 
+
+        window.addEventListener("beforeunload", function (e) {
+            e.preventDefault();
+            e.returnValue = "Deseja realmente sair desta página?";
+        });
+    </script>
+    <?php
 }
