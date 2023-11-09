@@ -25,7 +25,7 @@
         <form action="controller/loginController.php" method="post">
     <?php
         if(isset($_POST['msg'])){
-        ?>
+    ?>
         <div class="msgInvalido" id="msgIncluiu">
         Usuário/senha inválidos!
         </div>
