@@ -1,6 +1,6 @@
 <?php 
    session_start();
-   if(isset($_SESSION['EMAIL'])){
+   if(isset($_SESSION['EMAIL_USER'])){
     //ECHO 'TUDO CERTO';
    }if(isset($_GET['code'])){
     //DESLOGANDO
@@ -42,7 +42,7 @@
             <a href="CLIENTE/view/dadosUsuario.php"><ion-icon name="person-outline"></ion-icon></a>
             <a href="CLIENTE/view/carrinho.php?res=1"><ion-icon name="car-sport-outline"></ion-icon></a>
             <?php 
-                if(isset($_SESSION['EMAIL'])){
+                if(isset($_SESSION['EMAIL_USER'])){
                     //USUARIO LOGADO
                     echo '<button id="logout" onclick="logout();">Sair</button>';
                 }else{

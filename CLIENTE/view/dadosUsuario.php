@@ -1,14 +1,14 @@
 <?php 
    session_start();
-   if(isset($_SESSION['EMAIL'])){
+   if(isset($_SESSION['EMAIL_USER'])){
     //ECHO 'TUDO CERTO';
    }if(isset($_GET['code'])){
     //DESLOGANDO
     session_destroy();
     header('Location: ../../index.php');
-   }elseif(!isset($_SESSION['EMAIL'])){
+   }elseif(!isset($_SESSION['EMAIL_USER'])){
     //DESLOGADO
-    header('Location: ../../index.php');
+    header('Location: logSigin.php');
    } 
 ?>
 
@@ -41,7 +41,7 @@
             <a href="dadosUsuario.php"><ion-icon name="person-outline"></ion-icon></a>
             <a href="carrinho.php?res=1"><ion-icon name="car-sport-outline"></ion-icon></a>
             <?php 
-                if(isset($_SESSION['EMAIL'])){
+                if(isset($_SESSION['EMAIL_USER'])){
                     //USUARIO LOGADO
                     echo '<button id="logout" onclick="logout();">Sair</button>';
                 }else{
@@ -79,7 +79,7 @@
             <h1>Sua Conta</h1>
             <div class="box-p">
                 <p>Nome: <?php echo $_SESSION['NOME'] ?></p>
-                <p>Email: <?php echo $_SESSION['EMAIL'] ?></p>
+                <p>Email: <?php echo $_SESSION['EMAIL_USER'] ?></p>
                 <p>CPF: <?php echo $_SESSION['CPF'] ?></p>
                 <!--<p>Senha: Mdjhs</p>-->
             </div>
@@ -87,7 +87,7 @@
                 <form action="mudarSenha.php" method="POST"><input type="submit" name="editar" value="Mudar senha" class="btn edit"></form>
                 <form action="../controller/confirmarSenha.php" method="POST">
                     <input type="submit" name="deletar" value="Excluir" class="btn delete">
-                    <input type="hidden" name="email" value="<?php echo $_SESSION['EMAIL']; ?>">
+                    <input type="hidden" name="email" value="<?php echo $_SESSION['EMAIL_USER']; ?>">
                 </form>
             </div>
         </div>
