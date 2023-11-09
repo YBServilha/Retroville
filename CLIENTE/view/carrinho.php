@@ -217,7 +217,18 @@
                 </div>
 
                 <a href="produtos.php" id="linkProdutos"><button type="button" class="btn btn-outline-warning btn-lg btn-block">Adicionar outro produto</button></a>
-                <button type="button" class="btn btn-outline-success btn-lg btn-block">Comprar</button>
+                <button type="button" class="btn btn-outline-success btn-lg btn-block" id="btnComprar">
+                    <form action="../../pagamento.php" method="post" id="formCompra">
+                        <?php
+                        foreach($resSubtotal as $sub){
+                        ?>
+                        <input type="hidden" name="valorTotal" value="<?php echo  intval($sub['total_precos']);?>">
+                        <?php
+                        }
+                        ?>
+                    </form>
+                    Comprar
+                </button>
             </div>
         </div>
     </section>
@@ -259,6 +270,15 @@
 
             deleteButton.addEventListener('click', () => {
                 formDelete.submit();
+            });
+        </script>
+
+        <script>
+            let btnComprar = document.getElementById('btnComprar');
+            let formComprar = document.getElementById('formCompra');
+
+            btnComprar.addEventListener('click', () => {
+                formComprar.submit();
             });
         </script>
 
