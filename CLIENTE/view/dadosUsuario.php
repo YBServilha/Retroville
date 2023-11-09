@@ -8,7 +8,7 @@
     header('Location: ../../index.php');
    }elseif(!isset($_SESSION['EMAIL_USER'])){
     //DESLOGADO
-    header('Location: logSigin.php');
+    header('Location: logSigin.php?msg');
    } 
 ?>
 

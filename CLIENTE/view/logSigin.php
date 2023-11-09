@@ -100,6 +100,16 @@
     </section>
 
 
+    <?php
+        if(isset($_GET['msg'])){
+    ?>
+        <script>
+            alert("Você não está Logado. Faça o Login ou Cadastre-se");
+        </script>
+         
+    <?php } ?>
+
+
     <script>
         var btn = document.getElementById('btn');
         var btnLogIn = document.getElementById('btn2'); // Use 'btn2' para selecionar o botão de LogIn
