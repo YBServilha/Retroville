@@ -20,7 +20,7 @@ class Usuarios{
         $sql = "INSERT INTO usuarios(email, nome, senha, cpf) VALUES('$this->email','$this->nome','$this->senha','$this->cpf');";
         $conexao->executar($sql);
         ?>
-        <form action="../view/logSigin.php" method="post" id="formCadastro">
+        <form action="../view/logSigin.php?msg_sucesso" method="post" id="formCadastro">
         <input type="hidden" name="cadastro" id="cadastro" id="myForm">
         </form>
         <script>

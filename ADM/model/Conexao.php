@@ -119,7 +119,7 @@
             $_SESSION['EMAIL_USER'] = $dados['email'];
             $_SESSION['SENHA'] = $dados['senha'];
             $_SESSION['CPF'] = $dados['cpf'];
-            header('Location: ../../index.php');
+            header('Location: ../../CLIENTE/view/dadosUsuario.php?msg_sucesso');
             
             
             // $_SESSION['user_data'][] = array('ID' => $dados['id'], 'EMAIL' => $dados['email'], 'SENHA' => $dados['senha']);
@@ -128,7 +128,7 @@
             session_destroy();
             //header('Location: ../index.php');
             ?>
-            <form action="../../CLIENTE/view/logSigin.php" method="post" name="formMsg" id="formMsg">
+            <form action="../../CLIENTE/view/logSigin.php?erro_login" method="post" name="formMsg" id="formMsg">
                 <input type="hidden" name="msg">
                 <input type="hidden" name="cadastro">
             </form>

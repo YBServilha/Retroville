@@ -86,9 +86,16 @@
             <div class="forms">
                 <form action="mudarSenha.php" method="POST"><input type="submit" name="editar" value="Mudar senha" class="btn edit"></form>
                 <form action="../controller/confirmarSenha.php" method="POST">
-                    <input type="submit" name="deletar" value="Excluir" class="btn delete">
+                    <input type="submit" name="deletar" value="Apagar" class="btn delete">
                     <input type="hidden" name="email" value="<?php echo $_SESSION['EMAIL_USER']; ?>">
                 </form>
+                <?php
+                    if(isset($_GET['msg_sucesso'])){
+                ?>
+                    <div class="msgValido" id="msgIncluiu">
+                        Login feito com sucesso!
+                    </div>
+                <?php } ?>
             </div>
         </div>
     </div>
