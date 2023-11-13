@@ -413,6 +413,7 @@ h1{
     margin: 20px;
     overflow: hidden;
     position: relative;
+    
 }
 
 span#carroceria {
@@ -453,6 +454,7 @@ span#carroceria {
     width:100%; 
     transition: all 0.5s ease;
     /*box-shadow: 0px 0px 5px 0px;*/
+    z-index: -10;
 }
 
 .item-products-img:hover{
@@ -474,11 +476,12 @@ span#carroceria {
 
     .box-div-img{
         height: 250px;
+        width: 300px;
         overflow:visible;  
     }
 
     .item-products p{
-        margin-top: -90px;
+        margin-top: -60px;
     }
 }
 
@@ -486,7 +489,7 @@ span#carroceria {
     .item-products{
         width: 300px;
         height: 250px;
-        overflow:visible;
+        overflow:hidden;
         margin-bottom: -70px;
     }
 
@@ -497,12 +500,15 @@ span#carroceria {
 
     .box-div-img{
         height: 250px;
+        width: 250px;
         overflow:visible;  
     }
 
     .item-products p{
-        margin-top: -124px;
+        margin-top: -95px;
     }
+
+    
 }
 
 
@@ -582,7 +588,7 @@ footer{
     }
 
     footer{
-        border: solid 2px black;
+        /*border: solid 2px black;*/
     }
 
     .fa-brands{
