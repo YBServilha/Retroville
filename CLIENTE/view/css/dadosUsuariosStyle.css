@@ -451,6 +451,24 @@ footer{
     .fa-brands{
         margin-top: 5px;
     }
+
+    .msgValido{
+        font-family: 'Martian Mono';
+        font-size: 15px;
+        background-color: #e2ebcc;
+        border-color: #e2ebcc;
+        color: #57a942;
+        padding: 10px;
+        border-radius: 5px;
+        width: 60%;
+        margin-top: 40px;
+        text-align: center;
+        font-weight: bold;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 @media(max-width:412px){
@@ -501,4 +519,22 @@ footer{
     .logo{
         width: 100px;
     }
+}
+
+.msgValido{
+    font-family: 'Martian Mono';
+    font-size: 15px;
+    background-color: #e2ebcc;
+    border-color: #e2ebcc;
+    color: #57a942;
+    padding: 10px;
+    border-radius: 5px;
+    width: 60%;
+    margin-top: 450px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }

@@ -87,6 +87,24 @@
         </section>
     </main>
 
+    <?php
+        if(isset($_GET['msg_sucesso'])){
+    ?>
+        <script>
+            alert("Login feito com sucesso!");
+        </script>
+         
+    <?php 
+        }if(isset($_GET['msg_excluir'])){
+    ?>
+        <script>
+            alert("Conta excluída com sucesso!");
+        </script>
+         
+    <?php 
+        }
+    ?>
+
     <script>
         function logout() {
             // Redirecionar para a página de logout

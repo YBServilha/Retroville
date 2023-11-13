@@ -93,6 +93,18 @@
                         <input type="email" name="email" id="email">
                         <label for="senha">Senha: </label>
                         <input type="password" name="senha" id="senha">
+                        <?php
+                            if(isset($_GET['erro_login'])){
+                        ?>
+                            <div class="msgInvalido" id="msgIncluiu">
+                                Usuário ou senha inválidos!
+                            </div>
+                        <?php }if(isset($_GET['msg_sucesso'])){
+                        ?>
+                            <div class="msgValido" id="msgIncluiu">
+                                Conta criada com sucesso!
+                            </div>
+                        <?php } ?>
                         <input type="submit" value="Entrar" id="btnEntrar">
                     </form>
             </div>
@@ -107,7 +119,21 @@
             alert("Você não está Logado. Faça o Login ou Cadastre-se");
         </script>
          
-    <?php } ?>
+    <?php 
+        }
+    ?>
+
+    <script>
+        function logout() {
+            // Redirecionar para a página de logout
+            window.location.href = "../../index.php?code=1"; 
+        }
+
+        function sigin() {
+            //Redirecionar para login e sigin
+            window.location.href = "logSigin.php";
+        }
+    </script>
 
 
     <script>

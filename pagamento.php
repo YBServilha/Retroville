@@ -15,9 +15,9 @@ if(isset($_POST['valorTotal'])){
     //echo $valorTotal;
     //exit();
 
-$obPayload = (new Payload)->setPixKey('+5511998949584')
+$obPayload = (new Payload)->setPixKey('54447462800')
                           ->setDescription('Pagamento B')
-                          ->setMerchantName("Brunno Silva Steagall")
+                          ->setMerchantName("Yan Barbosa Servilha")
                           ->setMerchantCity("SAO PAULO")
                           ->setAmount($valorTotal)
                           ->setTxid('WDEV1234');    
