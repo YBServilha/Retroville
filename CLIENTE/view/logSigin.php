@@ -72,7 +72,7 @@
                     <label for="nome">Nome: </label>
                     <input type="text" name="nome" id="nome"  required pattern="[A-Za-z\s]{1,}">
                     <label for="email">E-mail: </label>
-                    <input type="email" name="email" id="email"  required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                    <input type="email" name="email" id="email"  required pattern="[^']+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
                     <label for="senha">Senha: </label>
                     <input type="password" name="senha" id="senha"  required pattern=".{3,}">
                     <label for="cpf">CPF: </label>
@@ -227,6 +227,18 @@
         
 
     </script>
+
+<script>
+    const emailInput = document.getElementById('email');
+
+    emailInput.addEventListener('input', function(event) {
+      // Verifica se o caractere inserido é uma aspa simples
+      if (event.data === "'") {
+        // Impede a inserção da aspa simples
+        event.preventDefault();
+      }
+    });
+  </script>
 
     
     

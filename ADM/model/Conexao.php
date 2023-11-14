@@ -15,7 +15,9 @@
         
         mysqli_close($conexao);
     }   
-
+    public function pegarConexao(){
+        return mysqli_connect($this->host, $this->user, $this->pass, $this->db);
+    }
     public function consultarDados($sql) {
         $conexao = mysqli_connect($this->host, $this->user, $this->pass, $this->db);
         $resultado = mysqli_query($conexao, $sql);
@@ -144,6 +146,11 @@
         mysqli_close($conexao);
     }
 
+
+    public function escapar($conexao, $valor)
+    {
+        return mysqli_real_escape_string($conexao, $valor);
+    }
 
     
 }
