@@ -70,13 +70,13 @@
                 </div>
                 <form action="../controller/siginController.php" method="post">
                     <label for="nome">Nome: </label>
-                    <input type="text" name="nome" id="nome" required>
+                    <input type="text" name="nome" id="nome"  required pattern="[A-Za-z\s]{1,}">
                     <label for="email">E-mail: </label>
-                    <input type="email" name="email" id="email" required>
+                    <input type="email" name="email" id="email"  required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
                     <label for="senha">Senha: </label>
-                    <input type="password" name="senha" id="senha" required>
+                    <input type="password" name="senha" id="senha"  required pattern=".{3,}">
                     <label for="cpf">CPF: </label>
-                    <input type="text" name="cpf" id="cpfInput" maxlength="14" required>
+                    <input type="text" name="cpf" id="cpfInput" maxlength="14"  required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
                     <input type="submit" value="Cadastrar" id="btnCadastrar">
                 </form>
             </div>
@@ -90,9 +90,9 @@
                     </div>
                     <form action="../controller/loginController.php" method="post">
                         <label for="email">E-mail: </label>
-                        <input type="email" name="email" id="email">
+                        <input type="email" name="email" id="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
                         <label for="senha">Senha: </label>
-                        <input type="password" name="senha" id="senha">
+                        <input type="password" name="senha" id="senha" required pattern=".{3,}">
                         <?php
                             if(isset($_GET['erro_login'])){
                         ?>
