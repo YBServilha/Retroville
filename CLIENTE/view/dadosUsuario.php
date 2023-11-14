@@ -32,7 +32,7 @@
         </div>
         <nav>
             <ul>
-                <a href="CLIENTE/view/produtos.php"><li>Veículos</li></a>
+                <a href="produtos.php"><li>Veículos</li></a>
                 <a href="#"><li>Sobre</li></a>
                 <a href="#"><li>Contato</li></a>
             </ul>

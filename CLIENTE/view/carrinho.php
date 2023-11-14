@@ -87,6 +87,16 @@
         </script>
         <?php
         }
+
+        function calcularSubtotal($produtos) {
+            $subtotal = 0;
+        
+            foreach ($produtos as $produto) {
+                $subtotal += $produto['preco'];
+            }
+        
+            return number_format($subtotal, 2);
+        }
     ?>
 
 
@@ -190,7 +200,7 @@
                     if(isset($resSubtotal)){
                         
                         foreach($resSubtotal as $sub){
-                            echo $sub['total_precos']; 
+                            echo calcularSubtotal($produtosNoCarrinho);
                         }
                     } else {
                         echo 0;
@@ -209,7 +219,7 @@
                     if(isset($resSubtotal)){
                         //var_dump($resSubtotal);
                         foreach($resSubtotal as $sub){
-                            echo $sub['total_precos']; 
+                            echo calcularSubtotal($produtosNoCarrinho);
                         }
                     } else {
                         echo 0;
