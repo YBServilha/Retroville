@@ -209,7 +209,7 @@ header nav ul a:hover{
 #section{
     width: 100%;
     height: 1100px;
-    background-color: rgb(162, 161, 161);
+    background-color: rgb(230, 230, 230);
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -218,7 +218,7 @@ header nav ul a:hover{
 #section .boxLogin{
     width: 70%;
     height: 70%;
-    background-color: rgb(162, 161, 161);
+    background-color: rgb(230, 230, 230);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -259,7 +259,7 @@ header nav ul a:hover{
 }
 
 #section .boxLogin .logIn{
-    background-color: gray;
+    background-color: rgb(110, 110, 110);
     width: 100%;
     height: 100%;
     display: flex;
@@ -270,7 +270,7 @@ header nav ul a:hover{
     position: relative;
 }
 #section .boxLogin .sigIn{
-    background-color: silver;
+    background-color: rgb(110, 110, 110);
     width: 100%;
     height: 100%;
     display: flex;
