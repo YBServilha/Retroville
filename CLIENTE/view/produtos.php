@@ -25,8 +25,8 @@
         <nav>
             <ul>
                 <a href="produtos.php"><li>Veículos</li></a>
-                <a href="#"><li>Sobre</li></a>
-                <a href="#"><li>Contato</li></a>
+                <a href="sobre.php"><li>Sobre</li></a>
+                <a href="contato.php"><li>Contato</li></a>
             </ul>
         </nav>
         <div class="icons">
@@ -53,8 +53,8 @@
                 <div class="itensResponsivo">
                     <ul>
                         <a href="produtos.php"><li>Veículos</li></a>
-                        <a href="#"><li>Sobre</li></a>
-                        <a href="#"><li>Contato</li></a>
+                        <a href="sobre.php"><li>Sobre</li></a>
+                        <a href="contato.php"><li>Contato</li></a>
                         <a href="dadosUsuario.php"><ion-icon name="person-outline"></ion-icon></a>
                         <a href="carrinho.php?res=1"><ion-icon name="car-sport-outline"></ion-icon></a>
                     </ul>
