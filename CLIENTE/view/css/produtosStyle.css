@@ -13,6 +13,7 @@ html{
 }
 body{
     position: relative;
+    background-color: rgb(230, 230, 230);
 }
 
 /* HEADER */
