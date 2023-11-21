@@ -34,8 +34,8 @@
         <nav>
             <ul>
                 <a href="CLIENTE/view/produtos.php"><li>Veículos</li></a>
-                <a href="#"><li>Sobre</li></a>
-                <a href="#"><li>Contato</li></a>
+                <a href="CLIENTE/view/sobre.php"><li>Sobre</li></a>
+                <a href="CLIENTE/view/contato.php"><li>Contato</li></a>
             </ul>
         </nav>
         <div class="icons">

@@ -1,15 +1,6 @@
-<?php 
-   session_start();
-   if(isset($_SESSION['EMAIL_USER'])){
-    //ECHO 'TUDO CERTO';
-   }if(isset($_GET['code'])){
-    //DESLOGANDO
-    session_destroy();
-    header('Location: ../../index.php');
-   }elseif(!isset($_SESSION['EMAIL_USER'])){
-    //DESLOGADO
-    header('Location: logSigin.php?msg');
-   } 
+<?php
+    session_start();
+    include_once ('../../ADM/model/Conexao.php');
 ?>
 
 <!DOCTYPE html>
@@ -18,11 +9,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="css/mudarSenha.css" rel="stylesheet">
+    <link href="css/sobreStyle.css" rel="stylesheet">
     <title>Produtos</title>
 </head>
 <body>
-    <!--HEADER DO SITE-->
+
+    <!--CABEÇALHO HEADER-->
     <header>
         <div id="logo">
             <a href="../../index.php">
@@ -31,7 +23,7 @@
         </div>
         <nav>
             <ul>
-                <a href="CLIENTE/view/produtos.php"><li>Veículos</li></a>
+                <a href="produtos.php"><li>Veículos</li></a>
                 <a href="sobre.php"><li>Sobre</li></a>
                 <a href="contato.php"><li>Contato</li></a>
             </ul>
@@ -71,24 +63,59 @@
     </header>
 
 
+    <!--TÍTULO E INFORMAÇÕES DE SOBRE NÓS-->
+    <h1>Sobre Nós</h1>
+    <div class="box-text">
+        <p>
+            Bem-vindo ao nosso site de curadoria de carros antigos! Nós somos um grupo de estudantes da ETEC Jornalista Roberto Marinho, e este projeto faz parte do nosso trabalho de conclusão de curso.
+        </p>
 
-    <!--TÍTULO DE USUÁRIOS E IMG DE FUNDO-->
-    <div class="box-all">
-        <div class="box-info">
-            <h1>Mudar senha:</h1>
-            <div class="forms">
-                <form action="../controller/confirmarSenha.php" method="POST">
-                    <input type="password" name="senha" placeholder="Senha atual..." pattern=".{3,}" title="A senha deve ter pelo menos 3 caracteres" required>
-                    <input type="password" name="nova_senha" placeholder="Nova senha..." pattern=".{3,}" title="A nova senha deve ter pelo menos 3 caracteres" required>
-                    <input type="hidden" name="email" value="<?php echo $_SESSION['EMAIL_USER'] ?>">
-                    <input type="submit" name="editar" value="Atualizar" class="btn edit">
-                </form>
-            </div>
-        </div>
+        <p>
+            Nosso objetivo é proporcionar uma 
+            experiência única para entusiastas de carros antigos, oferecendo uma seleção cuidadosa de veículos clássicos à venda. Valorizamos a qualidade, autenticidade e história por trás de cada carro que disponibilizamos em nosso site.
+        </p>
+
+        <p>
+            Além da venda de carros antigos, também fornecemos informações detalhadas sobre cada modelo, incluindo especificações técnicas e curiosidades. Acreditamos que é fundamental inspirar nossos clientes, ajudando-os a tomar decisões e a encontrar o carro clássico dos seus sonhos.
+        </p>
     </div>
 
+    <h1>Integrantes</h1>
+    <div class="box-fotos">
+        <div class="fotos">
+            <img src="img/imgSobreNos/f1.png" alt="">
+            <p class="nomes">Brunno Silva Steagall</p>
+            <p class="funcao">Gestor de Conteúdo</p>
+        </div>
+        <div class="fotos">
+            <img src="img/imgSobreNos/f2.png" alt="">
+            <p class="nomes">Yan  Barbosa Servilha</p>
+            <p class="funcao">Desenvolvedor de Software</p>
+        </div>
+        <div class="fotos">
+            <img src="img/imgSobreNos/f3.png" alt="">
+            <p class="nomes">Enzo Lemos Menon</p>
+            <p class="funcao">Designer / UX</p>
+        </div>
+        <div class="fotos">
+            <img src="img/imgSobreNos/f4.png" alt="">
+            <p class="nomes">Jorge Liotino Rodrigues</p>
+            <p class="funcao">Designer / UX</p>
+        </div>
+        <div class="fotos">
+            <img src="img/imgSobreNos/f5.png" alt="">
+            <p class="nomes">Danilo dos Santos Almeida</p>
+            <p class="funcao">Desenvolvedor de Software</p>
+        </div>
+        
+        <div class="fotos">
+            <img src="img/imgSobreNos/f6.webp" alt="">
+            <p class="nomes">Rafael Henrique Loureiro </p>
+            <p class="funcao">Documentador</p>
+        </div>
+    </div>
+                
     
-
     <!--RODAPÉ FOOTER-->
     <footer>
         <div id="box-footer">
@@ -104,13 +131,13 @@
                 <div class="box-icons">
                     <p class="p-redes-sociais">Redes Sociais:</p>
                     <div class="iii">
-                        <a href="" class="link-redes">
+                        <a href="https://www.instagram.com/retroville_rv/" class="link-redes">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
-                        <a href="" class="link-redes">
+                        <a href="https://api.whatsapp.com/send?phone=5511984008296" class="link-redes">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
-                        <a href="" class="link-redes">
+                        <a href="https://www.tiktok.com/@retroville_rv" class="link-redes">
                             <i class="fa-brands fa-tiktok"></i>
                         </a>
                     </div>
