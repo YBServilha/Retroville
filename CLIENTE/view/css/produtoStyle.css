@@ -13,6 +13,7 @@ body{
     color: #171a20;
     font-family: 'M PLUS 1p', sans-serif;
     position: relative;
+    background-color: rgb(230, 230, 230);
 }
 /* HEADER */
 header{

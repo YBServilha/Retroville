@@ -109,7 +109,7 @@
         </div>
         
         <div class="fotos">
-            <img src="img/imgSobreNos/f6.webp" alt="">
+            <img src="img/imgSobreNos/f6.jpeg" alt="">
             <p class="nomes">Rafael Henrique Loureiro </p>
             <p class="funcao">Documentador</p>
         </div>
