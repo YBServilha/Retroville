@@ -237,6 +237,7 @@
                         <?php
                         }
 
+                        if(isset($_GET['cod'])){
                         $conn = new Conexao();
                         $codProduto = $_GET['cod'];
                         $sql = "SELECT * FROM produtos WHERE cod = '$codProduto'";
@@ -244,6 +245,8 @@
 
                         foreach($resultados as $resultado){
                         ?>
+                        <input type="hidden" name="codigo" value="<?php echo $codProduto;?>">
+
                         <input type="hidden" name="cpf" value="<?php echo $_SESSION['CPF'];?>">
                         
                         <input type="hidden" name="nome" value="<?php echo $_SESSION['NOME'];?>">
@@ -257,7 +260,7 @@
                         <input type="hidden" name="imgCard" value="<?php echo $resultado['imgCard'];?>">
 
                         <?php
-                        }
+                        }}
                         ?>
                     </form>
                     Comprar
