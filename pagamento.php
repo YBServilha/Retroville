@@ -1,5 +1,26 @@
 <?php
 
+    include_once('CLIENTE/model/pedidosModel.php');
+    include_once('ADM/model/ferramentas.php');
+    include_once('ADM/model/Conexao.php');
+
+    $cpf = $_POST['cpf'];
+    $nome = $_POST['nome'];
+    $nome_produto = $_POST['nome_produto']; 
+    $preco = $_POST['preco'];
+    $cod = $_POST['cod'];
+    $imgCard = $_POST['imgCard'];
+
+    $conexao = new Conexao();
+    $sql = "INSERT INTO pedidos(cpf, nome, nome_produto, preco, cod, imgCard) VALUES('$cpf', '$nome', '$nome_produto', '$preco','$cod','$imgCard');";
+    $conexao->executar($sql);
+    /*$conn = new Conexao();
+    $conexao = $conn->pegarConexao();
+
+    $pedido = new Pedidos($cpf, $nome, $nome_produto, $preco, $cod, $imgCard);
+    $pedido->incluirPedido();
+    */
+
 require __DIR__.'/vendor/autoload.php';
 
 use \App\Pix\Payload;
@@ -122,4 +143,7 @@ echo $image;
         });
     </script>
     <?php
+
+    
 }
+
