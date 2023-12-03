@@ -209,7 +209,7 @@
                 </div>
                 <div id="frete">
                     <p>Frete</p>
-                    <p>Grátis</p>
+                    <p>Retirar na loja</p>
                 </div>
             </div>
             <div class="total">
