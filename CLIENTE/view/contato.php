@@ -64,7 +64,7 @@
 
 
     <!--TÍTULO E CONTATO-->
-    <h1>Sobre Nós</h1>
+    <h1>Fale conosco aqui!</h1>
     <div class="box-text">
         <p>
             Caso você queira entrar em contato com a gente, disponibilizamos o nosso email: 

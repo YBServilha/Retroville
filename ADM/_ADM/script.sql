@@ -65,3 +65,14 @@ create table carrinho(
     ano varchar(9) not null,
     primary key(id)
 );
+
+create table pedidos(
+    id int not null auto_increment,
+    cpf varchar(100) not null,
+    nome varchar(100) not null,
+    nome_produto varchar(100) not null,
+    preco varchar(100) not null,
+    cod varchar(100) not null,
+    imgCard varchar(100) not null,
+    primary key(id)
+);
