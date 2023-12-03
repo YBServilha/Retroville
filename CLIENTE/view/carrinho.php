@@ -226,8 +226,8 @@
                     } ?></p>
                 </div>
 
-                <a href="produtos.php" id="linkProdutos"><button type="button" class="btn btn-outline-warning btn-lg btn-block">Adicionar outro produto</button></a>
-                <button type="button" class="btn btn-outline-success btn-lg btn-block" id="btnComprar">
+                <a href="produtos.php" id="linkProdutos"><button type="button" class="btn btn-warning btn-lg btn-block">Adicionar outro produto</button></a>
+                <button type="button" class="btn btn-success btn-lg btn-block" id="btnComprar">
                     <form action="../../pagamento.php" method="post" id="formCompra">
                         <input type="hidden" name="pedido" value="pedido">
                         <?php

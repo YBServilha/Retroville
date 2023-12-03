@@ -56,6 +56,9 @@ header .icons a{
 header .icons a:hover{
     color: yellow;
 }
+ion-icon{
+    color: white;
+}
 header nav{
     background-color: none;
     max-width: 400px;
