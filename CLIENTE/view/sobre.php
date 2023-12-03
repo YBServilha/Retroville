@@ -80,39 +80,58 @@
         </p>
     </div>
 
-    <h1>Integrantes</h1>
-    <div class="box-fotos">
-        <div class="fotos">
-            <img src="img/imgSobreNos/f1.png" alt="">
-            <p class="nomes">Brunno Silva Steagall</p>
-            <p class="funcao">Gestor de Conteúdo</p>
-        </div>
-        <div class="fotos">
+    <h1 id="integrantes">Integrantes</h1>
+    <div class="container">
+        <span data-tilt>
+        <div class="box" style="--i:0;">
+        <i></i>
+        <div class="content">
             <img src="img/imgSobreNos/f2.png" alt="">
-            <p class="nomes">Yan  Barbosa Servilha</p>
-            <p class="funcao">Desenvolvedor de Software</p>
+            <h2>Yan Servilha<br><span>Lead & Desenvolvedor</span></h2>
+            <a href="https://www.linkedin.com/in/yan-barbosa-servilha" target="_blank">Contato</a>
         </div>
-        <div class="fotos">
-            <img src="img/imgSobreNos/f3.png" alt="">
-            <p class="nomes">Enzo Lemos Menon</p>
-            <p class="funcao">Designer / UX</p>
         </div>
-        <div class="fotos">
-            <img src="img/imgSobreNos/f4.png" alt="">
-            <p class="nomes">Jorge Liotino Rodrigues</p>
-            <p class="funcao">Designer / UX</p>
-        </div>
-        <div class="fotos">
-            <img src="img/imgSobreNos/f5.png" alt="">
-            <p class="nomes">Danilo dos Santos Almeida</p>
-            <p class="funcao">Desenvolvedor de Software</p>
-        </div>
-        
-        <div class="fotos">
-            <img src="img/imgSobreNos/f6.jpeg" alt="">
-            <p class="nomes">Rafael Henrique Loureiro </p>
-            <p class="funcao">Documentador</p>
-        </div>
+    </span>
+        <div class="box" style="--i:1;">
+            <i></i>
+            <div class="content">
+                <img src="img/imgSobreNos/f1.png" alt="">
+                <h2>Brunno Silva<br><span>Social Media</span></h2>
+                <a href="https://www.linkedin.com/in/brunno-steagall-770a951b0/" target="_blank">Contato</a>
+            </div>
+            </div>
+            <div class="box" style="--i:2;">
+                <i></i>
+                <div class="content">
+                    <img src="img/imgSobreNos/f5.png" alt="">
+                    <h2>Danilo dos Santos<br><span>Desenvolvedor</span></h2>
+                    <a href="https://www.linkedin.com/in/danilo-almeida-7a0994269/" target="_blank">Contato</a>
+                </div>
+                </div>
+                <div class="box" style="--i:2;">
+                    <i></i>
+                    <div class="content">
+                        <img src="img/imgSobreNos/f3.png" alt="">
+                        <h2>Enzo Lemos<br><span>Designer/UX</span></h2>
+                        <a href="https://www.linkedin.com/in/enzo-l-b9a881208/" target="_blank">Contato</a>
+                    </div>
+                    </div>
+                    <div class="box" style="--i:2;">
+                        <i></i>
+                        <div class="content">
+                            <img src="img/imgSobreNos/f4.png" alt="">
+                            <h2>Jorge Liotino<br><span>Designer/UX</span></h2>
+                            <a href="https://www.linkedin.com/in/jorge-liotino-2aa6b9267/" target="_blank">Contato</a>
+                        </div>
+                        </div>
+                        <div class="box" style="--i:2;">
+                            <i></i>
+                            <div class="content">
+                                <img src="img/imgSobreNos/f6.jpeg" alt="">
+                                <h2>Rafael Henrique<br><span>Documentador</span></h2>
+                                <a href="#">Contato</a>
+                            </div>
+                            </div>
     </div>
                 
     
@@ -168,6 +187,17 @@
         btn.addEventListener('click', () => {
             menuMobile.classList.toggle('display');
         });
+    </script>
+
+<script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".box"), {
+            max: 25,
+            speed: 400
+        });
+        
+        //It also supports NodeList
+        VanillaTilt.init(document.querySelectorAll(".box"));
     </script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

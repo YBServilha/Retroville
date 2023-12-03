@@ -216,6 +216,9 @@ h1{
     font-size: 50px;
     color: rgb(51, 51, 50)
 }
+#integrantes{
+    margin-top: 80px;
+}
 
 .box-text{
     width: 50%;
@@ -331,6 +334,9 @@ h1{
         color: white;
         cursor:default;
     }
+    #integrantes{
+        margin-top: 40px;
+    }
 }
 
 @media(max-width:390px){
@@ -394,6 +400,124 @@ h1{
         color: white;
         cursor:default;
     }
+}
+
+
+.container{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}
+.box{
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background: rgba(0,0,0,0.5);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media(max-width: 540px){
+    .box{
+        width: 280px;
+        height: 350px;
+    }
+}
+.box::before, 
+.box::after{
+    content: '';
+    position: absolute;
+    background: linear-gradient(315deg, #00ccff, #d400d4);
+    inset: -80px 100px;
+    transition: 0.5s;
+    filter: hue-rotate(calc(var(--i) * 120deg));
+    animation: animate 8s linear infinite;
+}
+.box::after{
+    background: linear-gradient(315deg, #ffeb3b, #e91e63);
+    filter: hue-rotate(calc(var(--i) * 120deg));
+    animation-delay: -2s;
+}
+
+.box:hover::before, 
+.box:hover::after{
+    animation-play-state: paused;
+    inset: -80px 80px;
+}
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.box i{
+    position: absolute;
+    inset: 5px;
+    background: rgb(230, 230, 230);
+    z-index: 1;
+}
+.box .content{
+    position: absolute;
+    inset: 10px;
+    background: #0d122c;
+    border: 3px solid #070c23;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    background-size: cover;
+}
+.box .content img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    z-index: 3;
+    pointer-events: none;
+}
+.box:hover .content img{
+    opacity: 0;
+}
+.box .content h2{
+    position: relative;
+    z-index: 2;
+    font-size: 1.25em;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: 1.25em;
+    text-transform: uppercase;
+}
+.box .content h2 span{
+    font-weight: 300;
+    font-size: 0.75em;
+}
+.box .content a{
+    position: relative;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #fff;
+    color: #070a1c;
+    border-radius: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.box .content a:hover{
+    letter-spacing: 0.2em;
 }
 
 
