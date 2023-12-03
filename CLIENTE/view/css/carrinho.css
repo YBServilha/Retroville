@@ -382,4 +382,5 @@ section.carrinho .resumo-pedido .total #total{
 #excluirProdutoCarrinho{
     font-size: 32px;
     cursor: pointer;
+    color: black;
 }
