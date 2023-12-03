@@ -33,6 +33,7 @@ header{
     margin-bottom: 100px;
     font-family: 'Inclusive Sans';
 }
+
 header #logo img{
     max-width: 110px;
     width: 100%;
@@ -105,6 +106,9 @@ header nav ul a:hover{
 }
 .menuResponsivo.display{
     display: none;
+}
+ion-icon{
+    color: white;
 }
 
 .menuResponsivoIcon{

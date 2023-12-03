@@ -178,6 +178,9 @@ header nav ul a:hover{
 .menuResponsivo .principalResponsivo .itensResponsivo ul a:hover{
     background-color: orange;
 }
+ion-icon{
+    color: white;
+}
 
 /* Responsividade */
 @media(max-width: 750px){
