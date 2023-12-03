@@ -92,7 +92,7 @@
         </div>
         </div>
     </span>
-        <div class="box" style="--i:1;">
+        <div class="box" style="--i:0;">
             <i></i>
             <div class="content">
                 <img src="img/imgSobreNos/f1.png" alt="">
@@ -100,7 +100,7 @@
                 <a href="https://www.linkedin.com/in/brunno-steagall-770a951b0/" target="_blank">Contato</a>
             </div>
             </div>
-            <div class="box" style="--i:2;">
+            <div class="box" style="--i:0;">
                 <i></i>
                 <div class="content">
                     <img src="img/imgSobreNos/f5.png" alt="">
@@ -108,7 +108,7 @@
                     <a href="https://www.linkedin.com/in/danilo-almeida-7a0994269/" target="_blank">Contato</a>
                 </div>
                 </div>
-                <div class="box" style="--i:2;">
+                <div class="box" style="--i:0;">
                     <i></i>
                     <div class="content">
                         <img src="img/imgSobreNos/f3.png" alt="">
@@ -116,7 +116,7 @@
                         <a href="https://www.linkedin.com/in/enzo-l-b9a881208/" target="_blank">Contato</a>
                     </div>
                     </div>
-                    <div class="box" style="--i:2;">
+                    <div class="box" style="--i:0;">
                         <i></i>
                         <div class="content">
                             <img src="img/imgSobreNos/f4.png" alt="">
@@ -124,7 +124,7 @@
                             <a href="https://www.linkedin.com/in/jorge-liotino-2aa6b9267/" target="_blank">Contato</a>
                         </div>
                         </div>
-                        <div class="box" style="--i:2;">
+                        <div class="box" style="--i:0;">
                             <i></i>
                             <div class="content">
                                 <img src="img/imgSobreNos/f6.jpeg" alt="">
