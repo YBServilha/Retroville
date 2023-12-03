@@ -1,15 +1,16 @@
 <?php
+    session_start();
 
     include_once('CLIENTE/model/pedidosModel.php');
     include_once('ADM/model/ferramentas.php');
     include_once('ADM/model/Conexao.php');
 
-    $codigo = $_POST['codigo'];
-    $cpf = $_POST['cpf'];
-    $nome = $_POST['nome'];
-    $preco = $_POST['preco'];
-    $cod = $_POST['cod'];
-    $imgCard = $_POST['imgCard'];
+    //$codigo = $_POST['codigo'];
+    $cpf = $_SESSION['CPF'];
+    $nome = $_SESSION['NOME'];
+    //$preco = $_POST['preco'];
+    //$cod = $_POST['cod'];
+    //$imgCard = $_POST['imgCard'];
 
     $conexao = new Conexao();
     $sql1 = "SELECT * FROM carrinho WHERE cod_usuario = '$cpf'";

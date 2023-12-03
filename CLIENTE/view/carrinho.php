@@ -237,30 +237,7 @@
                         <?php
                         }
 
-                        if(isset($_GET['cod'])){
-                        $conn = new Conexao();
-                        $codProduto = $_GET['cod'];
-                        $sql = "SELECT * FROM produtos WHERE cod = '$codProduto'";
-                        $resultados = $conn->consultarDados($sql);
-
-                        foreach($resultados as $resultado){
-                        ?>
-                        <input type="hidden" name="codigo" value="<?php echo $codProduto;?>">
-
-                        <input type="hidden" name="cpf" value="<?php echo $_SESSION['CPF'];?>">
                         
-                        <input type="hidden" name="nome" value="<?php echo $_SESSION['NOME'];?>">
-
-                        <input type="hidden" name="nome_produto" value="<?php echo $resultado['marca'] . '_' . $resultado['modelo'];?>">
-
-                        <input type="hidden" name="preco" value="<?php echo $resultado['preco'];?>">
-
-                        <input type="hidden" name="cod" value="<?php echo $resultado['cod'];?>">
-
-                        <input type="hidden" name="imgCard" value="<?php echo $resultado['imgCard'];?>">
-
-                        <?php
-                        }}
                         ?>
                     </form>
                     Comprar
