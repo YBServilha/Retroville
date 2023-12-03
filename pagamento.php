@@ -1,33 +1,5 @@
 <?php
-    session_start();
-
-    include_once('CLIENTE/model/pedidosModel.php');
-    include_once('ADM/model/ferramentas.php');
-    include_once('ADM/model/Conexao.php');
-
-    //$codigo = $_POST['codigo'];
-    $cpf = $_SESSION['CPF'];
-    $nome = $_SESSION['NOME'];
-    //$preco = $_POST['preco'];
-    //$cod = $_POST['cod'];
-    //$imgCard = $_POST['imgCard'];
-
-    $conexao = new Conexao();
-    $sql1 = "SELECT * FROM carrinho WHERE cod_usuario = '$cpf'";
-    $resultados = $conexao->consultarDados($sql1);
-
-    foreach($resultados as $resultado){
-    $nome_produto = $resultado['marca'] . "_" . $resultado['modelo'];
-
-    $sql = "INSERT INTO pedidos(cpf, nome, nome_produto, preco, cod, imgCard) VALUES('$cpf', '$nome', '$nome_produto', '{$resultado["preco"]}','{$resultado["cod_produto"]}','{$resultado["imgCard"]}');";
-    $conexao->executar($sql);
-    }
-    /*$conn = new Conexao();
-    $conexao = $conn->pegarConexao();
-
-    $pedido = new Pedidos($cpf, $nome, $nome_produto, $preco, $cod, $imgCard);
-    $pedido->incluirPedido();
-    */
+session_start();
 
 require __DIR__.'/vendor/autoload.php';
 
@@ -62,6 +34,36 @@ $image = (new Output\Png)->output($obQrCode,400);
 
 header('Content-Type: image/png');
 echo $image;
+
+
+
+include_once('CLIENTE/model/pedidosModel.php');
+include_once('ADM/model/ferramentas.php');
+include_once('ADM/model/Conexao.php');
+
+//$codigo = $_POST['codigo'];
+$cpf = $_SESSION['CPF'];
+$nome = $_SESSION['NOME'];
+//$preco = $_POST['preco'];
+//$cod = $_POST['cod'];
+//$imgCard = $_POST['imgCard'];
+
+$conexao = new Conexao();
+$sql1 = "SELECT * FROM carrinho WHERE cod_usuario = '$cpf'";
+$resultados = $conexao->consultarDados($sql1);
+
+foreach($resultados as $resultado){
+$nome_produto = $resultado['marca'] . "_" . $resultado['modelo'];
+
+$sql = "INSERT INTO pedidos(cpf, nome, nome_produto, preco, cod, imgCard) VALUES('$cpf', '$nome', '$nome_produto', '{$resultado["preco"]}','{$resultado["cod_produto"]}','{$resultado["imgCard"]}');";
+$conexao->executar($sql);
+}
+/*$conn = new Conexao();
+$conexao = $conn->pegarConexao();
+
+$pedido = new Pedidos($cpf, $nome, $nome_produto, $preco, $cod, $imgCard);
+$pedido->incluirPedido();
+*/
 
 ?>
 
