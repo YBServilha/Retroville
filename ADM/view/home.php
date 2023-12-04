@@ -33,7 +33,6 @@
             <a href="listaProdutos.php"><i class="fa-sharp fa-solid fa-car"></i>  <li>Produtos</li></a>
             <a href="listaPedidos.php"><i class="fa-solid fa-truck"></i> <li>Pedidos</li></a>
             <a href="usuario.php"><i class="fa-solid fa-user"></i> <li>Usuário</li></a>
-            <a href="alterarSenha.php" class="alterar-senha"><i class="fa-solid fa-lock"></i> <li id="alterar">Alterar Senha</li></a>
         </ul>
 
         <button id="logout" onclick="logout();">Logout</button>

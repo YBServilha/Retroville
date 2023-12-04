@@ -177,7 +177,7 @@
                     <h2 class="rubik"><?php echo $produtoNoCarrinho['marca'].' - '.$produtoNoCarrinho['modelo'];?></h2>
                     <p>Infos: <br>Carroceria: <?php echo $produtoNoCarrinho['carroceria']?>;<br>KM: <?php echo $produtoNoCarrinho['km']?>;<br>Cor: <?php echo $produtoNoCarrinho['cor']?>;<br> Motor: <?php echo $produtoNoCarrinho['motor']?>.</p>
                 </div>
-                <p class="preco-carrinho">Preço: R$ <?php echo number_format($produtoNoCarrinho['preco'], 2); ?></p>
+                <p class="preco-carrinho">Preço: R$ <?php echo number_format($produtoNoCarrinho['preco'], 2, ',', '.'); ?></p>
                 <form action="../controller/carrinhoController.php" method="post" id="formCarrinho" name="formDelete">
                 <ion-icon name="trash-outline" id="excluirProdutoCarrinho"></ion-icon>
                 <input type="hidden" name="codUsuario" value="<?php echo $usuario;?>">
