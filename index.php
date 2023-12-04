@@ -74,16 +74,32 @@
     <main>
         <section class="background1">
             <!--<p>Esportivos</p>-->
-            <p>Esportivos</p>
+            <p>Retroville</p>
             <a href="CLIENTE/view/produtos.php">Ver todos os veículos</a>
         </section>
         <section class="background1">
-            <p>Esportivos</p>
-            <a href="CLIENTE/view/produtos.php">Ver todos os esportivos</a>
+            <p>Sedans</p>
+            <a href="CLIENTE/view/produtos.php">Ver todos os sedans</a>
         </section>
         <section class="background1">
-            <p>Esportivos</p>
-            <a href="CLIENTE/view/produtos.php">Ver todos os esportivos</a>
+            <p id="texto5">Hatches</p>
+            <a href="CLIENTE/view/produtos.php">Ver todos os hatches</a>
+        </section>
+        <section class="background1">
+            <p>Coupês</p>
+            <a href="CLIENTE/view/produtos.php">Ver todos os coupês</a>
+        </section>
+        <section class="background1">
+            <p id="texto4">Caminhonetes</p>
+            <a href="CLIENTE/view/produtos.php">Ver todas as caminhonetes</a>
+        </section>
+        <section class="background1">
+            <p id="texto5">SUVs</p>
+            <a href="CLIENTE/view/produtos.php">Ver todos os SUVs</a>
+        </section>
+        <section class="background1">
+            <p id="texto5">Conversíveis</p>
+            <a href="CLIENTE/view/produtos.php">Ver todos os conversíveis</a>
         </section>
     </main>
 
