@@ -283,7 +283,7 @@ header nav ul a:hover{
     
 }
 #section .boxLogin .sigIn h2, #section .boxLogin .logIn h2{
-    color: rgba(0, 0, 0, 0.778);
+    color: rgba(255, 255, 255, 0.75);
     margin-bottom: 30px;
     font-size: 52px;
 }
@@ -303,7 +303,7 @@ header nav ul a:hover{
 #section .boxLogin .sigIn form label, #section .boxLogin .logIn form label{
     font-size: 20px;
 }
-#section .boxLogin .logIn form label{
+#section .boxLogin .logIn form label, #section .boxLogin .sigIn form label{
     color: rgba(255, 255, 255, 0.75);
 }
 #section .boxLogin .sigIn form input,
