@@ -178,7 +178,7 @@ if (isset($_GET['cod'])) {
                     <p>Valor</p>
                 </div>
                 <div class="resultado">
-                    <p><?php echo $resultado['preco']?></p>
+                    <p>R$ <?php echo number_format($resultado['preco'], 2, ',', '.') ?></p>
                 </div>
             </div>
         </section>
