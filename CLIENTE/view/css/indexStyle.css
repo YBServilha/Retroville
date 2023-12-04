@@ -232,7 +232,7 @@ main section.background1{
     width: 100%;
     object-fit: cover;
     height: 100vh;
-    background: url(../img/imgHome/RETROVILLE.png);
+    background: url(../img/imgHome/background3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -271,7 +271,18 @@ main section.background1:nth-child(2){
     width: 100%;
     object-fit: cover;
     height: 100vh;
-    background: url(../img/imgHome/background4.jpg);
+    background: url(../img/imgHome/background2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+
+main section.background1:nth-child(3){
+    width: 100%;
+    object-fit: cover;
+    height: 100vh;
+    background: url(../img/imgHome/h1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
