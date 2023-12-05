@@ -90,3 +90,15 @@ INSERT INTO produtos (
     'opala-historia.png', 'carro2.jpg', 'carro3.jpg', 'carro4.jpg', 'carro5.jpg',
     'carro6.jpg', 'carro7.jpg', 'carro8.jpg', 'carro9.jpg', '1'
 );
+
+INSERT INTO produtos (
+    cod, data, marca, modelo, carroceria, preco, motor, cor, km, ano,
+    cambio, finalPlaca, textoCarro, imgCard, imgCapa, imgHistoria, img1,
+    img2, img3, img4, img5, img6, img7, img8, status
+) VALUES (
+    'xWMq7RQQ', '05-12-2023 19:49:55', 'CHEVROLET', 'D20', 'Caminhonete',
+    1650000.00, '4.0', 'Vermelho', '12.000', '1993',
+    'MANUAL', 6, 'O Chevrolet D20 foi uma picape produzida no Brasil de 1985 a 1996. Conhecida por sua robustez e versatilidade, atendia tanto às necessidades de transporte de carga como ao uso pessoal. Oferecida com diversas opções de motores, a D20 ganhou destaque e é lembrada como um ícone da indústria automobilística brasileira.', 'carro1.png', 'd20inicio.png',
+    'd20historia.png', 'carro2.png', 'carro3.png', 'carro4.png', 'carro5.png',
+    'carro6.png', 'carro7.png', 'carro8.png', 'carro9.png', '1'
+);
