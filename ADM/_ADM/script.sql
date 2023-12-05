@@ -114,3 +114,15 @@ INSERT INTO produtos (
     'c2.webp', 'c3.webp', 'c4.webp', 'c5.webp', 'c6.webp',
     'c7.webp', 'c8.webp', 'c9.webp', '1'
 );
+
+INSERT INTO produtos (
+    cod, data, marca, modelo, carroceria, preco, motor, cor, km, ano,
+    cambio, finalPlaca, textoCarro, imgCard, imgCapa, imgHistoria, img1,
+    img2, img3, img4, img5, img6, img7, img8, status
+) VALUES (
+    '9z6pC3vm', '05-12-2023 20:35:43', 'VOLKSWAGEN', 'KOMBI', 'SUV',
+    82000.00, '1.2 V8', 'VERMELHO', '20.000', '1961',
+    'MANUAL', 2, 'A Volkswagen Kombi, ├® um dos ve├¡culos mais ic├┤nicos e longevos da hist├│ria automotiva. Lan├ºada em 1950, originou-se do design simples e funcional de Ben Pon, inspirado nos ve├¡culos utilit├írios da Segunda Guerra Mundial. A Kombi rapidamente se tornou popular devido ├á sua versatilidade, sendo usada para transporte de passageiros, carga e at├® como base para ambul├óncias e campervans. Ao longo das d├®cadas, a Kombi passou por v├írias atualiza├º├Áes, mas manteve o conceito de design e praticidade.', 'carro1.jpg', 'kombiinicio.png', 'kombihistoria.png',
+    'carro2.jpg', 'carro3.jpg', 'carro4.jpg', 'carro7.jpg', 'carro9.jpg',
+    'carro11.jpg', 'carro12.jpg', 'carro13.jpg', '1'
+);
