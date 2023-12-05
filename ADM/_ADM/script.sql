@@ -76,3 +76,17 @@ create table pedidos(
     imgCard varchar(100) not null,
     primary key(id)
 );
+
+
+INSERT INTO produtos (
+    cod, data, marca, modelo, carroceria, preco, motor, cor, km, ano,
+    cambio, finalPlaca, textoCarro, imgCard, imgCapa, imgHistoria, img1,
+    img2, img3, img4, img5, img6, img7, img8, status
+) VALUES (
+    '76oDXv22', '05-12-2023 19:26:36', 'CHEVROLET', 'OPALA', 'Sedan',
+    70000.00, '12V', 'Preto', '150.000', '1989',
+    'MANUAL - 4 Marchas', 8, 'Esta não é apenas uma máquina; é um pedaço da história automotiva que foi restaurado e reimaginado para atender aos padrões de hoje. O interior reflete o luxo da década de 80, combinando conforto e nostalgia de uma forma única. Cada detalhe foi cuidadosamente mantido para preservar a autenticidade deste clássico. 
+  Imagine-se dirigindo pelas estradas, as luzes noturnas dançando no exterior preto espelhado, enquanto você segura o volante clássico e sente o poder do motor respondendo ao seu toque. Este Opala Diplomata 1989 preto não é apenas um carro; é uma experiência que desperta os sentidos e evoca memórias de uma era dourada.', 'carro1.jpg', 'opala-inicio.png',
+    'opala-historia.png', 'carro2.jpg', 'carro3.jpg', 'carro4.jpg', 'carro5.jpg',
+    'carro6.jpg', 'carro7.jpg', 'carro8.jpg', 'carro9.jpg', '1'
+);
