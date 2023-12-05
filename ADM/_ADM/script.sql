@@ -126,3 +126,15 @@ INSERT INTO produtos (
     'carro2.jpg', 'carro3.jpg', 'carro4.jpg', 'carro7.jpg', 'carro9.jpg',
     'carro11.jpg', 'carro12.jpg', 'carro13.jpg', '1'
 );
+
+INSERT INTO produtos (
+    cod, data, marca, modelo, carroceria, preco, motor, cor, km, ano,
+    cambio, finalPlaca, textoCarro, imgCard, imgCapa, imgHistoria, img1,
+    img2, img3, img4, img5, img6, img7, img8, status
+) VALUES (
+    'SaFkjf3D', '05-12-2023 20:44:30', 'Ford', 'Maverick', 'Coupe',
+    132000.00, '5.0 V8', 'VERMELHO', '39.700', '1974',
+    'MANUAL', 8, 'O Ford Maverick de 1974 com motor 4.9 V8 foi uma varia├º├úo do modelo compacto introduzido pela Ford em 1970. Com o motor V8 de 4.9 litros, tamb├®m conhecido como motor 302, oferecia um desempenho decente para a ├®poca, com cerca de 140 a 150 cavalos de pot├¬ncia e aproximadamente 245 lb-ft de torque. O Maverick foi produzido at├® 1977 e ├® lembrado por sua variedade de op├º├Áes de motoriza├º├úo, incluindo esse V8 de 4.9 litros, antes de ser substitu├¡do pelo Ford Fairmont.', 'e1.jpg', 'inicio.png', 'historia.png',
+    'e2.jpg', 'e3.jpg', 'e4.jpg', 'e5.jpg', 'e6.jpg',
+    'e7.jpg', 'e8.jpg', 'e10.jpg', '1'
+);
