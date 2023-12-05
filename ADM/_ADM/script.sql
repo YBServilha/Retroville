@@ -102,3 +102,15 @@ INSERT INTO produtos (
     'd20historia.png', 'carro2.png', 'carro3.png', 'carro4.png', 'carro5.png',
     'carro6.png', 'carro7.png', 'carro8.png', 'carro9.png', '1'
 );
+
+INSERT INTO produtos (
+    cod, data, marca, modelo, carroceria, preco, motor, cor, km, ano,
+    cambio, finalPlaca, textoCarro, imgCard, imgCapa, imgHistoria, img1,
+    img2, img3, img4, img5, img6, img7, img8, status
+) VALUES (
+    'wlRr23rP', '05-12-2023 20:16:55', 'VolksWagen', 'Gol', 'Hatch',
+    105000.00, '1.8', 'vermelho', '198.100', '1991',
+    'manual', 7, 'O Volkswagen Gol GTS foi uma vers├úo esportiva do popular Gol, lan├ºado no Brasil em 1987. Ele era o sucessor direto do Gol GT e antecessor do Gol GTI. Com um motor 1.8 a ├ílcool, que mais tarde ganhou uma vers├úo a gasolina, o Gol GTS era conhecido por seu desempenho robusto e design esportivo, que inclu├¡a faixas decorativas, rodas de liga leve e um interior diferenciado com volante esportivo. O Gol GTS tornou-se um dos modelos mais emblem├íticos dos anos 80 e 90, apreciado por entusiastas do automobilismo e colecionadores de carros cl├íssicos brasileiros.', 'c12.webp', 'c11.webp', 'c222.webp',
+    'c2.webp', 'c3.webp', 'c4.webp', 'c5.webp', 'c6.webp',
+    'c7.webp', 'c8.webp', 'c9.webp', '1'
+);
