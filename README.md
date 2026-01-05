@@ -229,7 +229,7 @@ Projeto desenvolvido por alunos da **ETEC Jornalista Roberto Marinho**:
 | **Danilo dos Santos** | Desenvolvedor | [LinkedIn](https://www.linkedin.com/in/danilo-almeida-7a0994269/) |
 | **Enzo Lemos** | Designer/UX | [LinkedIn](https://www.linkedin.com/in/enzo-l-b9a881208/) |
 | **Jorge Liotino** | Designer/UX | [LinkedIn](https://www.linkedin.com/in/jorge-liotino-2aa6b9267/) |
-| **Rafael Henrique** | Documentador | - |
+| **Rafael Henrique** | Redator | - |
 
 ---
 
@@ -238,7 +238,6 @@ Projeto desenvolvido por alunos da **ETEC Jornalista Roberto Marinho**:
 Siga o Retroville nas redes sociais:
 
 - 📸 [Instagram](https://www.instagram.com/retroville_rv/)
-- 📱 [WhatsApp](https://api.whatsapp.com/send?phone=5511998949584)
 - 🎵 [TikTok](https://www.tiktok.com/@retroville_rv)
 
 ---
@@ -276,7 +275,6 @@ Para dúvidas, sugestões ou parcerias:
 
 - 🌐 **Site**: [www.retroville.rf.gd](http://www.retroville.rf.gd)
 - 📧 **Email**: Entre em contato através do [formulário no site](http://www.retroville.rf.gd/CLIENTE/view/contato.php)
-- 📱 **WhatsApp**: [+55 11 99894-9584](https://api.whatsapp.com/send?phone=5511998949584)
 
 ---
 
