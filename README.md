@@ -9,7 +9,7 @@
   [![PHP](https://img.shields.io/badge/PHP-7.4+-777BB4?logo=php&logoColor=white)](https://php.net)
   [![MySQL](https://img.shields.io/badge/MySQL-8.0+-4479A1?logo=mysql&logoColor=white)](https://www.mysql.com/)
   
-  [🌐 Acesse o Site](http://www.retroville.rf.gd) | [📧 Contato](mailto:retroville@gmail.com)
+  [🌐 Acesse o Site - Atualmente fora do ar, por usar hospedagem gratuita](http://www.retroville.rf.gd) | [📧 Contato](mailto:retroville@gmail.com)
 </div>
 
 ---
@@ -273,7 +273,7 @@ Embora este seja um projeto acadêmico, sugestões e feedbacks são bem-vindos!
 
 Para dúvidas, sugestões ou parcerias:
 
-- 🌐 **Site**: [www.retroville.rf.gd](http://www.retroville.rf.gd)
+- 🌐 **Site**: [www.retroville.rf.gd](http://www.retroville.rf.gd) (Fora do ar, por causa de utilizar hospedagem gratuita)
 - 📧 **Email**: Entre em contato através do [formulário no site](http://www.retroville.rf.gd/CLIENTE/view/contato.php)
 
 ---
