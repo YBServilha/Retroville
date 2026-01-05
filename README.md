@@ -280,7 +280,7 @@ Para dúvidas, sugestões ou parcerias:
 
 <div align="center">
   
-  ### Feito com ❤️ pela equipe Retroville
+  ### Feito com entusiasmo pela equipe Retroville
   
   **ETEC Jornalista Roberto Marinho - 2023**
   
